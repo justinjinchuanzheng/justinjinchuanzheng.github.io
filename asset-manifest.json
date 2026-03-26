@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/justin-portfolio/static/css/main.dd1a2ddd.css",
-    "main.js": "/justin-portfolio/static/js/main.abcfeb48.js",
+    "main.css": "/justin-portfolio/static/css/main.1949ff27.css",
+    "main.js": "/justin-portfolio/static/js/main.e7a0de15.js",
     "static/css/64.bba8fa55.chunk.css": "/justin-portfolio/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/justin-portfolio/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/justin-portfolio/static/css/769.b3cbb36b.chunk.css",
     "static/js/769.bda0d7b7.chunk.js": "/justin-portfolio/static/js/769.bda0d7b7.chunk.js",
     "static/media/finger.png": "/justin-portfolio/static/media/finger.b122bfb3f4a0b2e0e718.png",
+    "static/media/Myphoto.png": "/justin-portfolio/static/media/Myphoto.8b999d506a22a32907a3.png",
     "static/media/umichLogo.png": "/justin-portfolio/static/media/umichLogo.5e85a00af01a996eac4a.png",
     "static/media/Montserrat-Regular.ttf": "/justin-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/justin-portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
@@ -19,15 +20,15 @@
     "static/media/nextuLogo.webp": "/justin-portfolio/static/media/nextuLogo.e033dbfa4c58c0a906aa.webp",
     "index.html": "/justin-portfolio/index.html",
     "static/media/talksCardBack.svg": "/justin-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.dd1a2ddd.css.map": "/justin-portfolio/static/css/main.dd1a2ddd.css.map",
-    "main.abcfeb48.js.map": "/justin-portfolio/static/js/main.abcfeb48.js.map",
+    "main.1949ff27.css.map": "/justin-portfolio/static/css/main.1949ff27.css.map",
+    "main.e7a0de15.js.map": "/justin-portfolio/static/js/main.e7a0de15.js.map",
     "64.bba8fa55.chunk.css.map": "/justin-portfolio/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/justin-portfolio/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/justin-portfolio/static/css/769.b3cbb36b.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/justin-portfolio/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd1a2ddd.css",
-    "static/js/main.abcfeb48.js"
+    "static/css/main.1949ff27.css",
+    "static/js/main.e7a0de15.js"
   ]
 }
