@@ -30,11 +30,7 @@ export default function Top() {
 
   return (
     <button onClick={topEvent} id="topButton" title="Go to top">
-      <img
-        src={scrollToTopImg}
-        alt="Back to top"
-        className="top-button-icon"
-      />
+      <img src={scrollToTopImg} alt="Back to top" className="top-button-icon" />
     </button>
   );
 }

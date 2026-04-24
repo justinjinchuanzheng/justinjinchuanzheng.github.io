@@ -63,9 +63,7 @@ export default function Skills() {
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       {/* Header */}
       <div className="skills-header">
-        <h1
-          className={isDark ? "dark-mode skills-heading" : "skills-heading"}
-        >
+        <h1 className={isDark ? "dark-mode skills-heading" : "skills-heading"}>
           Research
         </h1>
         <h2 className="skills-project-title">Liquid Metal Actuator</h2>
@@ -113,24 +111,24 @@ export default function Skills() {
 
           <p
             className={
-              isDark
-                ? "dark-mode subTitle skills-text"
-                : "subTitle skills-text"
+              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
             }
           >
             This video shows a millimeter scale flapping-wing robot driven by a
-            liquid-metal core encapsulated in a {/*polyacrylamide/KOH*/} hydrogel
-            membrane. {/*By modulating the surface tension of the liquid metal with
+            liquid-metal core encapsulated in a {/*polyacrylamide/KOH*/}{" "}
+            hydrogel membrane.{" "}
+            {/*By modulating the surface tension of the liquid metal with
             electrical inputs of about 1 V, the actuator produces more than 40%
             strain with strain rates above 1,000% per second and maintains
             measurable motion up to 50 Hz, comparable to biological dragonfly
-            wingbeat frequencies.*/} This demonstration illustrates that
-            low-voltage, high-bandwidth soft actuators can be integrated into
-            insect-scale robotic platforms for controlled flapping flight. My
-            contributions to this work include synthesizing the hydrogel
-            material used in the actuator and performing quantitative data
-            analysis and movement tracking from high-speed videos, including
-            wing trajectory and flapping-frequency extraction.
+            wingbeat frequencies.*/}{" "}
+            This demonstration illustrates that low-voltage, high-bandwidth soft
+            actuators can be integrated into insect-scale robotic platforms for
+            controlled flapping flight. My contributions to this work include
+            synthesizing the hydrogel material used in the actuator and
+            performing quantitative data analysis and movement tracking from
+            high-speed videos, including wing trajectory and flapping-frequency
+            extraction.
           </p>
 
           <div className="skills-divider" />
@@ -171,17 +169,18 @@ export default function Skills() {
               }
             >
               This video shows a single-axis, axisymmetric liquid-metal hydrogel
-              actuator operating in real time. {/*A ~24.5 µL droplet of eutectic
+              actuator operating in real time.{" "}
+              {/*A ~24.5 µL droplet of eutectic
               liquid metal is encapsulated in a ~120 µm thick
               polyacrylamide/KOH hydrogel membrane and driven with an activation
               voltage of ±2.6 V at 0.5 Hz, producing large, reversible radial
               deformation of the cylinder. This experiment is used to
               characterize strain, response time, cyclic stability, and
               interfacial bubble dynamics, providing quantitative data for the
-              design of low-voltage soft actuators.*/} My contributions include
-              synthesizing the hydrogel membrane and performing image-based
-              motion tracking and data analysis of the actuator kinematics from
-              the recorded videos.
+              design of low-voltage soft actuators.*/}{" "}
+              My contributions include synthesizing the hydrogel membrane and
+              performing image-based motion tracking and data analysis of the
+              actuator kinematics from the recorded videos.
             </p>
           </div>
 
@@ -304,9 +303,7 @@ export default function Skills() {
         <div className="skills-battery-header">
           <h2
             className={
-              isDark
-                ? "dark-mode skills-project-title"
-                : "skills-project-title"
+              isDark ? "dark-mode skills-project-title" : "skills-project-title"
             }
           >
             High-Performance Liquid-State Batteries
@@ -317,9 +314,7 @@ export default function Skills() {
         <div className="skills-battery-project">
           <p
             className={
-              isDark
-                ? "dark-mode subTitle skills-text"
-                : "subTitle skills-text"
+              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
             }
           >
             I led a battery research project developing a dry-electrode
@@ -351,9 +346,7 @@ export default function Skills() {
         <div className="skills-subtitle-wrapper">
           <h3
             className={
-              isDark
-                ? "dark-mode skills-project-title"
-                : "skills-project-title"
+              isDark ? "dark-mode skills-project-title" : "skills-project-title"
             }
           >
             Microstructure (SEM Gallery)

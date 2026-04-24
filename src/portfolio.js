@@ -24,7 +24,7 @@ const greeting = {
   username: "Justin J. Zheng",
   title: "Justin Jinchuan Zheng",
   subTitle: emoji(
-    "I am an undergraduate student at the University of Michigan with a research focus on soft robotics. I am interested in how the composition and structure of soft materials, such as liquid metal based conductors, battery materials, and architected soft composites, shape the behavior of robotic actuators and bodies. My goal is to design functional materials that can bend, stretch, and distribute forces in a controlled way so that robots can navigate safely through complex environments. I envision a future where soft robots are built from materials that are intrinsically safe for close human interaction and energetically sustainable throughout their life cycle.",
+    "I am an undergraduate student at the University of Michigan with a research focus on soft robotics. I am interested in how the composition and structure of soft materials, such as liquid metal based conductors, battery materials, and architected soft composites, shape the behavior of robotic actuators and bodies. My goal is to design functional materials that can bend, stretch, and distribute forces in a controlled way so that robots can navigate safely through complex environments. I envision a future where soft robots are built from materials that are intrinsically safe for close human interaction and energetically sustainable throughout their life cycle."
   ),
   resumeLink:
     "https://scholar.google.com/citations?hl=en&user=XVc7h10AAAAJ&view_op=list_works&gmla=AKzYXQ3YJXS2bDhbIpt6reHK-TmlO_rzsUAFdN1H1yPuXGp_ya6MzLa4ksd5MhPkLgByQGzoUKkwuMLl4YoEXdMU", // Set to empty to hide the button
@@ -54,10 +54,14 @@ const skillsSection = {
     "Soft and micro-robotics projects focusing on liquid-metal actuators and compliant mechanisms.",
   skills: [
     emoji("⚡ Liquid-metal based soft actuators for safe, high-strain motion."),
-    emoji("⚡ Micro-scale jumping and flapping mechanisms inspired by insects."),
-    emoji("⚡ Experimental characterization and high-speed imaging of actuator dynamics.")
+    emoji(
+      "⚡ Micro-scale jumping and flapping mechanisms inspired by insects."
+    ),
+    emoji(
+      "⚡ Experimental characterization and high-speed imaging of actuator dynamics."
+    )
   ],
-  softwareSkills: [],   // hide the tech icons row
+  softwareSkills: [], // hide the tech icons row
   display: true
 };
 // Education Section
@@ -83,12 +87,8 @@ const educationInfo = {
       logo: require("./assets/images/umichLogo.png"),
       subHeader: "Bachelor of Science in Engineering, Robotics",
       duration: "Expected December 2026",
-      desc:
-        "",
-      descBullets: [
-        "Research Area: Soft Robotics",
-        "GPA: 4.0 / 4.0",
-      ]
+      desc: "",
+      descBullets: ["Research Area: Soft Robotics", "GPA: 4.0 / 4.0"]
     }
   ]
 };
@@ -106,7 +106,7 @@ const researchAppointmentsInfo = {
       desc: "Lab: Soft Machines Lab",
       descBullets: [
         "Advisor: Professor Carmel Majidi",
-        "Research Area: Soft Robotics, Microfluidic Electronics, Liquid Metal Actuators",
+        "Research Area: Soft Robotics, Microfluidic Electronics, Liquid Metal Actuators"
       ]
     }
   ]
@@ -115,7 +115,7 @@ const researchAppointmentsInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: false,  // <- change this from true to false
+  viewSkillBars: false, // <- change this from true to false
   experience: [
     {
       Stack: "Frontend/Design",
@@ -223,39 +223,40 @@ const achievementSection = {
   subtitle:
     "Graduate courses I completed during my undergraduate studies at the University of Michigan.",
   achievementsCards: [
-  {
-    courseNumber: "ROB 535",
-    courseTitle: "Self Driving Cars: Perception and Control",
-    credits: "",
-    grade: "",
-    image: require("./assets/images/umichLogo.png"),
-    footerLink: []
-  },
-  {
-    courseNumber: "ROB 530",
-    courseTitle: "Mobile Robotics: Methods and Algorithms",
-    credits: "",
-    grade: "",
-    image: require("./assets/images/umichLogo.png"),
-    footerLink: []
-  },
-  {
-    courseNumber: "BIOMEDE 561",
-    courseTitle: "Biological Micro- and Nanotechnology",
-    credits: "",
-    grade: "",
-    image: require("./assets/images/umichLogo.png"),
-    footerLink: []
-  },
-  {
-    courseNumber: "MECHENG 570",
-    courseTitle: "Fundamentals of Defects in Materials and Applications of Atomistic Modeling",
-    credits: "",
-    grade: "",
-    image: require("./assets/images/umichLogo.png"),
-    footerLink: []
-  }
-],
+    {
+      courseNumber: "ROB 535",
+      courseTitle: "Self Driving Cars: Perception and Control",
+      credits: "",
+      grade: "",
+      image: require("./assets/images/umichLogo.png"),
+      footerLink: []
+    },
+    {
+      courseNumber: "ROB 530",
+      courseTitle: "Mobile Robotics: Methods and Algorithms",
+      credits: "",
+      grade: "",
+      image: require("./assets/images/umichLogo.png"),
+      footerLink: []
+    },
+    {
+      courseNumber: "BIOMEDE 561",
+      courseTitle: "Biological Micro- and Nanotechnology",
+      credits: "",
+      grade: "",
+      image: require("./assets/images/umichLogo.png"),
+      footerLink: []
+    },
+    {
+      courseNumber: "MECHENG 570",
+      courseTitle:
+        "Fundamentals of Defects in Materials and Applications of Atomistic Modeling",
+      credits: "",
+      grade: "",
+      image: require("./assets/images/umichLogo.png"),
+      footerLink: []
+    }
+  ],
   display: true
 };
 

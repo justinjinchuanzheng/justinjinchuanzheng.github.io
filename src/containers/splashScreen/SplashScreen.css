@@ -8,7 +8,7 @@
 
 /* Make this smaller so the two logos move closer to the center */
 .splash-animation-container {
-  height: 25vh;   /* was 50vh; try 25vh to make the gap about half */
+  height: 25vh; /* was 50vh; try 25vh to make the gap about half */
 }
 
 .splash-title-container {
@@ -23,5 +23,5 @@
   padding: 0 20px;
 }
 .splash-title-logo {
-  height: 250px;      /* make bigger or smaller if you want */
+  height: 250px; /* make bigger or smaller if you want */
 }

@@ -10,15 +10,15 @@ export default function SplashScreen() {
   return (
     <div className={isDark ? "dark-mode splash-container" : "splash-container"}>
       <div className="splash-animation-container">
-  <DisplayLottie animationData={splashScreen.animation} />
-</div>
+        <DisplayLottie animationData={splashScreen.animation} />
+      </div>
       <div className="splash-title-container">
-  <img
-    src={umichLogo}
-    alt="University of Michigan logo"
-    className="splash-title-logo"
-  />
-</div>
+        <img
+          src={umichLogo}
+          alt="University of Michigan logo"
+          className="splash-title-logo"
+        />
+      </div>
     </div>
   );
 }

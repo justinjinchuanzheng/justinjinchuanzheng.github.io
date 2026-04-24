@@ -2,7 +2,7 @@ import React from "react";
 import "../education/Education.scss";
 import "./ResearchAppointments.scss";
 import EducationCard from "../../components/educationCard/EducationCard";
-import { researchAppointmentsInfo } from "../../portfolio";
+import {researchAppointmentsInfo} from "../../portfolio";
 
 export default function ResearchAppointments() {
   if (researchAppointmentsInfo.display) {

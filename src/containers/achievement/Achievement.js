@@ -84,15 +84,13 @@ export default function Achievement() {
               </h2>
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Self-driving cars are a transformative technology for society.
-                This course covers the underlying technologies in perception
-                and control. Topics include deep learning, computer vision,
-                sensor fusion, localization, trajectory optimization, obstacle
+                This course covers the underlying technologies in perception and
+                control. Topics include deep learning, computer vision, sensor
+                fusion, localization, trajectory optimization, obstacle
                 avoidance, vehicle dynamics. Course includes theoretical
                 underpinnings of self-driving car algorithms and practical
                 application of the material in hands-on labs.
@@ -113,9 +111,7 @@ export default function Achievement() {
               </h2>
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Theory and application of probabilistic techniques for
@@ -123,10 +119,10 @@ export default function Achievement() {
                 critically examine contemporary algorithms for robot perception
                 (using a variety of modalities), state estimation, mapping, and
                 path planning. Topics include Bayesian filtering; stochastic
-                representations of the environment; motion and sensor models
-                for mobile robots; algorithms for mapping, localization,
-                planning and control in the presense of uncertainty; application
-                to autonomous marine, ground, and air vehicles.
+                representations of the environment; motion and sensor models for
+                mobile robots; algorithms for mapping, localization, planning
+                and control in the presense of uncertainty; application to
+                autonomous marine, ground, and air vehicles.
               </p>
               <hr className="course-detail-divider" />
             </div>
@@ -144,18 +140,16 @@ export default function Achievement() {
               </h2>
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
-                Many life processes occur at small size-scales. This course 
-                covers scaling laws, biological solutions to coping with or 
-                taking advantage of small size, micro- and nanofabrication 
-                techniques, biochemistry, and biomedical applications 
-                (genomics, proteomics, cell biology, diagnostics, etc.). 
-                There is an emphasis on microfluidics, surface science, 
-                and non-traditional fabrication techniques.
+                Many life processes occur at small size-scales. This course
+                covers scaling laws, biological solutions to coping with or
+                taking advantage of small size, micro- and nanofabrication
+                techniques, biochemistry, and biomedical applications (genomics,
+                proteomics, cell biology, diagnostics, etc.). There is an
+                emphasis on microfluidics, surface science, and non-traditional
+                fabrication techniques.
               </p>
               <hr className="course-detail-divider" />
             </div>
@@ -174,9 +168,7 @@ export default function Achievement() {
               </h2>
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Introduction on the correlation between various types of

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -16,12 +16,12 @@ import {
 } from "../../portfolio";
 
 function Header() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
 
   // Section visibility flags from portfolio.js
-  const viewSkills = skillsSection.display;           // About
-  const viewResearch = skillsSection.display;         // Research
-  const viewEducation = educationInfo.display;        // Education
+  const viewSkills = skillsSection.display; // About
+  const viewResearch = skillsSection.display; // Research
+  const viewEducation = educationInfo.display; // Education
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
@@ -35,7 +35,7 @@ function Header() {
           <img
             src={umichLogo}
             alt="University of Michigan logo"
-            style={{ height: "80px", marginRight: "12px" }}
+            style={{height: "80px", marginRight: "12px"}}
           />
           <span className="logo-title">
             Justin J. Zheng | Research Portfolio
@@ -46,11 +46,9 @@ function Header() {
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{ color: "white" }}
+          style={{color: "white"}}
         >
-          <span
-            className={isDark ? "navicon navicon-dark" : "navicon"}
-          ></span>
+          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
 
         <ul className={isDark ? "dark-menu menu" : "menu"}>

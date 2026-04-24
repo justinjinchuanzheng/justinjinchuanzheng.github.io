@@ -69,7 +69,7 @@ body {
 /* Logo block (UMich seal + text) */
 .header .logo {
   display: flex;
-  align-items: center;   /* vertically center logo + text */
+  align-items: center; /* vertically center logo + text */
   flex: none;
   float: left;
   text-decoration: none;
@@ -81,7 +81,7 @@ body {
 .logo-title {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #000000;        /* black in light mode */
+  color: #000000; /* black in light mode */
   line-height: 1.2;
 }
 
@@ -92,7 +92,7 @@ body {
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
-  color: #000000;        /* black in light mode */
+  color: #000000; /* black in light mode */
 }
 
 /* Keep logo text white in dark mode */
@@ -225,7 +225,7 @@ body {
   /* Let the title wrap instead of cutting off */
   .logo-title {
     font-size: 1.2rem;
-    white-space: normal;      /* allow multi-line */
+    white-space: normal; /* allow multi-line */
   }
 
   .header .logo-name {
