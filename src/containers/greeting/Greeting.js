@@ -96,9 +96,22 @@ export default function Greeting() {
                 Michigan Engineering Distinguished Academic Achievement
                 Undergraduate Award, March 2026.
               </p>
+
               <p className="greeting-image-caption-sub">
                 Selected as the sole undergraduate award recipient in Robotics.
               </p>
+
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7451976673643880448/"
+                target="_blank"
+                rel="noreferrer"
+                className={`greeting-image-link ${
+                  isDark ? "dark-link" : "light-link"
+                }`}
+              >
+                <span className="linkedin-icon">in</span>
+                <span>Featured by UMich Robotics on LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>

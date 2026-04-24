@@ -1,0 +1,45 @@
+@import "../../_globalColor";
+
+.courses-page {
+  min-height: 100vh;
+}
+
+/* Give the Courses page enough space below the fixed header */
+.courses-page #achievements.main {
+  margin-top: 0;
+  padding-top: 5rem;
+}
+
+/* Make the course cards look like the original dark homepage version */
+.courses-page.dark-mode #achievements .certificate-card {
+  background-color: $darkBackground;
+  border: 1px solid $subTitle;
+  box-shadow: none;
+}
+
+/* Keep the hover effect subtle */
+.courses-page.dark-mode #achievements .certificate-card:hover {
+  box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
+}
+
+/* Fix black text / dark text boxes inside course cards */
+.courses-page.dark-mode #achievements .card-title,
+.courses-page.dark-mode #achievements .card-subtitle,
+.courses-page.dark-mode #achievements .course-card-title-line,
+.courses-page.dark-mode #achievements .course-card-credits,
+.courses-page.dark-mode #achievements .course-card-grade {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* Keep the course details readable */
+.courses-page.dark-mode #achievements .course-detail-title,
+.courses-page.dark-mode #achievements .course-detail-text {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .courses-page #achievements.main {
+    padding-top: 4.5rem;
+  }
+}

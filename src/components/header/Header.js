@@ -55,50 +55,50 @@ function Header() {
           {viewSkills && (
             <li>
               {/* About – hero section */}
-              <a href="#about">About</a>
+              <a href="#/about">About</a>
             </li>
           )}
 
           {viewEducation && (
             <li>
               {/* Education section */}
-              <a href="#education">Education</a>
+              <a href="#/education">Education</a>
             </li>
           )}
 
           {viewResearch && (
             <li>
               {/* Research goes to the Skills/Research section */}
-              <a href="#skills">Research</a>
+              <a href="#/research">Research</a>
             </li>
           )}
 
           {viewAchievement && (
             <li>
-              <a href="#achievements">Courses</a>
+              <a href="#/courses">Courses</a>
             </li>
           )}
 
           {viewBlog && (
             <li>
-              <a href="#blogs">Blogs</a>
+              <a href="#/blogs">Blogs</a>
             </li>
           )}
 
           {viewTalks && (
             <li>
-              <a href="#talks">Talks</a>
+              <a href="#/talks">Talks</a>
             </li>
           )}
 
           {viewResume && (
             <li>
-              <a href="#resume">Resume</a>
+              <a href="#/resume">Resume</a>
             </li>
           )}
 
           <li>
-            <a href="#contact">Contact Me</a>
+            <a href="#/contact">Contact Me</a>
           </li>
 
           <li>

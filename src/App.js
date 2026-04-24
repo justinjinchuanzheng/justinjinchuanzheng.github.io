@@ -1,12 +1,33 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import "./App.scss";
+
+import {HashRouter, Switch, Route, Redirect} from "react-router-dom";
+
 import Main from "./containers/Main";
+
+const Courses = lazy(() => import("./containers/courses/Courses"));
 
 function App() {
   return (
-    <div>
-      <Main />
-    </div>
+    <HashRouter>
+      <Suspense fallback={<div></div>}>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/about" component={Main} />
+          <Route exact path="/education" component={Main} />
+          <Route exact path="/research" component={Main} />
+          <Route exact path="/blogs" component={Main} />
+          <Route exact path="/talks" component={Main} />
+          <Route exact path="/resume" component={Main} />
+          <Route exact path="/contact" component={Main} />
+
+          <Route exact path="/courses" component={Courses} />
+          <Route exact path="/achievements" component={Courses} />
+
+          <Redirect to="/" />
+        </Switch>
+      </Suspense>
+    </HashRouter>
   );
 }
 

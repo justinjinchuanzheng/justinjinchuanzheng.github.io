@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
@@ -6,7 +7,6 @@ import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
-import Achievement from "./achievement/Achievement";
 import Blogs from "./blogs/Blogs";
 import Footer from "../components/footer/Footer";
 import Talks from "./talks/Talks";
@@ -24,6 +24,7 @@ import "./Main.scss";
 
 const Main = () => {
   // Always start in dark mode for first-time users
+  const location = useLocation();
   const [isDark, setIsDark] = useLocalStorage("isDark", true);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
@@ -39,6 +40,33 @@ const Main = () => {
       };
     }
   }, []);
+
+  useEffect(() => {
+  if (isShowingSplashAnimation && splashScreen.enabled) {
+    return;
+  }
+
+  const sectionMap = {
+    "/about": "about",
+    "/education": "education",
+    "/research": "skills",
+    "/blogs": "blogs",
+    "/talks": "talks",
+    "/resume": "resume",
+    "/contact": "contact"
+  };
+
+  const sectionId = sectionMap[location.pathname];
+
+  if (sectionId) {
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({behavior: "smooth", block: "start"});
+      }
+    }, 100);
+  }
+}, [location.pathname, isShowingSplashAnimation]);
 
   const changeTheme = () => {
     setIsDark(!isDark);
@@ -60,7 +88,6 @@ const Main = () => {
             <WorkExperience />
             <Projects />
             <StartupProject />
-            <Achievement />
             <Blogs />
             <Talks />
             <Twitter />
