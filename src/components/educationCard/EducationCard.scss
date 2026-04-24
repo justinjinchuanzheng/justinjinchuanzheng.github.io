@@ -5,6 +5,18 @@
   flex-direction: row;
 }
 
+.education-section {
+  /* existing styles if you have them */
+  margin-top: 6rem;   /* increase this number for more space */
+}
+
+.education-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 2rem;   /* increase this number for more space */
+}
 .education-card:hover + .education-card-border {
   border-color: $educationCardBorder;
   width: 100%;
@@ -43,8 +55,8 @@
 .education-roundedimg {
   object-fit: cover;
   margin-right: 2rem;
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;   /* was 6rem */
+  height: 10rem;  /* was 6rem */
   box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
   border-radius: 50%;
 }
@@ -76,6 +88,7 @@
 
 .education-text-bullets > ul {
   margin-top: 0.5rem;
+  line-height: 1.9;
 }
 
 /* Media Query */
@@ -103,8 +116,8 @@
     font-size: 16px;
   }
   .education-roundedimg {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     margin-bottom: 0.5rem;
     margin-right: 0px;
   }
@@ -122,8 +135,8 @@
   }
   .education-roundedimg {
     margin-top: 10px;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     margin-bottom: 1rem;
     margin-right: 0;
   }

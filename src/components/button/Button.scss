@@ -1,47 +1,58 @@
 @import "../../_globalColor";
 
 .main-button {
-  background-color: $buttonColor;
-  border: solid 1px $buttonColor;
-  color: $textColorDark;
-  font-weight: 700;
+  background-color: transparent;
+  border: solid 2.5px currentColor;
+  color: inherit !important;
+  font-weight: 800;
   width: max-content;
-  padding: 13px 22px;
+  padding: 12px 22px;
   margin-right: 50px;
   text-transform: uppercase;
-  border-radius: 6px;
+  border-radius: 8px;
   text-align: center;
   text-decoration: none;
   display: block;
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
 }
+
+.main-button * {
+  color: inherit !important;
+}
+
 .main-button:hover {
-  background-color: $darkBoxShadow2;
-  color: $buttonColor;
   transition: all 0.3s ease 0s;
   transform: translateY(-3px);
 }
+
+.main-button:hover * {
+  color: inherit !important;
+}
+
 .project-button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
+
 .project-button > .main-button {
   margin-right: 0 !important;
 }
+
 /* Media Query */
 @media (max-width: 768px) {
   .main-button {
-    font-size: 0.938rem;
-    padding: 12px 18px;
+    font-size: 0.9rem;
+    padding: 11px 17px;
     margin-right: 0px;
   }
 }
+
 @media (max-width: 320px) {
   .main-button {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 }

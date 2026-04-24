@@ -1,24 +1,27 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
+import umichLogo from "../../assets/images/umichLogo.png";
 import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
   blogSection,
   talkSection,
   achievementSection,
-  resumeSection
+  resumeSection,
+  educationInfo
 } from "../../portfolio";
 
 function Header() {
-  const {isDark} = useContext(StyleContext);
-  const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
-  const viewSkills = skillsSection.display;
+  const { isDark } = useContext(StyleContext);
+
+  // Section visibility flags from portfolio.js
+  const viewSkills = skillsSection.display;           // About
+  const viewResearch = skillsSection.display;         // Research
+  const viewEducation = educationInfo.display;        // Education
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
@@ -27,58 +30,79 @@ function Header() {
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
-          <span className="grey-color"> &lt;</span>
-          <span className="logo-name">{greeting.username}</span>
-          <span className="grey-color">/&gt;</span>
-        </a>
+        {/* Logo and title: now NON-clickable */}
+        <div className="logo">
+          <img
+            src={umichLogo}
+            alt="University of Michigan logo"
+            style={{ height: "80px", marginRight: "12px" }}
+          />
+          <span className="logo-title">
+            Justin J. Zheng | Research Portfolio
+          </span>
+        </div>
+
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{color: "white"}}
+          style={{ color: "white" }}
         >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
+          <span
+            className={isDark ? "navicon navicon-dark" : "navicon"}
+          ></span>
         </label>
+
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              {/* About – hero section */}
+              <a href="#about">About</a>
             </li>
           )}
-          {viewExperience && (
+
+          {viewEducation && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              {/* Education section */}
+              <a href="#education">Education</a>
             </li>
           )}
-          {viewOpenSource && (
+
+          {viewResearch && (
             <li>
-              <a href="#opensource">Open Source</a>
+              {/* Research goes to the Skills/Research section */}
+              <a href="#skills">Research</a>
             </li>
           )}
+
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#achievements">Courses</a>
             </li>
           )}
+
           {viewBlog && (
             <li>
               <a href="#blogs">Blogs</a>
             </li>
           )}
+
           {viewTalks && (
             <li>
               <a href="#talks">Talks</a>
             </li>
           )}
+
           {viewResume && (
             <li>
               <a href="#resume">Resume</a>
             </li>
           )}
+
           <li>
             <a href="#contact">Contact Me</a>
           </li>
+
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
@@ -90,4 +114,5 @@ function Header() {
     </Headroom>
   );
 }
+
 export default Header;

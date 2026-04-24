@@ -12,6 +12,7 @@ import Footer from "../components/footer/Footer";
 import Talks from "./talks/Talks";
 import Podcast from "./podcast/Podcast";
 import Education from "./education/Education";
+import ResearchAppointments from "./researchAppointments/ResearchAppointments";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
 import Profile from "./profile/Profile";
@@ -22,8 +23,8 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  // Always start in dark mode for first-time users
+  const [isDark, setIsDark] = useLocalStorage("isDark", true);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -52,9 +53,10 @@ const Main = () => {
           <>
             <Header />
             <Greeting />
+            <Education />
+            <ResearchAppointments />
             <Skills />
             <StackProgress />
-            <Education />
             <WorkExperience />
             <Projects />
             <StartupProject />

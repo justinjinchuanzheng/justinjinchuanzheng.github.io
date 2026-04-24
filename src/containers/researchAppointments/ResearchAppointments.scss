@@ -1,0 +1,24 @@
+.research-appointments-section {
+  margin-top: -50px !important;
+  padding-top: 0 !important;
+}
+
+.research-appointments-section .education-heading {
+  margin-top: 0 !important;
+  margin-bottom: 30px !important;
+}
+
+.research-appointments-section .education-card-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .research-appointments-section {
+    margin-top: -15px !important;
+  }
+
+  .research-appointments-section .education-heading {
+    margin-bottom: 20px !important;
+  }
+}

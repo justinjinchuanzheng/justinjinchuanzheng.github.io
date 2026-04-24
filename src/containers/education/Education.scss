@@ -1,14 +1,16 @@
 .education-heading {
   font-size: 56px;
   font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
 }
 
 .education-section {
   display: flex;
   flex-direction: column;
   width: 90%;
-  padding: 20px 0px;
-  margin: 0px auto;
+  padding: 20px 0;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
@@ -25,11 +27,13 @@
 
 @media (max-width: 1380px) {
   .education-card-container {
-    padding-top: 0px;
+    padding-top: 0;
   }
+
   .education-heading {
     font-size: 40px;
   }
+
   .education-text-subtitle {
     font-size: 18px;
     text-align: center;
@@ -37,14 +41,39 @@
 }
 
 @media (max-width: 768px) {
+  .education-section {
+    width: 92%;
+    padding: 10px 0;
+    margin-top: 1rem;
+  }
+
+  .education-section > * {
+    margin-bottom: 18px;
+  }
+
   .education-card-container {
-    padding-top: 0px;
+    padding-top: 0;
   }
+
   .education-heading {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
+    line-height: 1.15;
+    margin-bottom: 10px;
   }
+
   .education-text-subtitle {
     font-size: 16px;
+    text-align: center;
   }
+}
+
+/* Make GPA / bullets black in light mode, white in dark mode */
+
+.education-section .subTitle {
+  color: #222222 !important;
+}
+
+.dark-mode .education-section .subTitle {
+  color: #ffffff !important;
 }

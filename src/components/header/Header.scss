@@ -1,11 +1,26 @@
 @import "../../_globalColor";
 
+/* ===== Global fix: remove horizontal scroll on mobile ===== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
 /*React-headroom*/
 .headroom-wrapper {
   max-height: 100px;
 }
 
-/* header */
+/* ===== header (light vs dark) ===== */
 
 .dark-menu {
   background-color: $darkBackground !important;
@@ -22,9 +37,10 @@
 
 .header {
   background-color: $lightBackground1;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   padding: 15px 20px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .header ul {
@@ -50,25 +66,42 @@
   background-color: $headerHoverBG;
 }
 
+/* Logo block (UMich seal + text) */
 .header .logo {
-  display: block;
+  display: flex;
+  align-items: center;   /* vertically center logo + text */
   flex: none;
   float: left;
-  font-size: 1.5em;
   text-decoration: none;
-  margin-top: 10px;
-  line-height: normal;
+  margin-top: 0;
+  line-height: 1.2;
 }
 
+/* Portfolio title text */
+.logo-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;        /* black in light mode */
+  line-height: 1.2;
+}
+
+/* Fancy Agustina name */
 .header .logo-name {
   font-family: "Agustina Regular";
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
+  color: #000000;        /* black in light mode */
 }
 
-/* menu */
+/* Keep logo text white in dark mode */
+.dark-menu .logo-title,
+.dark-menu .logo-name {
+  color: #ffffff;
+}
+
+/* ===== menu ===== */
 
 .header .menu {
   clear: both;
@@ -157,8 +190,8 @@
   top: 0;
 }
 
+/* ===== Desktop layout (>= 768px) ===== */
 /* 48em = 768px */
-
 @media (min-width: 48em) {
   .header li {
     float: left;
@@ -175,8 +208,32 @@
     display: none;
   }
 }
+
+/* ===== Tablet / small desktop (768px–960px) ===== */
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
+  }
+}
+
+/* ===== PHONE LAYOUT (<= 767px) ===== */
+@media (max-width: 767px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  /* Let the title wrap instead of cutting off */
+  .logo-title {
+    font-size: 1.2rem;
+    white-space: normal;      /* allow multi-line */
+  }
+
+  .header .logo-name {
+    padding: 0 6px;
+  }
+
+  /* Keep the logo + text on one block, menu icon on the right */
+  .header .logo {
+    float: left;
   }
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import "./Top.scss";
+import scrollToTopImg from "../../assets/images/finger.png"; // or finger.webp
 
 export default function Top() {
-  function TopEvent() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  function topEvent() {
+    // Scroll to top
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
   }
-  // When the user scrolls down 20px from the top of the document, show the button
+
   function scrollFunction() {
     if (
       document.body.scrollTop > 20 ||
@@ -17,16 +19,22 @@ export default function Top() {
       document.getElementById("topButton").style.visibility = "hidden";
     }
   }
+
   window.onscroll = function () {
     scrollFunction();
   };
+
   window.onload = function () {
     scrollFunction();
-  }; //To make sure that this button is not visible at starting.
-  // When the user clicks on the button, scroll to the top of the document
+  };
+
   return (
-    <button onClick={TopEvent} id="topButton" title="Go to top">
-      <i className="fas fa-hand-point-up" aria-hidden="true"></i>
+    <button onClick={topEvent} id="topButton" title="Go to top">
+      <img
+        src={scrollToTopImg}
+        alt="Back to top"
+        className="top-button-icon"
+      />
     </button>
   );
 }

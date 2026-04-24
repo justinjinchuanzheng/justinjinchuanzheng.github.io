@@ -4,15 +4,60 @@
   font-size: 56px;
   font-weight: 400;
   line-height: normal;
-  margin: 0px;
+  margin: 0;              /* keep all sides zero */
+  margin-bottom: 24px;    /* space under "Graduate Level Courses" */
 }
+
 .achievement-subtitle {
   text-transform: uppercase;
-  margin: 0px;
-  margin-bottom: 50px;
+  margin: 0;
+  margin-bottom: 50px;    /* keep the space below the subtitle */
 }
+
+/* NEW: subtitle colors for this section only */
+.achievement-subtitle-dark {
+  color: #ffffff;   /* pure white in dark mode */
+}
+
+.achievement-subtitle-light {
+  color: #000000;   /* pure black in light mode */
+}
+
 .subTitle {
   color: $subTitle;
+}
+
+/* Extra styles for the detailed course descriptions at the bottom */
+
+.course-detail-list {
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course-detail {
+  margin-bottom: 2.5rem;
+}
+
+.course-detail-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.4;   /* add this (try 1.4–1.5) */
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.course-detail-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.course-detail-divider {
+  border: none;
+  border-top: 1px solid $subTitle;
+  margin: 2rem 0 1.5rem;
 }
 
 /* Media Query */
@@ -21,6 +66,7 @@
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .achievement-heading {
     font-size: 30px;
@@ -30,5 +76,47 @@
     font-size: 16px;
     line-height: normal;
     text-align: center;
+  }
+
+  .course-detail-title {
+    font-size: 1.3rem;
+  }
+
+  .course-detail-text {
+    font-size: 1rem;
+  }
+}
+
+.course-card-title-line,
+.course-card-credits,
+.course-card-grade {
+  display: block;
+}
+
+.course-card-credits {
+  margin-top: 0.4rem;  // space between title and credits
+}
+
+.course-card-grade {
+  margin-top: 0.35rem; // space between credits and grade
+}
+
+/* Pull Graduate Level Courses closer to the line above */
+#achievements.main {
+  margin-top: 2rem;   /* try 1rem or 0rem if you want it even tighter */
+}
+
+/* Phone layout: 2 graduate course cards per row ONLY on small screens */
+@media (max-width: 768px) {
+  #achievements .achievement-cards-div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns */
+    gap: 1.5rem;
+  }
+
+  /* Let each card fill its grid cell */
+  #achievements .achievement-cards-div .achievement-card {
+    width: 100%;
+    margin: 0;
   }
 }

@@ -3,31 +3,90 @@
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
+/* text + image container under video */
 .greeting-main {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  padding-top: 0;
 }
 
+/* generic subtitle color used in other sections */
 .subTitle {
   color: $subTitle !important;
 }
 
-.greeting-main {
-  display: flex;
+.greeting-text-div {
+  flex: 1.02;
+  min-width: 0;
+  margin-top: -1rem;
+  margin-bottom: 30px;
 }
 
-.greeting-main > * {
-  flex: 1;
+.greeting-image-div {
+  flex: 1.08;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.greeting-profile-image {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.greeting-image-caption {
+  margin-top: 14px;
+  text-align: center;
+  max-width: 560px;
+}
+
+.greeting-image-caption-main {
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 6px 0;
+}
+
+.greeting-image-caption-sub {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* caption colors by mode */
+.greeting-image-caption.dark-caption .greeting-image-caption-main {
+  color: #ffffff;
+}
+
+.greeting-image-caption.dark-caption .greeting-image-caption-sub {
+  color: #d6d6d6;
+}
+
+.greeting-image-caption.light-caption .greeting-image-caption-main {
+  color: #00274c;
+}
+
+.greeting-image-caption.light-caption .greeting-image-caption-sub {
+  color: #5b6573;
 }
 
 .empty-div {
@@ -36,26 +95,78 @@
 
 .button-greeting-div {
   display: flex;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  margin-top: 65px;
+  gap: 3.5rem;
 }
+
+.greeting-cta {
+  font-weight: 800;
+  width: max-content;
+  padding: 12px 22px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  border: solid 2.5px;
+}
+
+.greeting-cta.dark {
+  background-color: transparent;
+  border-color: #ffcb05;
+  color: #ffcb05;
+}
+
+.greeting-cta.dark:hover {
+  background-color: #ffcb05;
+  color: #00274c;
+  transform: translateY(-3px);
+}
+
+.greeting-cta.light {
+  background-color: transparent;
+  border-color: #00274c;
+  color: #00274c;
+}
+
+.greeting-cta.light:hover {
+  background-color: #00274c;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
 .download-link-button {
   text-decoration: none;
 }
 
+/* ===== About section text ===== */
+
 .greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
+  font-size: 48px;
+  line-height: 1.08;
+  color: #000000;
+  margin-bottom: 18px;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 1.48;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
+/* dark mode text */
+.dark-mode.greeting-text {
+  color: #ffffff !important;
+}
+
+.dark-mode.greeting-text-p {
+  color: #ffffff !important;
 }
 
 .wave-emoji {
@@ -90,38 +201,205 @@
   }
 }
 
-/* Media Query */
+/* ===== Video header above About section ===== */
+
+.video-background {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-background__video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.video-caption {
+  margin-top: 0.75rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ===== DESKTOP / LARGE SCREEN ===== */
+
 @media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
+  .greeting-main {
+    gap: 32px;
   }
+
+  .greeting-text-div {
+    flex: 1.03;
+  }
+
+  .greeting-image-div {
+    flex: 1.02;
+  }
+
+  .greeting-profile-image {
+    max-width: 540px;
+  }
+
+  .greeting-image-caption {
+    max-width: 540px;
+  }
+
+  .greeting-text {
+    font-size: 43px;
+  }
+
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
+
+/* ===== TABLETS & PHONES ===== */
+
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+  .main,
+  .greet-main {
+    width: 95%;
+    padding: 15px 8px;
+    margin-top: 2.5rem;
   }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
+
   .greeting-main {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
   }
+
+  .greeting-text-div {
+    flex: 1.12;
+    margin-top: 0;
+  }
+
   .greeting-image-div {
-    height: 256px;
+    flex: 0.88;
+    margin-top: 0;
+  }
+
+  .greeting-profile-image {
+    max-width: 200px;
+  }
+
+  .greeting-image-caption {
+    max-width: 200px;
+    margin-top: 10px;
+  }
+
+  .greeting-image-caption-main {
+    font-size: 11px;
+  }
+
+  .greeting-image-caption-sub {
+    font-size: 10px;
+  }
+
+  .greeting-text {
+    font-size: 28px;
+    line-height: 1.12;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  .greeting-text-p {
+    font-size: 14px;
+    line-height: 1.42;
+    text-align: left;
+  }
+
+  .button-greeting-div {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+    gap: 0.8rem;
+  }
+
+  .greeting-cta {
+    font-size: 0.9rem;
+    padding: 11px 17px;
+  }
+
+  .video-caption {
+    font-size: 1.05rem;
+    padding: 0 0.5rem;
+  }
+}
+
+/* extra small phones */
+@media (max-width: 480px) {
+  .greeting-main {
+    gap: 12px;
+  }
+
+  .greeting-text-div {
+    flex: 1.08;
+  }
+
+  .greeting-image-div {
+    flex: 0.92;
+  }
+
+  .greeting-profile-image {
+    max-width: 150px;
+  }
+
+  .greeting-image-caption {
+    max-width: 150px;
+  }
+
+  .greeting-image-caption-main {
+    font-size: 10px;
+  }
+
+  .greeting-image-caption-sub {
+    font-size: 9px;
+  }
+
+  .greeting-text {
+    font-size: 22px;
+  }
+
+  .greeting-text-p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .button-greeting-div {
+    margin-top: 18px;
   }
 }
 
 @media (max-width: 320px) {
   .main {
     width: auto;
+  }
+
+  .greeting-profile-image {
+    max-width: 125px;
+  }
+
+  .greeting-image-caption {
+    max-width: 125px;
+  }
+
+  .greeting-text {
+    font-size: 18px;
+  }
+
+  .greeting-text-p {
+    font-size: 11px;
+  }
+
+  .greeting-cta {
+    font-size: 0.72rem;
   }
 }

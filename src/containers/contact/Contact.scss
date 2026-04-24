@@ -85,3 +85,8 @@
     display: none;
   }
 }
+
+/* Pull Contact Me closer to the section above */
+#contact.main {
+  margin-top: 5rem;   // try 2rem; use 1rem or 0rem if you want it even tighter
+}

@@ -1,66 +1,103 @@
 import React, {useContext} from "react";
 import {Fade} from "react-reveal";
-import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
+import {greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import profileImage from "../../assets/images/Award.png";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+
   if (!greeting.displayGreeting) {
     return null;
   }
+
   return (
     <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
-        <div className="greeting-main">
+      <div className="greet-main">
+        <div className="video-background">
+          <video
+            className="video-background__video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster={process.env.PUBLIC_URL + "/MetalPoster.png"}
+          >
+            <source
+              src={process.env.PUBLIC_URL + "/Metal.mp4"}
+              type="video/mp4"
+            />
+          </video>
+
+          <p className="video-caption">
+            Liquid metal actuator; project lead: Dr. Jiahe Liao.
+          </p>
+        </div>
+
+        <div className="greeting-main" id="about">
           <div className="greeting-text-div">
             <div>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
+              <h1 className={isDark ? "dark-mode greeting-text" : "greeting-text"}>
+                {greeting.title}
               </h1>
+
               <p
                 className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
+                  isDark ? "dark-mode greeting-text-p" : "greeting-text-p"
                 }
               >
                 {greeting.subTitle}
               </p>
+
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
+
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <a
+                  href="#contact"
+                  className={`greeting-cta ${isDark ? "dark" : "light"}`}
+                >
+                  Contact me
+                </a>
+
                 {greeting.resumeLink && (
                   <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
-                    className="download-link-button"
+                    href={greeting.resumeLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`greeting-cta ${isDark ? "dark" : "light"}`}
                   >
-                    <Button text="Download my resume" />
+                    Google Scholar
                   </a>
                 )}
               </div>
             </div>
           </div>
+
           <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
-            )}
+            <img
+              src={profileImage}
+              alt="Justin Zheng with Associate Dean Kevin Pipe"
+              className="greeting-profile-image"
+            />
+
+            <div
+              className={`greeting-image-caption ${
+                isDark ? "dark-caption" : "light-caption"
+              }`}
+            >
+              <p className="greeting-image-caption-main">
+                Justin Zheng with Associate Dean Kevin Pipe after receiving the
+                Michigan Engineering Distinguished Academic Achievement
+                Undergraduate Award, March 2026.
+              </p>
+              <p className="greeting-image-caption-sub">
+                Selected as the sole undergraduate award recipient in Robotics.
+              </p>
+            </div>
           </div>
         </div>
       </div>
