@@ -34,7 +34,7 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "#",
+  github: "https://github.com/justinjinchuanzheng",
   linkedin: "https://www.linkedin.com/in/justin-j-zheng-918876373/",
   gmail: "justinjz@umich.edu",
   //gitlab: "#",
