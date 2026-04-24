@@ -42,31 +42,31 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-  if (isShowingSplashAnimation && splashScreen.enabled) {
-    return;
-  }
+    if (isShowingSplashAnimation && splashScreen.enabled) {
+      return;
+    }
 
-  const sectionMap = {
-    "/about": "about",
-    "/education": "education",
-    "/research": "skills",
-    "/blogs": "blogs",
-    "/talks": "talks",
-    "/resume": "resume",
-    "/contact": "contact"
-  };
+    const sectionMap = {
+      "/about": "about",
+      "/education": "education",
+      "/research": "skills",
+      "/blogs": "blogs",
+      "/talks": "talks",
+      "/resume": "resume",
+      "/contact": "contact"
+    };
 
-  const sectionId = sectionMap[location.pathname];
+    const sectionId = sectionMap[location.pathname];
 
-  if (sectionId) {
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({behavior: "smooth", block: "start"});
-      }
-    }, 100);
-  }
-}, [location.pathname, isShowingSplashAnimation]);
+    if (sectionId) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({behavior: "smooth", block: "start"});
+        }
+      }, 100);
+    }
+  }, [location.pathname, isShowingSplashAnimation]);
 
   const changeTheme = () => {
     setIsDark(!isDark);
