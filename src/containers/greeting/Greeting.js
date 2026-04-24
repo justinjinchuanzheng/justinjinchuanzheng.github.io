@@ -14,7 +14,7 @@ export default function Greeting() {
   }
 
   return (
-    <Fade bottom duration={1000} distance="40px">
+    <Fade duration={300}>
       <div className="greet-main">
         <div className="video-background">
           <video

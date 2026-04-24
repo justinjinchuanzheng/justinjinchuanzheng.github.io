@@ -18,7 +18,7 @@ export default function StartupProject() {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <Fade duration={300}>
       <div className="main" id="projects">
         <div>
           <h1 className="skills-heading">{bigProjects.title}</h1>

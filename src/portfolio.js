@@ -106,7 +106,7 @@ const researchAppointmentsInfo = {
       desc: "Lab: Soft Machines Lab",
       descBullets: [
         "Advisor: Professor Carmel Majidi",
-        "Research Area: Soft Robotics",
+        "Research Area: Soft Robotics, Microfluidic Electronics, Liquid Metal Actuators",
       ]
     }
   ]
