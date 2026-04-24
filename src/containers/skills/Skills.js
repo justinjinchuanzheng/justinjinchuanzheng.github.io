@@ -8,6 +8,26 @@ export default function Skills() {
   const {isDark} = useContext(StyleContext);
   const publicUrl = process.env.PUBLIC_URL || "";
 
+  const startVideo = event => {
+    const video = event.currentTarget;
+    video.muted = true;
+
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {});
+    }
+  };
+
+  const videoProps = {
+    autoPlay: true,
+    loop: true,
+    muted: true,
+    playsInline: true,
+    preload: "auto",
+    onCanPlay: startVideo
+  };
+
   if (!skillsSection.display) {
     return null;
   }
@@ -29,7 +49,7 @@ export default function Skills() {
         {/* Dragonfly: two videos side by side */}
         <div className="skills-video-row">
           <div className="skills-video-block">
-            <video className="skills-video" autoPlay loop muted playsInline>
+            <video className="skills-video" {...videoProps}>
               <source src={`${publicUrl}/Dragonfly.mp4`} type="video/mp4" />
             </video>
             <p className="skills-video-caption">
@@ -38,7 +58,7 @@ export default function Skills() {
           </div>
 
           <div className="skills-video-block">
-            <video className="skills-video" autoPlay loop muted playsInline>
+            <video className="skills-video" {...videoProps}>
               <source src={`${publicUrl}/Dragonfly2.mp4`} type="video/mp4" />
             </video>
             <p className="skills-video-caption">
@@ -100,13 +120,7 @@ export default function Skills() {
 
           <div className="skills-single-video">
             <div className="skills-video-block">
-              <video
-                className="skills-video-wide"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-video-wide" {...videoProps}>
                 <source src={`${publicUrl}/Actuator.mp4`} type="video/mp4" />
               </video>
               <p className="skills-video-caption">
@@ -160,13 +174,7 @@ export default function Skills() {
 
           <div className="skills-single-video">
             <div className="skills-video-block">
-              <video
-                className="skills-video-wide"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-video-wide" {...videoProps}>
                 <source src={`${publicUrl}/Tracking.mp4`} type="video/mp4" />
               </video>
               <p className="skills-video-caption">
@@ -215,73 +223,37 @@ export default function Skills() {
         <div className="skills-battery-video-grid-wrapper">
           <div className="skills-battery-video-grid">
             <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-battery-video" {...videoProps}>
                 <source src={`${publicUrl}/Bubblevid.mp4`} type="video/mp4" />
               </video>
             </div>
 
             <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-battery-video" {...videoProps}>
                 <source src={`${publicUrl}/Greyvid.mp4`} type="video/mp4" />
               </video>
             </div>
 
             <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-battery-video" {...videoProps}>
                 <source src={`${publicUrl}/Bubblevid2.mp4`} type="video/mp4" />
               </video>
             </div>
 
             <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-battery-video" {...videoProps}>
                 <source src={`${publicUrl}/Bluevid.mp4`} type="video/mp4" />
               </video>
             </div>
 
             <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-battery-video" {...videoProps}>
                 <source src={`${publicUrl}/Bluevid1.mp4`} type="video/mp4" />
               </video>
             </div>
 
             <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
+              <video className="skills-battery-video" {...videoProps}>
                 <source src={`${publicUrl}/Bluevid2.mp4`} type="video/mp4" />
               </video>
             </div>

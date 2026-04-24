@@ -1,32 +1,41 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Top.scss";
-import scrollToTopImg from "../../assets/images/finger.png"; // or finger.webp
+import scrollToTopImg from "../../assets/images/finger.png";
 
 export default function Top() {
   function topEvent() {
-    // Scroll to top
-    document.body.scrollTop = 0; // Safari
-    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      document.getElementById("topButton").style.visibility = "visible";
-    } else {
-      document.getElementById("topButton").style.visibility = "hidden";
+  useEffect(() => {
+    function scrollFunction() {
+      const topButton = document.getElementById("topButton");
+
+      if (!topButton) {
+        return;
+      }
+
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        topButton.style.visibility = "visible";
+      } else {
+        topButton.style.visibility = "hidden";
+      }
     }
-  }
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
+    window.addEventListener("scroll", scrollFunction);
+    window.addEventListener("load", scrollFunction);
 
-  window.onload = function () {
     scrollFunction();
-  };
+
+    return () => {
+      window.removeEventListener("scroll", scrollFunction);
+      window.removeEventListener("load", scrollFunction);
+    };
+  }, []);
 
   return (
     <button onClick={topEvent} id="topButton" title="Go to top">
