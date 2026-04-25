@@ -48,11 +48,40 @@ function Header() {
     }
   };
 
+  const goToTop = () => {
+    if (window.location.hash !== "#/about") {
+      window.location.hash = "#/about";
+
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }, 400);
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        {/* Logo and title: non-clickable */}
-        <div className="logo">
+        {/* Logo and title: clickable, returns to top */}
+        <div
+          className="logo"
+          onClick={goToTop}
+          onKeyDown={event => {
+            if (event.key === "Enter" || event.key === " ") {
+              goToTop();
+            }
+          }}
+          role="button"
+          tabIndex={0}
+          style={{cursor: "pointer"}}
+        >
           <img
             src={umichLogo}
             alt="University of Michigan logo"
@@ -75,15 +104,17 @@ function Header() {
 
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
-  <li>
-    <a
-      href="#/about"
-      onClick={event => goToRouteAndScroll(event, "#/about", "about")}
-    >
-      About
-    </a>
-  </li>
-)}
+            <li>
+              <a
+                href="#/about"
+                onClick={event =>
+                  goToRouteAndScroll(event, "#/about", "about")
+                }
+              >
+                About
+              </a>
+            </li>
+          )}
 
           {viewEducation && (
             <li>
