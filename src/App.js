@@ -1,11 +1,11 @@
 import React, {lazy, Suspense} from "react";
 import "./App.scss";
-
 import {HashRouter, Switch, Route, Redirect} from "react-router-dom";
 
 import Main from "./containers/Main";
 
 const Courses = lazy(() => import("./containers/courses/Courses"));
+const ContactPage = lazy(() => import("./containers/contact/ContactPage"));
 
 function App() {
   return (
@@ -19,10 +19,11 @@ function App() {
           <Route exact path="/blogs" component={Main} />
           <Route exact path="/talks" component={Main} />
           <Route exact path="/resume" component={Main} />
-          <Route exact path="/contact" component={Main} />
 
           <Route exact path="/courses" component={Courses} />
           <Route exact path="/achievements" component={Courses} />
+
+          <Route exact path="/contact" component={ContactPage} />
 
           <Redirect to="/" />
         </Switch>

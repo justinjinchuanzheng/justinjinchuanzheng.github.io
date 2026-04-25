@@ -15,7 +15,6 @@ import Education from "./education/Education";
 import ResearchAppointments from "./researchAppointments/ResearchAppointments";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
-import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
@@ -52,8 +51,7 @@ const Main = () => {
       "/research": "skills",
       "/blogs": "blogs",
       "/talks": "talks",
-      "/resume": "resume",
-      "/contact": "contact"
+      "/resume": "resume"
     };
 
     const sectionId = sectionMap[location.pathname];
@@ -92,7 +90,6 @@ const Main = () => {
             <Talks />
             <Twitter />
             <Podcast />
-            <Profile />
             <Footer />
             <ScrollToTopButton />
           </>

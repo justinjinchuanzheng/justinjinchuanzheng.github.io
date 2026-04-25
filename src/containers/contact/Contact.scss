@@ -90,3 +90,10 @@
 #contact.main {
   margin-top: 5rem; // try 2rem; use 1rem or 0rem if you want it even tighter
 }
+
+.contact-page-wrapper {
+  min-height: calc(100vh - 100px);
+  padding-top: 100px;
+  display: flex;
+  align-items: flex-start;
+}
