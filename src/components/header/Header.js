@@ -24,7 +24,7 @@ function Header() {
   const viewTalks = talkSection.display;
   const viewResume = resumeSection.display;
 
-  const scrollToResearchSection = sectionId => {
+  const scrollToSection = (sectionId, delay = 0) => {
     setTimeout(() => {
       const section = document.getElementById(sectionId);
 
@@ -34,7 +34,18 @@ function Header() {
           block: "start"
         });
       }
-    }, 300);
+    }, delay);
+  };
+
+  const goToRouteAndScroll = (event, route, sectionId) => {
+    event.preventDefault();
+
+    if (window.location.hash !== route) {
+      window.location.hash = route;
+      scrollToSection(sectionId, 400);
+    } else {
+      scrollToSection(sectionId, 50);
+    }
   };
 
   return (
@@ -71,7 +82,14 @@ function Header() {
 
           {viewEducation && (
             <li>
-              <a href="#/education">Education</a>
+              <a
+                href="#/education"
+                onClick={event =>
+                  goToRouteAndScroll(event, "#/education", "education")
+                }
+              >
+                Education
+              </a>
             </li>
           )}
 
@@ -79,7 +97,9 @@ function Header() {
             <li className="menu-dropdown">
               <a
                 href="#/research"
-                onClick={() => scrollToResearchSection("skills")}
+                onClick={event =>
+                  goToRouteAndScroll(event, "#/research", "skills")
+                }
               >
                 Research <span className="menu-caret">▾</span>
               </a>
@@ -88,8 +108,12 @@ function Header() {
                 <li>
                   <a
                     href="#/research"
-                    onClick={() =>
-                      scrollToResearchSection("liquid-metal-actuators")
+                    onClick={event =>
+                      goToRouteAndScroll(
+                        event,
+                        "#/research",
+                        "liquid-metal-actuators"
+                      )
                     }
                   >
                     Liquid Metal Actuators
@@ -99,8 +123,12 @@ function Header() {
                 <li>
                   <a
                     href="#/research"
-                    onClick={() =>
-                      scrollToResearchSection("liquid-state-batteries")
+                    onClick={event =>
+                      goToRouteAndScroll(
+                        event,
+                        "#/research",
+                        "liquid-state-batteries"
+                      )
                     }
                   >
                     Liquid State Batteries
