@@ -26,6 +26,12 @@ body {
   z-index: 9999 !important;
 }
 
+/* UMich colors used in the header */
+$umich-maize: #ffcb05;
+$umich-maize-light: #ffd84d;
+$umich-navy: #00274c;
+$dropdown-navy: #1b2230;
+
 /* Header colors */
 .dark-menu {
   background-color: $darkBackground !important;
@@ -37,7 +43,8 @@ body {
 }
 
 .dark-menu li a:hover {
-  background-color: $buttonColor !important;
+  background-color: $umich-maize !important;
+  color: $umich-navy !important;
 }
 
 .header {
@@ -70,7 +77,8 @@ body {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: $headerHoverBG;
+  background-color: $umich-maize !important;
+  color: $umich-navy !important;
 }
 
 /* Logo block */
@@ -124,6 +132,11 @@ body {
   cursor: pointer;
 }
 
+.header .menu-dropdown:hover > a {
+  background-color: $umich-maize !important;
+  color: $umich-navy !important;
+}
+
 .menu-caret {
   font-size: 0.7rem;
   margin-left: 5px;
@@ -135,13 +148,14 @@ body {
   top: 100%;
   left: 0;
   min-width: 245px;
-  background-color: #242424;
+  background-color: $dropdown-navy !important;
   z-index: 10000;
   padding: 0;
   margin: 0;
   list-style: none;
   overflow: visible;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+  border-top: 2px solid $umich-maize;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
 }
 
 .header .submenu li {
@@ -156,12 +170,26 @@ body {
   white-space: nowrap;
   font-size: 15px;
   line-height: 1.25;
-  background-color: #242424;
+  background-color: $dropdown-navy !important;
 }
 
 .header .submenu li a:hover {
-  background-color: $buttonColor !important;
+  background-color: $umich-maize !important;
+  color: $umich-navy !important;
+}
+
+.dark-menu .submenu {
+  background-color: $dropdown-navy !important;
+}
+
+.dark-menu .submenu li a {
+  background-color: $dropdown-navy !important;
   color: #ffffff !important;
+}
+
+.dark-menu .submenu li a:hover {
+  background-color: $umich-maize !important;
+  color: $umich-navy !important;
 }
 
 .header .menu-dropdown:hover .submenu {
@@ -313,12 +341,29 @@ body {
     display: block;
     min-width: 100%;
     box-shadow: none;
-    background-color: transparent;
+    border-top: none;
+    background-color: transparent !important;
   }
 
   .header .submenu li a {
     padding-left: 40px;
-    background-color: transparent;
+    background-color: transparent !important;
+    color: inherit !important;
     font-size: 14px;
+  }
+
+  .header .submenu li a:hover {
+    background-color: $umich-maize !important;
+    color: $umich-navy !important;
+  }
+
+  .dark-menu .submenu li a {
+    background-color: transparent !important;
+    color: #ffffff !important;
+  }
+
+  .dark-menu .submenu li a:hover {
+    background-color: $umich-maize !important;
+    color: $umich-navy !important;
   }
 }
