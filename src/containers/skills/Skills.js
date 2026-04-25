@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import "./Skills.scss";
 import {skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
@@ -7,6 +7,42 @@ import StyleContext from "../../contexts/StyleContext";
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
   const publicUrl = process.env.PUBLIC_URL || "";
+
+  useEffect(() => {
+    const videos = Array.from(document.querySelectorAll("#skills video"));
+
+    if (!("IntersectionObserver" in window)) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const video = entry.target;
+
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      {
+        rootMargin: "1200px 0px",
+        threshold: 0.01
+      }
+    );
+
+    videos.forEach(video => {
+      video.muted = true;
+      video.playsInline = true;
+      observer.observe(video);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   if (!skillsSection.display) {
     return null;
