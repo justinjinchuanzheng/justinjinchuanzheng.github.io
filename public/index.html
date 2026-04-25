@@ -6,11 +6,31 @@
 
     <!-- Edit meta tags for SEO -->
     <title>Justin Zheng | Research Portfolio</title>
-    <meta name="title" content="Justin Zheng | Research Portfolio">
+    <meta name="title" content="Justin Zheng | Research Portfolio" />
     <meta
       name="description"
       content="Research portfolio of Justin Zheng, an undergraduate robotics researcher at the University of Michigan focusing on soft robotics and liquid-metal actuators."
     />
+
+    <!-- Prevent initial white flash before React/CSS loads -->
+    <style>
+      html,
+      body,
+      #root {
+        margin: 0;
+        min-height: 100%;
+        background-color: #171c28;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #171c28;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+    </style>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -24,16 +44,22 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://justinjinchuanzheng.github.io/" />
-    <meta property="twitter:title" content="Justin Zheng | Research Portfolio" />
+    <meta
+      property="twitter:url"
+      content="https://justinjinchuanzheng.github.io/"
+    />
+    <meta
+      property="twitter:title"
+      content="Justin Zheng | Research Portfolio"
+    />
     <meta
       property="twitter:description"
       content="Research portfolio of Justin Zheng, an undergraduate robotics researcher at the University of Michigan focusing on soft robotics and liquid-metal actuators."
     />
     <!-- <meta property="twitter:image" content=""> -->
 
-    <meta name="msapplication-TileColor" content="#603cba" />
-    <meta name="theme-color" content="#6c63ff" />
+    <meta name="msapplication-TileColor" content="#171c28" />
+    <meta name="theme-color" content="#171c28" />
 
     <!-- Favicon: UMich logo in public/umichLogo.png -->
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/umichLogo.png" />
@@ -58,10 +84,15 @@
     />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6N2Z0SK3S1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6N2Z0SK3S1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag("js", new Date());
       gtag("config", "G-6N2Z0SK3S1");
     </script>
@@ -72,6 +103,7 @@
       href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css"
     />
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
