@@ -4,31 +4,63 @@
   font-size: 56px;
   font-weight: 400;
   line-height: normal;
-  margin: 0; /* keep all sides zero */
-  margin-bottom: 24px; /* space under "Graduate Level Courses" */
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .achievement-subtitle {
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 50px; /* keep the space below the subtitle */
+  margin-bottom: 50px;
 }
 
-/* NEW: subtitle colors for this section only */
+/* Subtitle colors for this section only */
 .achievement-subtitle-dark {
-  color: #ffffff; /* pure white in dark mode */
+  color: #ffffff;
 }
 
 .achievement-subtitle-light {
-  color: #000000; /* pure black in light mode */
+  color: #000000;
 }
 
 .subTitle {
   color: $subTitle;
 }
 
-/* Extra styles for the detailed course descriptions at the bottom */
+/* Force 5 course cards in one row on desktop */
+#achievements .achievement-cards-div {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
 
+/* Make each card slightly smaller so all 5 fit nicely */
+#achievements .certificate-card {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#achievements .certificate-image-div {
+  height: 165px;
+}
+
+#achievements .card-image {
+  width: 155px;
+  max-width: 100%;
+  height: auto;
+}
+
+#achievements .card-title {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+#achievements .card-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.45rem;
+}
+
+/* Extra styles for the detailed course descriptions at the bottom */
 .course-detail-list {
   margin-top: 3rem;
   max-width: 1000px;
@@ -43,7 +75,7 @@
 .course-detail-title {
   font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.4; /* add this (try 1.4–1.5) */
+  line-height: 1.4;
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -60,18 +92,58 @@
   margin: 2rem 0 1.5rem;
 }
 
-/* Media Query */
+.course-card-title-line,
+.course-card-credits,
+.course-card-grade {
+  display: block;
+}
+
+.course-card-credits {
+  margin-top: 0.4rem;
+}
+
+.course-card-grade {
+  margin-top: 0.35rem;
+}
+
+/* Pull Graduate Level Courses closer to the line above */
+#achievements.main {
+  margin-top: 2rem;
+}
+
+/* Medium screens: use 3 per row */
 @media (max-width: 1380px) {
   .achievement-heading {
     font-size: 40px;
   }
+
+  #achievements .achievement-cards-div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #achievements .certificate-image-div {
+    height: 220px;
+  }
+
+  #achievements .card-image {
+    width: 220px;
+  }
 }
 
+/* Small tablets: use 2 per row */
+@media (max-width: 900px) {
+  #achievements .achievement-cards-div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Phone layout */
 @media (max-width: 768px) {
   .achievement-heading {
     font-size: 30px;
     text-align: center;
   }
+
   .achievement-subtitle {
     font-size: 16px;
     line-height: normal;
@@ -85,38 +157,31 @@
   .course-detail-text {
     font-size: 1rem;
   }
-}
 
-.course-card-title-line,
-.course-card-credits,
-.course-card-grade {
-  display: block;
-}
-
-.course-card-credits {
-  margin-top: 0.4rem; // space between title and credits
-}
-
-.course-card-grade {
-  margin-top: 0.35rem; // space between credits and grade
-}
-
-/* Pull Graduate Level Courses closer to the line above */
-#achievements.main {
-  margin-top: 2rem; /* try 1rem or 0rem if you want it even tighter */
-}
-
-/* Phone layout: 2 graduate course cards per row ONLY on small screens */
-@media (max-width: 768px) {
   #achievements .achievement-cards-div {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
-  /* Let each card fill its grid cell */
-  #achievements .achievement-cards-div .achievement-card {
+  #achievements .certificate-card {
     width: 100%;
     margin: 0;
+  }
+
+  #achievements .certificate-image-div {
+    height: 150px;
+  }
+
+  #achievements .card-image {
+    width: 135px;
+  }
+
+  #achievements .card-title {
+    font-size: 1rem;
+  }
+
+  #achievements .card-subtitle {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
   }
 }

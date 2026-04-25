@@ -27,8 +27,8 @@ const greeting = {
     "I am an undergraduate student at the University of Michigan with a research focus on soft robotics. I am interested in how the composition and structure of soft materials, such as liquid metal based conductors, battery materials, and architected soft composites, shape the behavior of robotic actuators and bodies. My goal is to design functional materials that can bend, stretch, and distribute forces in a controlled way so that robots can navigate safely through complex environments. I envision a future where soft robots are built from materials that are intrinsically safe for close human interaction and energetically sustainable throughout their life cycle."
   ),
   resumeLink:
-    "https://scholar.google.com/citations?hl=en&user=XVc7h10AAAAJ&view_op=list_works&gmla=AKzYXQ3YJXS2bDhbIpt6reHK-TmlO_rzsUAFdN1H1yPuXGp_ya6MzLa4ksd5MhPkLgByQGzoUKkwuMLl4YoEXdMU", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+    "https://scholar.google.com/citations?hl=en&user=XVc7h10AAAAJ&view_op=list_works&gmla=AKzYXQ3YJXS2bDhbIpt6reHK-TmlO_rzsUAFdN1H1yPuXGp_ya6MzLa4ksd5MhPkLgByQGzoUKkwuMLl4YoEXdMU",
+  displayGreeting: true
 };
 
 // Social Media Links
@@ -43,7 +43,7 @@ const socialMediaLinks = {
   //stackoverflow: "#",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
-  display: false // Set true to display this section, defaults to false
+  display: false
 };
 
 // Skills Section
@@ -61,13 +61,14 @@ const skillsSection = {
       "⚡ Experimental characterization and high-speed imaging of actuator dynamics."
     )
   ],
-  softwareSkills: [], // hide the tech icons row
+  softwareSkills: [],
   display: true
 };
+
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     /*{
       schoolName: "Harvard University",
@@ -115,7 +116,7 @@ const researchAppointmentsInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: false, // <- change this from true to false
+  viewSkillBars: false,
   experience: [
     {
       Stack: "Frontend/Design",
@@ -136,7 +137,7 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-  display: false, //Set it to true to show workExperiences Section
+  display: false,
   experience: [
     {
       role: "Software Engineer",
@@ -203,17 +204,8 @@ const bigProjects = {
       ]
     }
   ],
-  display: false // <-- hide the whole Big Projects section
+  display: false
 };
-
-// Achievement Section
-// Include certificates, talks etc
-
-// Achievement Section
-// Graduate-level courses
-
-// Achievement Section
-// Graduate-level courses
 
 // Achievement Section
 // Graduate-level courses
@@ -224,7 +216,15 @@ const achievementSection = {
     "Graduate courses I completed during my undergraduate studies at the University of Michigan.",
   achievementsCards: [
     {
-      courseNumber: "ROB 535",
+      courseNumber: "Robotics 560",
+      courseTitle: "Bio-Inspired Robotic Design",
+      credits: "",
+      grade: "",
+      image: require("./assets/images/umichLogo.png"),
+      footerLink: []
+    },
+    {
+      courseNumber: "Robotics 535",
       courseTitle: "Self Driving Cars: Perception and Control",
       credits: "",
       grade: "",
@@ -232,7 +232,7 @@ const achievementSection = {
       footerLink: []
     },
     {
-      courseNumber: "ROB 530",
+      courseNumber: "Robotics 530",
       courseTitle: "Mobile Robotics: Methods and Algorithms",
       credits: "",
       grade: "",
@@ -266,7 +266,7 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "true",
   blogs: [
     {
       url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
@@ -281,7 +281,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Talks Sections
@@ -300,7 +300,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Podcast Section
@@ -309,37 +309,35 @@ const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
-  // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Resume Section
+
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 const contactInfo = {
   title: emoji("Contact Me"),
   subtitle: "",
-  number: "", // leave empty so phone number is NOT shown
+  number: "",
   email_address: "justinjz@umich.edu"
 };
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  userName: "twitter",
+  display: false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false;
 
 export {
   illustration,

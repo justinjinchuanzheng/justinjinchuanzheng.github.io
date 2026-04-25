@@ -80,7 +80,33 @@ export default function Achievement() {
                     : "course-detail-title"
                 }
               >
-                ROB 535 · Self Driving Cars: Perception and Control
+                Robotics 560 · Bio-Inspired Robotic Design
+              </h2>
+              <p
+                className={
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
+                }
+              >
+                Examines original scientific research to extract general
+                principles that can be applied to robotics, such as template and
+                anchor models, walking, running, swimming, flying, sensing, and
+                navigation. Students build functional prototypes and learn about
+                the bioinspired design process through case studies that
+                highlight health, the environment, and safety.
+              </p>
+              <hr className="course-detail-divider" />
+            </div>
+
+            <div className="course-detail">
+              <hr className="course-detail-divider" />
+              <h2
+                className={
+                  isDark
+                    ? "dark-mode course-detail-title"
+                    : "course-detail-title"
+                }
+              >
+                Robotics 535 · Self Driving Cars: Perception and Control
               </h2>
               <p
                 className={
@@ -107,7 +133,7 @@ export default function Achievement() {
                     : "course-detail-title"
                 }
               >
-                ROB 530 · Mobile Robotics: Methods and Algorithms
+                Robotics 530 · Mobile Robotics: Methods and Algorithms
               </h2>
               <p
                 className={
@@ -117,11 +143,11 @@ export default function Achievement() {
                 Theory and application of probabilistic techniques for
                 autonomous mobile robotics. This course will present and
                 critically examine contemporary algorithms for robot perception
-                (using a variety of modalities), state estimation, mapping, and
+                using a variety of modalities, state estimation, mapping, and
                 path planning. Topics include Bayesian filtering; stochastic
                 representations of the environment; motion and sensor models for
                 mobile robots; algorithms for mapping, localization, planning
-                and control in the presense of uncertainty; application to
+                and control in the presence of uncertainty; application to
                 autonomous marine, ground, and air vehicles.
               </p>
               <hr className="course-detail-divider" />
@@ -146,8 +172,8 @@ export default function Achievement() {
                 Many life processes occur at small size-scales. This course
                 covers scaling laws, biological solutions to coping with or
                 taking advantage of small size, micro- and nanofabrication
-                techniques, biochemistry, and biomedical applications (genomics,
-                proteomics, cell biology, diagnostics, etc.). There is an
+                techniques, biochemistry, and biomedical applications, including
+                genomics, proteomics, cell biology, and diagnostics. There is an
                 emphasis on microfluidics, surface science, and non-traditional
                 fabrication techniques.
               </p>
