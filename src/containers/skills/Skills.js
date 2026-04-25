@@ -25,7 +25,7 @@ export default function Skills() {
         </p>
       </div>
 
-      <Fade bottom duration={1000} distance="40px">
+      <Fade duration={300}>
         {/* Dragonfly: two videos side by side */}
         <div className="skills-video-row">
           <div className="skills-video-block">
