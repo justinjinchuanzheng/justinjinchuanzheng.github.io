@@ -262,8 +262,12 @@
 .video-caption {
   margin-top: 0.75rem;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #00274c;
   text-align: center;
+}
+
+.dark-mode .video-caption {
+  color: #ffffff !important;
 }
 
 /* ===== DESKTOP / LARGE SCREEN ===== */
