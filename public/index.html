@@ -12,11 +12,10 @@
       content="Research portfolio of Justin Zheng, an undergraduate robotics researcher at the University of Michigan focusing on soft robotics and liquid-metal actuators."
     />
 
-    <!-- Prevent initial white flash before React/CSS loads -->
+    <!-- Prevent initial white flash before React/CSS loads, but allow light mode after app loads -->
     <style>
       html,
-      body,
-      #root {
+      body {
         margin: 0;
         min-height: 100%;
         background-color: #171c28;
@@ -30,7 +29,62 @@
       #root {
         min-height: 100vh;
       }
+
+      body.app-loaded {
+        background-color: #ffffff;
+      }
+
+      body.app-loaded.app-dark {
+        background-color: #171c28;
+      }
     </style>
+
+    <script>
+      (function () {
+        function updateBodyBackground() {
+          var root = document.getElementById("root");
+
+          if (!root || !document.body) {
+            return;
+          }
+
+          var isDarkMode = !!root.querySelector(".dark-mode");
+
+          document.body.classList.add("app-loaded");
+
+          if (isDarkMode) {
+            document.body.classList.add("app-dark");
+          } else {
+            document.body.classList.remove("app-dark");
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var root = document.getElementById("root");
+
+          if (!root) {
+            updateBodyBackground();
+            return;
+          }
+
+          var observer = new MutationObserver(function () {
+            updateBodyBackground();
+          });
+
+          observer.observe(root, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["class"]
+          });
+
+          updateBodyBackground();
+
+          setTimeout(updateBodyBackground, 500);
+          setTimeout(updateBodyBackground, 1500);
+        });
+      })();
+    </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
