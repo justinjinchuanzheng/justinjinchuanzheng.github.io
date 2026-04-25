@@ -23,6 +23,7 @@
   gap: 40px;
   position: relative;
   padding-top: 0;
+  scroll-margin-top: 210px;
 }
 
 /* generic subtitle color used in other sections */
@@ -317,6 +318,7 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    scroll-margin-top: 150px;
   }
 
   .greeting-text-div {

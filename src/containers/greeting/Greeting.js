@@ -59,7 +59,7 @@ export default function Greeting() {
 
               <div className="button-greeting-div">
                 <a
-                  href="#contact"
+                  href="#/contact"
                   className={`greeting-cta ${isDark ? "dark" : "light"}`}
                 >
                   Contact me

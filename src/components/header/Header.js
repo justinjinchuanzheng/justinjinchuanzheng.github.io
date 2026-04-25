@@ -75,10 +75,15 @@ function Header() {
 
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
-            <li>
-              <a href="#/about">About</a>
-            </li>
-          )}
+  <li>
+    <a
+      href="#/about"
+      onClick={event => goToRouteAndScroll(event, "#/about", "about")}
+    >
+      About
+    </a>
+  </li>
+)}
 
           {viewEducation && (
             <li>
