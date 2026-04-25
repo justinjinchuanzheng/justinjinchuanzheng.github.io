@@ -5,8 +5,6 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import umichLogo from "../../assets/images/umichLogo.png";
 import {
-  greeting,
-  workExperiences,
   skillsSection,
   blogSection,
   talkSection,
@@ -18,19 +16,31 @@ import {
 function Header() {
   const {isDark} = useContext(StyleContext);
 
-  // Section visibility flags from portfolio.js
-  const viewSkills = skillsSection.display; // About
-  const viewResearch = skillsSection.display; // Research
-  const viewEducation = educationInfo.display; // Education
+  const viewSkills = skillsSection.display;
+  const viewResearch = skillsSection.display;
+  const viewEducation = educationInfo.display;
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
   const viewResume = resumeSection.display;
 
+  const scrollToResearchSection = sectionId => {
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }, 300);
+  };
+
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        {/* Logo and title: now NON-clickable */}
+        {/* Logo and title: non-clickable */}
         <div className="logo">
           <img
             src={umichLogo}
@@ -43,6 +53,7 @@ function Header() {
         </div>
 
         <input className="menu-btn" type="checkbox" id="menu-btn" />
+
         <label
           className="menu-icon"
           htmlFor="menu-btn"
@@ -54,22 +65,48 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              {/* About – hero section */}
               <a href="#/about">About</a>
             </li>
           )}
 
           {viewEducation && (
             <li>
-              {/* Education section */}
               <a href="#/education">Education</a>
             </li>
           )}
 
           {viewResearch && (
-            <li>
-              {/* Research goes to the Skills/Research section */}
-              <a href="#/research">Research</a>
+            <li className="menu-dropdown">
+              <a
+                href="#/research"
+                onClick={() => scrollToResearchSection("skills")}
+              >
+                Research <span className="menu-caret">▾</span>
+              </a>
+
+              <ul className={isDark ? "dark-menu submenu" : "submenu"}>
+                <li>
+                  <a
+                    href="#/research"
+                    onClick={() =>
+                      scrollToResearchSection("liquid-metal-actuators")
+                    }
+                  >
+                    Liquid Metal Actuators
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#/research"
+                    onClick={() =>
+                      scrollToResearchSection("liquid-state-batteries")
+                    }
+                  >
+                    Liquid State Batteries
+                  </a>
+                </li>
+              </ul>
             </li>
           )}
 

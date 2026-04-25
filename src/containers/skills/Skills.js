@@ -51,13 +51,13 @@ export default function Skills() {
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       {/* Header */}
-      <div className="skills-header">
+      <div className="skills-header" id="liquid-metal-actuators">
         <h1 className={isDark ? "dark-mode skills-heading" : "skills-heading"}>
           Research
         </h1>
-        <h2 className="skills-project-title">Liquid Metal Actuator</h2>
+        <h2 className="skills-project-title">Liquid Metal Actuators</h2>
         <p className="skills-project-status-top">
-          Manuscript in Preparation (2025 – 2026)
+          Manuscript in Preparation (2025-2026)
         </p>
       </div>
 
@@ -69,7 +69,7 @@ export default function Skills() {
               <source src={`${publicUrl}/Dragonfly.mp4`} type="video/mp4" />
             </video>
             <p className="skills-video-caption">
-              Dragonfly-inspired liquid metal actuator (0.25×).
+              Dragonfly-inspired liquid metal actuator (0.25x).
             </p>
           </div>
 
@@ -326,8 +326,8 @@ export default function Skills() {
           <div className="skills-battery-video-divider" />
         </div>
 
-        {/* ================= Batteries section ================= */}
-        <div className="skills-battery-header">
+        {/* Batteries section */}
+        <div className="skills-battery-header" id="liquid-state-batteries">
           <h2
             className={
               isDark ? "dark-mode skills-project-title" : "skills-project-title"
@@ -335,7 +335,7 @@ export default function Skills() {
           >
             High-Performance Liquid-State Batteries
           </h2>
-          <p className="skills-project-status-top">2024–2025</p>
+          <p className="skills-project-status-top">2024-2025</p>
         </div>
 
         <div className="skills-battery-project">
@@ -356,7 +356,7 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* NEW: coin cell schematic image */}
+        {/* Coin cell schematic image */}
         <div className="skills-battery-image">
           <img
             className="skills-battery-cell-img"
@@ -454,7 +454,7 @@ export default function Skills() {
           }
         >
           SEM micrographs of dry-processed NMF333 composite cathodes at
-          different magnifications (1–50 µm), showing the PTFE fibril network
+          different magnifications (1-50 µm), showing the PTFE fibril network
           tying secondary particles together.
         </p>
       </Fade>
