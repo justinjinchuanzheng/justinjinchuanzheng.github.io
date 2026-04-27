@@ -107,9 +107,7 @@ function Header() {
             <li>
               <a
                 href="#/about"
-                onClick={event =>
-                  goToRouteAndScroll(event, "#/about", "about")
-                }
+                onClick={event => goToRouteAndScroll(event, "#/about", "about")}
               >
                 About
               </a>

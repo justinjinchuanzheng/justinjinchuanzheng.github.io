@@ -31,6 +31,7 @@ $umich-maize: #ffcb05;
 $umich-maize-light: #ffd84d;
 $umich-navy: #00274c;
 $dropdown-navy: #1b2230;
+$dropdown-hover: #2a3140;
 
 /* Header colors */
 .dark-menu {
@@ -40,11 +41,6 @@ $dropdown-navy: #1b2230;
 
 .dark-menu li a {
   color: $textColorDark !important;
-}
-
-.dark-menu li a:hover {
-  background-color: $umich-maize !important;
-  color: $umich-navy !important;
 }
 
 .header {
@@ -75,10 +71,25 @@ $dropdown-navy: #1b2230;
   text-decoration: none;
 }
 
-.header li a:hover,
+/* Light mode top nav hover style */
+.header > .menu > li > a:hover,
+.header > .menu > li > a:focus,
+.header > .menu > li > a:active,
 .header .menu-btn:hover {
-  background-color: $umich-maize !important;
+  background-color: transparent !important;
   color: $umich-navy !important;
+  outline: 2px solid $umich-maize;
+  outline-offset: -2px;
+}
+
+/* Dark mode top nav hover style */
+.dark-menu > .menu > li > a:hover,
+.dark-menu > .menu > li > a:focus,
+.dark-menu > .menu > li > a:active {
+  background-color: transparent !important;
+  color: $umich-maize !important;
+  outline: 2px solid $umich-maize;
+  outline-offset: -2px;
 }
 
 /* Logo block */
@@ -132,9 +143,20 @@ $dropdown-navy: #1b2230;
   cursor: pointer;
 }
 
+/* Light mode Research tab hover */
 .header .menu-dropdown:hover > a {
-  background-color: $umich-maize !important;
+  background-color: transparent !important;
   color: $umich-navy !important;
+  outline: 2px solid $umich-maize;
+  outline-offset: -2px;
+}
+
+/* Dark mode Research tab hover */
+.dark-menu .menu-dropdown:hover > a {
+  background-color: transparent !important;
+  color: $umich-maize !important;
+  outline: 2px solid $umich-maize;
+  outline-offset: -2px;
 }
 
 .menu-caret {
@@ -171,11 +193,15 @@ $dropdown-navy: #1b2230;
   font-size: 15px;
   line-height: 1.25;
   background-color: $dropdown-navy !important;
+  border-left: 3px solid transparent;
 }
 
+/* Dropdown hover */
 .header .submenu li a:hover {
-  background-color: $umich-maize !important;
-  color: $umich-navy !important;
+  background-color: $dropdown-hover !important;
+  color: $umich-maize !important;
+  border-left: 3px solid $umich-maize;
+  outline: none;
 }
 
 .dark-menu .submenu {
@@ -185,11 +211,14 @@ $dropdown-navy: #1b2230;
 .dark-menu .submenu li a {
   background-color: $dropdown-navy !important;
   color: #ffffff !important;
+  border-left: 3px solid transparent;
 }
 
 .dark-menu .submenu li a:hover {
-  background-color: $umich-maize !important;
-  color: $umich-navy !important;
+  background-color: $dropdown-hover !important;
+  color: $umich-maize !important;
+  border-left: 3px solid $umich-maize;
+  outline: none;
 }
 
 .header .menu-dropdown:hover .submenu {
@@ -350,20 +379,26 @@ $dropdown-navy: #1b2230;
     background-color: transparent !important;
     color: inherit !important;
     font-size: 14px;
+    border-left: 3px solid transparent;
   }
 
   .header .submenu li a:hover {
-    background-color: $umich-maize !important;
-    color: $umich-navy !important;
+    background-color: $dropdown-hover !important;
+    color: $umich-maize !important;
+    border-left: 3px solid $umich-maize;
+    outline: none;
   }
 
   .dark-menu .submenu li a {
     background-color: transparent !important;
     color: #ffffff !important;
+    border-left: 3px solid transparent;
   }
 
   .dark-menu .submenu li a:hover {
-    background-color: $umich-maize !important;
-    color: $umich-navy !important;
+    background-color: $dropdown-hover !important;
+    color: $umich-maize !important;
+    border-left: 3px solid $umich-maize;
+    outline: none;
   }
 }

@@ -95,12 +95,17 @@ export default function Skills() {
             Dragonfly-Inspired Millirobot Driven by a Liquid-Metal Muscle
           </h3>
 
-          <p className={isDark ? "subTitle skills-text" : "subTitle skills-text-dark"}>
+          <p
+            className={
+              isDark ? "subTitle skills-text" : "subTitle skills-text-dark"
+            }
+          >
             This video shows a millimeter-scale flapping-wing robot driven by a
-            liquid-metal hydrogel actuator. The demonstration shows how low-voltage,
-            high-bandwidth soft actuators can be integrated into insect-scale robotic
-            platforms. My contributions included hydrogel material synthesis and
-            quantitative video analysis of wing trajectory and flapping frequency.
+            liquid-metal hydrogel actuator. The demonstration shows how
+            low-voltage, high-bandwidth soft actuators can be integrated into
+            insect-scale robotic platforms. My contributions included hydrogel
+            material synthesis and quantitative video analysis of wing
+            trajectory and flapping frequency.
           </p>
 
           <div className="skills-divider" />
@@ -130,7 +135,8 @@ export default function Skills() {
                 <source src={`${publicUrl}/Actuator.mp4`} type="video/mp4" />
               </video>
               <p className="skills-video-caption">
-                Axisymmetric liquid-metal hydrogel muscle operating in real time.
+                Axisymmetric liquid-metal hydrogel muscle operating in real
+                time.
               </p>
             </div>
           </div>
@@ -143,10 +149,10 @@ export default function Skills() {
                   : "subTitle skills-text"
               }
             >
-              This video shows an axisymmetric liquid-metal hydrogel muscle 
-              operating in real time. My contributions included synthesizing 
-              the hydrogel membrane and performing image-based motion tracking 
-              to quantify actuator kinematics using recorded videos.
+              This video shows an axisymmetric liquid-metal hydrogel muscle
+              operating in real time. My contributions included synthesizing the
+              hydrogel membrane and performing image-based motion tracking to
+              quantify actuator kinematics using recorded videos.
             </p>
           </div>
 
@@ -163,7 +169,8 @@ export default function Skills() {
                   : "skills-project-subheading"
               }
             >
-              Linear Kinematic Tracking of an Axisymmetric Liquid-Metal Hydrogel Muscle
+              Linear Kinematic Tracking of an Axisymmetric Liquid-Metal Hydrogel
+              Muscle
             </h3>
           </div>
 
@@ -179,28 +186,30 @@ export default function Skills() {
                 <source src={`${publicUrl}/Tracking.mp4`} type="video/mp4" />
               </video>
               <p className="skills-video-caption">
-                Image-based tracking overlay used to extract axial strain and time-resolved response curves.
+                Image-based tracking overlay used to extract axial strain and
+                time-resolved response curves.
               </p>
             </div>
           </div>
 
           <div className="skills-text-below">
-          <p
-            className={
-              isDark
-                ? "dark-mode subTitle skills-text"
-                : "subTitle skills-text"
-            }
-          >
-            For this project, I designed and implemented an image-based tracking workflow
-            to quantify the linear deformation of an axisymmetric liquid-metal hydrogel
-            muscle. The pipeline tracked actuator boundaries frame by frame, converted
-            pixel motion into physical displacement, and extracted axial strain,
-            actuation frequency, and time-resolved response curves.
-          </p>
+            <p
+              className={
+                isDark
+                  ? "dark-mode subTitle skills-text"
+                  : "subTitle skills-text"
+              }
+            >
+              For this project, I designed and implemented an image-based
+              tracking workflow to quantify the linear deformation of an
+              axisymmetric liquid-metal hydrogel muscle. The pipeline tracked
+              actuator boundaries frame by frame, converted pixel motion into
+              physical displacement, and extracted axial strain, actuation
+              frequency, and time-resolved response curves.
+            </p>
 
-          <div className="skills-divider" />
-        </div>
+            <div className="skills-divider" />
+          </div>
         </div>
 
         {/* Battery demo video gallery */}
@@ -296,17 +305,18 @@ export default function Skills() {
 
         <div className="skills-battery-project">
           <p
-          className={
-            isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
-          }
-        >
-          I led a battery research project developing dry-processed, high-loading
-          sodium-ion cathodes using PTFE binder and hot-roll pressing. This route
-          achieved areal loadings up to about 20 mg cm⁻² while maintaining strong
-          cycling performance compared with a lower-loading wet-electrode control.
-          My work included electrode fabrication, coin cell assembly, cycling tests,
-          SEM preparation, and data analysis.
-        </p>
+            className={
+              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
+            }
+          >
+            I led a battery research project developing dry-processed,
+            high-loading sodium-ion cathodes using PTFE binder and hot-roll
+            pressing. This route achieved areal loadings up to about 20 mg cm⁻²
+            while maintaining strong cycling performance compared with a
+            lower-loading wet-electrode control. My work included electrode
+            fabrication, coin cell assembly, cycling tests, SEM preparation, and
+            data analysis.
+          </p>
         </div>
 
         {/* Coin cell schematic image */}
@@ -407,9 +417,9 @@ export default function Skills() {
               : "subTitle skills-text skills-sem-caption"
           }
         >
-          SEM micrographs of dry-processed NMF333 composite cathodes at multiple length
-          scales, showing PTFE fibrils linking secondary particles into a connected
-          electrode network.
+          SEM micrographs of dry-processed NMF333 composite cathodes at multiple
+          length scales, showing PTFE fibrils linking secondary particles into a
+          connected electrode network.
         </p>
       </Fade>
     </div>
