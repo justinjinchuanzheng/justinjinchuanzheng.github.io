@@ -55,7 +55,7 @@ export default function Skills() {
         <h1 className={isDark ? "dark-mode skills-heading" : "skills-heading"}>
           Research
         </h1>
-        <h2 className="skills-project-title">Liquid Metal Actuators</h2>
+        <h2 className="skills-project-title">Liquid-Metal Actuators</h2>
         <p className="skills-project-status-top">
           Manuscript in Preparation (2025-2026)
         </p>
@@ -69,7 +69,7 @@ export default function Skills() {
               <source src={`${publicUrl}/Dragonfly.mp4`} type="video/mp4" />
             </video>
             <p className="skills-video-caption">
-              Dragonfly-inspired liquid metal actuator (0.25x).
+              Dragonfly-inspired liquid-metal actuator shown at 0.25x speed.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export default function Skills() {
               <source src={`${publicUrl}/Dragonfly2.mp4`} type="video/mp4" />
             </video>
             <p className="skills-video-caption">
-              Dragonfly actuator in real time.
+              Dragonfly-inspired liquid-metal actuator operating in real time.
             </p>
           </div>
         </div>
@@ -92,30 +92,15 @@ export default function Skills() {
                 : "skills-project-subheading"
             }
           >
-            Dragonfly-Inspired Millirobot Driven by a Liquid-Metal Hydrogel
-            Muscle
+            Dragonfly-Inspired Millirobot Driven by a Liquid-Metal Muscle
           </h3>
 
-          <p
-            className={
-              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
-            }
-          >
-            This video shows a millimeter scale flapping-wing robot driven by a
-            liquid-metal core encapsulated in a {/*polyacrylamide/KOH*/}{" "}
-            hydrogel membrane.{" "}
-            {/*By modulating the surface tension of the liquid metal with
-            electrical inputs of about 1 V, the actuator produces more than 40%
-            strain with strain rates above 1,000% per second and maintains
-            measurable motion up to 50 Hz, comparable to biological dragonfly
-            wingbeat frequencies.*/}{" "}
-            This demonstration illustrates that low-voltage, high-bandwidth soft
-            actuators can be integrated into insect-scale robotic platforms for
-            controlled flapping flight. My contributions to this work include
-            synthesizing the hydrogel material used in the actuator and
-            performing quantitative data analysis and movement tracking from
-            high-speed videos, including wing trajectory and flapping-frequency
-            extraction.
+          <p className={isDark ? "subTitle skills-text" : "subTitle skills-text-dark"}>
+            This video shows a millimeter-scale flapping-wing robot driven by a
+            liquid-metal hydrogel actuator. The demonstration shows how low-voltage,
+            high-bandwidth soft actuators can be integrated into insect-scale robotic
+            platforms. My contributions included hydrogel material synthesis and
+            quantitative video analysis of wing trajectory and flapping frequency.
           </p>
 
           <div className="skills-divider" />
@@ -130,8 +115,7 @@ export default function Skills() {
                 : "skills-project-subheading"
             }
           >
-            Axisymmetric Liquid-Metal Hydrogel Muscle: Single-Actuator
-            Characterization
+            Axisymmetric Liquid-Metal Hydrogel Muscle Characterization
           </h3>
 
           <div className="skills-single-video">
@@ -146,8 +130,7 @@ export default function Skills() {
                 <source src={`${publicUrl}/Actuator.mp4`} type="video/mp4" />
               </video>
               <p className="skills-video-caption">
-                Axisymmetric liquid-metal hydrogel muscle actuator operating in
-                real time.
+                Axisymmetric liquid-metal hydrogel muscle operating in real time.
               </p>
             </div>
           </div>
@@ -160,19 +143,10 @@ export default function Skills() {
                   : "subTitle skills-text"
               }
             >
-              This video shows a single-axis, axisymmetric liquid-metal hydrogel
-              actuator operating in real time.{" "}
-              {/*A ~24.5 µL droplet of eutectic
-              liquid metal is encapsulated in a ~120 µm thick
-              polyacrylamide/KOH hydrogel membrane and driven with an activation
-              voltage of ±2.6 V at 0.5 Hz, producing large, reversible radial
-              deformation of the cylinder. This experiment is used to
-              characterize strain, response time, cyclic stability, and
-              interfacial bubble dynamics, providing quantitative data for the
-              design of low-voltage soft actuators.*/}{" "}
-              My contributions include synthesizing the hydrogel membrane and
-              performing image-based motion tracking and data analysis of the
-              actuator kinematics from the recorded videos.
+              This video shows an axisymmetric liquid-metal hydrogel muscle 
+              operating in real time. My contributions included synthesizing 
+              the hydrogel membrane and performing image-based motion tracking 
+              to quantify actuator kinematics using recorded videos.
             </p>
           </div>
 
@@ -189,8 +163,7 @@ export default function Skills() {
                   : "skills-project-subheading"
               }
             >
-              Linear Kinematic Tracking of Axisymmetric Liquid-Metal Hydrogel
-              Muscle
+              Linear Kinematic Tracking of an Axisymmetric Liquid-Metal Hydrogel Muscle
             </h3>
           </div>
 
@@ -206,45 +179,28 @@ export default function Skills() {
                 <source src={`${publicUrl}/Tracking.mp4`} type="video/mp4" />
               </video>
               <p className="skills-video-caption">
-                Image-based tracking overlay used to extract axial strain and
-                response curves.
+                Image-based tracking overlay used to extract axial strain and time-resolved response curves.
               </p>
             </div>
           </div>
 
           <div className="skills-text-below">
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text"
-                  : "subTitle skills-text"
-              }
-            >
-              For this project, I designed and implemented the tracking workflow
-              and carried out all motion analysis and data processing for the
-              full set of experimental videos.
-            </p>
+          <p
+            className={
+              isDark
+                ? "dark-mode subTitle skills-text"
+                : "subTitle skills-text"
+            }
+          >
+            For this project, I designed and implemented an image-based tracking workflow
+            to quantify the linear deformation of an axisymmetric liquid-metal hydrogel
+            muscle. The pipeline tracked actuator boundaries frame by frame, converted
+            pixel motion into physical displacement, and extracted axial strain,
+            actuation frequency, and time-resolved response curves.
+          </p>
 
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text"
-                  : "subTitle skills-text"
-              }
-            >
-              This video shows the linear kinematics tracking workflow used to
-              quantify the one dimensional deformation of the axisymmetric
-              liquid-metal hydrogel muscle. An image-based analysis pipeline
-              tracks the actuator boundaries frame by frame, converts pixel
-              motion to physical displacement, and extracts axial strain,
-              actuation frequency, and time-resolved response curves. The
-              resulting datasets are then used to generate experimental graphs
-              and to perform quantitative calculations of response speed, cyclic
-              stability, and voltage-dependent performance.
-            </p>
-
-            <div className="skills-divider" />
-          </div>
+          <div className="skills-divider" />
+        </div>
         </div>
 
         {/* Battery demo video gallery */}
@@ -333,27 +289,24 @@ export default function Skills() {
               isDark ? "dark-mode skills-project-title" : "skills-project-title"
             }
           >
-            High-Performance Liquid-State Batteries
+            Liquid-State Batteries
           </h2>
           <p className="skills-project-status-top">2024-2025</p>
         </div>
 
         <div className="skills-battery-project">
           <p
-            className={
-              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
-            }
-          >
-            I led a battery research project developing a dry-electrode
-            fabrication route for high-loading sodium-ion cathodes using PTFE
-            binder and hot-roll pressing. This approach enabled areal loadings
-            up to about 20 mg cm⁻² while maintaining strong electrochemical
-            performance, including better long-term retention than a
-            lower-loading wet-electrode control. I carried out the full
-            workflow, including electrode fabrication, coin cell assembly,
-            cycling tests, SEM sample preparation, and electrochemical data
-            analysis.
-          </p>
+          className={
+            isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
+          }
+        >
+          I led a battery research project developing dry-processed, high-loading
+          sodium-ion cathodes using PTFE binder and hot-roll pressing. This route
+          achieved areal loadings up to about 20 mg cm⁻² while maintaining strong
+          cycling performance compared with a lower-loading wet-electrode control.
+          My work included electrode fabrication, coin cell assembly, cycling tests,
+          SEM preparation, and data analysis.
+        </p>
         </div>
 
         {/* Coin cell schematic image */}
@@ -361,10 +314,11 @@ export default function Skills() {
           <img
             className="skills-battery-cell-img"
             src={`${publicUrl}/cell.png`}
-            alt="Schematic of a liquid state sodium metal coin cell with Na2MnFe(CN) cathode, Celgard 3501 separator, and sodium anode."
+            alt="Schematic of a liquid-state sodium metal coin cell with 
+            Na₂MnFe(CN) cathode, Celgard 3501 separator, and sodium anode."
           />
           <p className="skills-battery-image-caption">
-            Schematic of a liquid state sodium metal coin cell with Na₂MnFe(CN)
+            Schematic of a liquid-state sodium metal coin cell with Na₂MnFe(CN)
             cathode, Celgard 3501 separator, and sodium anode.
           </p>
         </div>
@@ -453,9 +407,9 @@ export default function Skills() {
               : "subTitle skills-text skills-sem-caption"
           }
         >
-          SEM micrographs of dry-processed NMF333 composite cathodes at
-          different magnifications (1-50 µm), showing the PTFE fibril network
-          tying secondary particles together.
+          SEM micrographs of dry-processed NMF333 composite cathodes at multiple length
+          scales, showing PTFE fibrils linking secondary particles into a connected
+          electrode network.
         </p>
       </Fade>
     </div>

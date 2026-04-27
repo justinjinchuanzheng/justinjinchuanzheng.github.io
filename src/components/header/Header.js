@@ -152,7 +152,7 @@ function Header() {
                       )
                     }
                   >
-                    Liquid Metal Actuators
+                    Liquid-Metal Actuators
                   </a>
                 </li>
 
