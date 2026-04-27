@@ -89,7 +89,7 @@ const educationInfo = {
       subHeader: "Bachelor of Science in Engineering, Robotics",
       duration: "Expected December 2026",
       desc: "",
-      descBullets: ["Research Area: Soft Robotics", "GPA: 4.0 / 4.0"]
+      descBullets: ["Research Focus: Soft Robotics", "GPA: 4.0 / 4.0"]
     }
   ]
 };
@@ -106,8 +106,8 @@ const researchAppointmentsInfo = {
       duration: "",
       desc: "Lab: Soft Machines Lab",
       descBullets: [
-        "Advisor: Professor Carmel Majidi",
-        "Research Area: Soft Robotics, Microfluidic Electronics, Liquid Metal Actuators"
+        "Faculty Host: Prof. Carmel Majidi",
+        "Research Focus: Soft Robotics, Microfluidic Electronics, and Liquid-Metal Actuators"
       ]
     }
   ]

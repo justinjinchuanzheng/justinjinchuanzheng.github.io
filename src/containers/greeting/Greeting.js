@@ -33,7 +33,7 @@ export default function Greeting() {
           </video>
 
           <p className="video-caption">
-            Liquid metal actuator; project lead: Dr. Jiahe Liao.
+            Liquid-metal actuator research project led by Dr. Jiahe Liao.
           </p>
         </div>
 
