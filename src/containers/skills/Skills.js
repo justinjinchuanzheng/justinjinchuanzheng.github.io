@@ -9,16 +9,9 @@ export default function Skills() {
   const publicUrl = process.env.PUBLIC_URL || "";
 
   useEffect(() => {
-    const videos = Array.from(
-      document.querySelectorAll("#skills video[data-lazy-video='true']")
-    );
+    const videos = Array.from(document.querySelectorAll("#skills video"));
 
     if (!("IntersectionObserver" in window)) {
-      videos.forEach(video => {
-        video.muted = true;
-        video.playsInline = true;
-        video.play().catch(() => {});
-      });
       return;
     }
 
@@ -28,8 +21,6 @@ export default function Skills() {
           const video = entry.target;
 
           if (entry.isIntersecting) {
-            video.muted = true;
-            video.playsInline = true;
             video.play().catch(() => {});
           } else {
             video.pause();
@@ -37,8 +28,8 @@ export default function Skills() {
         });
       },
       {
-        rootMargin: "300px 0px",
-        threshold: 0.2
+        rootMargin: "1200px 0px",
+        threshold: 0.01
       }
     );
 
@@ -57,52 +48,6 @@ export default function Skills() {
     return null;
   }
 
-  const mainVideoProps = {
-    autoPlay: true,
-    loop: true,
-    muted: true,
-    playsInline: true,
-    preload: "metadata",
-    "data-lazy-video": "true"
-  };
-
-  const actuatorGalleryVideoProps = {
-    loop: true,
-    muted: true,
-    playsInline: true,
-    preload: "none",
-    "data-lazy-video": "true"
-  };
-
-  const lazyImageProps = {
-    loading: "lazy",
-    decoding: "async"
-  };
-
-  const semImages = [
-    "SEM1.png",
-    "SEM2.png",
-    "SEM3.png",
-    "SEM4.png",
-    "SEM5.png",
-    "SEM6.png",
-    "SEM7.png",
-    "SEM8.png",
-    "SEM9.png",
-    "SEM10.png",
-    "SEM11.png",
-    "SEM12.png"
-  ];
-
-  const actuatorGalleryVideos = [
-    "Bubblevid.mp4",
-    "Greyvid.mp4",
-    "Bubblevid2.mp4",
-    "Bluevid.mp4",
-    "Bluevid1.mp4",
-    "Bluevid2.mp4"
-  ];
-
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       {/* Header */}
@@ -110,9 +55,7 @@ export default function Skills() {
         <h1 className={isDark ? "dark-mode skills-heading" : "skills-heading"}>
           Research
         </h1>
-
         <h2 className="skills-project-title">Liquid-Metal Actuators</h2>
-
         <p className="skills-project-status-top">
           Manuscript in Preparation (2025-2026)
         </p>
@@ -122,20 +65,18 @@ export default function Skills() {
         {/* Dragonfly: two videos side by side */}
         <div className="skills-video-row">
           <div className="skills-video-block">
-            <video className="skills-video" {...mainVideoProps}>
+            <video className="skills-video" autoPlay loop muted playsInline>
               <source src={`${publicUrl}/Dragonfly.mp4`} type="video/mp4" />
             </video>
-
             <p className="skills-video-caption">
               Dragonfly-inspired liquid-metal actuator shown at 0.25x speed.
             </p>
           </div>
 
           <div className="skills-video-block">
-            <video className="skills-video" {...mainVideoProps}>
+            <video className="skills-video" autoPlay loop muted playsInline>
               <source src={`${publicUrl}/Dragonfly2.mp4`} type="video/mp4" />
             </video>
-
             <p className="skills-video-caption">
               Dragonfly-inspired liquid-metal actuator operating in real time.
             </p>
@@ -156,7 +97,7 @@ export default function Skills() {
 
           <p
             className={
-              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
+              isDark ? "subTitle skills-text" : "subTitle skills-text-dark"
             }
           >
             This video shows a millimeter-scale flapping-wing robot driven by a
@@ -184,10 +125,15 @@ export default function Skills() {
 
           <div className="skills-single-video">
             <div className="skills-video-block">
-              <video className="skills-video-wide" {...mainVideoProps}>
+              <video
+                className="skills-video-wide"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
                 <source src={`${publicUrl}/Actuator.mp4`} type="video/mp4" />
               </video>
-
               <p className="skills-video-caption">
                 Axisymmetric liquid-metal hydrogel muscle operating in real
                 time.
@@ -230,10 +176,15 @@ export default function Skills() {
 
           <div className="skills-single-video">
             <div className="skills-video-block">
-              <video className="skills-video-wide" {...mainVideoProps}>
+              <video
+                className="skills-video-wide"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
                 <source src={`${publicUrl}/Tracking.mp4`} type="video/mp4" />
               </video>
-
               <p className="skills-video-caption">
                 Image-based tracking overlay used to extract axial strain and
                 time-resolved response curves.
@@ -261,25 +212,83 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Liquid-metal actuator video gallery */}
-        <div className="skills-actuator-gallery-video-grid-wrapper">
-          <div className="skills-actuator-gallery-video-grid">
-            {actuatorGalleryVideos.map(videoName => (
-              <div
-                className="skills-actuator-gallery-video-block"
-                key={videoName}
+        {/* Battery demo video gallery */}
+        <div className="skills-battery-video-grid-wrapper">
+          <div className="skills-battery-video-grid">
+            <div className="skills-battery-video-block">
+              <video
+                className="skills-battery-video"
+                autoPlay
+                loop
+                muted
+                playsInline
               >
-                <video
-                  className="skills-actuator-gallery-video"
-                  {...actuatorGalleryVideoProps}
-                >
-                  <source src={`${publicUrl}/${videoName}`} type="video/mp4" />
-                </video>
-              </div>
-            ))}
+                <source src={`${publicUrl}/Bubblevid.mp4`} type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="skills-battery-video-block">
+              <video
+                className="skills-battery-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${publicUrl}/Greyvid.mp4`} type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="skills-battery-video-block">
+              <video
+                className="skills-battery-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${publicUrl}/Bubblevid2.mp4`} type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="skills-battery-video-block">
+              <video
+                className="skills-battery-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${publicUrl}/Bluevid.mp4`} type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="skills-battery-video-block">
+              <video
+                className="skills-battery-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${publicUrl}/Bluevid1.mp4`} type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="skills-battery-video-block">
+              <video
+                className="skills-battery-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${publicUrl}/Bluevid2.mp4`} type="video/mp4" />
+              </video>
+            </div>
           </div>
 
-          <div className="skills-actuator-gallery-video-divider" />
+          <div className="skills-battery-video-divider" />
         </div>
 
         {/* Batteries section */}
@@ -291,7 +300,6 @@ export default function Skills() {
           >
             Liquid-State Batteries
           </h2>
-
           <p className="skills-project-status-top">2024-2025</p>
         </div>
 
@@ -316,10 +324,9 @@ export default function Skills() {
           <img
             className="skills-battery-cell-img"
             src={`${publicUrl}/cell.png`}
-            alt="Schematic of a liquid-state sodium metal coin cell with Na₂MnFe(CN) cathode, Celgard 3501 separator, and sodium anode."
-            {...lazyImageProps}
+            alt="Schematic of a liquid-state sodium metal coin cell with 
+            Na₂MnFe(CN) cathode, Celgard 3501 separator, and sodium anode."
           />
-
           <p className="skills-battery-image-caption">
             Schematic of a liquid-state sodium metal coin cell with Na₂MnFe(CN)
             cathode, Celgard 3501 separator, and sodium anode.
@@ -340,15 +347,66 @@ export default function Skills() {
         {/* SEM gallery */}
         <div className="skills-sem-gallery">
           <div className="skills-sem-row">
-            {semImages.map((imageName, index) => (
-              <img
-                className="skills-sem-img"
-                src={`${publicUrl}/${imageName}`}
-                alt={`SEM ${index + 1}`}
-                key={imageName}
-                {...lazyImageProps}
-              />
-            ))}
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM1.png`}
+              alt="SEM 1"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM2.png`}
+              alt="SEM 2"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM3.png`}
+              alt="SEM 3"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM4.png`}
+              alt="SEM 4"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM5.png`}
+              alt="SEM 5"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM6.png`}
+              alt="SEM 6"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM7.png`}
+              alt="SEM 7"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM8.png`}
+              alt="SEM 8"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM9.png`}
+              alt="SEM 9"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM10.png`}
+              alt="SEM 10"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM11.png`}
+              alt="SEM 11"
+            />
+            <img
+              className="skills-sem-img"
+              src={`${publicUrl}/SEM12.png`}
+              alt="SEM 12"
+            />
           </div>
         </div>
 

@@ -7,12 +7,8 @@ export default function AchievementCard({cardInfo, isDark}) {
       console.log(`URL for ${name} not found`);
       return;
     }
-
-    const win = window.open(url, "_blank");
-
-    if (win) {
-      win.focus();
-    }
+    var win = window.open(url, "_blank");
+    win.focus();
   }
 
   return (
@@ -22,23 +18,18 @@ export default function AchievementCard({cardInfo, isDark}) {
           src={cardInfo.image}
           alt={cardInfo.imageAlt || "Card Thumbnail"}
           className="card-image"
-          loading="lazy"
-          decoding="async"
-        />
+        ></img>
       </div>
-
       <div className="certificate-detail-div">
         <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
           {cardInfo.title}
         </h5>
-
         <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
           {cardInfo.description}
         </p>
       </div>
-
       <div className="certificate-card-footer">
-        {(cardInfo.footer || []).map((v, i) => {
+        {cardInfo.footer.map((v, i) => {
           return (
             <span
               key={i}
