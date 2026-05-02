@@ -47,7 +47,7 @@
     width: 92%;
     padding: 10px 0;
     margin-top: 5rem;
-    scroll-margin-top: 120px;
+    scroll-margin-top: 170px;
   }
 
   .education-section > * {
@@ -60,19 +60,18 @@
 
   .education-heading {
     font-size: 26px;
-    text-align: center;
+    text-align: left;
     line-height: 1.15;
     margin-bottom: 10px;
   }
 
   .education-text-subtitle {
     font-size: 16px;
-    text-align: center;
+    text-align: left;
   }
 }
 
 /* Make GPA / bullets black in light mode, white in dark mode */
-
 .education-section .subTitle {
   color: #222222 !important;
 }
