@@ -92,6 +92,7 @@
   width: 100%;
   border-radius: 10px;
   display: block;
+  background-color: #111111;
 }
 
 .skills-video-wide {
@@ -99,6 +100,7 @@
   max-width: 1100px;
   border-radius: 10px;
   display: block;
+  background-color: #111111;
 }
 
 .skills-video-caption,
@@ -156,39 +158,41 @@
   border-bottom: 1px solid #ffffff;
 }
 
-.skills-battery-video-grid-wrapper {
+.skills-actuator-gallery-video-grid-wrapper {
   width: 100%;
   max-width: 1740px;
   margin: 10px auto 60px auto;
 }
 
-.skills-battery-video-grid {
+.skills-actuator-gallery-video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   align-items: start;
 }
 
-.skills-battery-video-block {
+.skills-actuator-gallery-video-block {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
+  background-color: #111111;
 }
 
-.skills-battery-video {
+.skills-actuator-gallery-video {
   width: 134%;
   margin-left: -17%;
   display: block;
   object-fit: cover;
+  background-color: #111111;
 }
 
-.skills-battery-video-divider {
+.skills-actuator-gallery-video-divider {
   width: 100%;
   margin: 100px auto 56px auto;
   border-bottom: 1px solid #000000;
 }
 
-.dark-mode .skills-battery-video-divider {
+.dark-mode .skills-actuator-gallery-video-divider {
   border-bottom: 1px solid #ffffff;
 }
 
@@ -220,6 +224,7 @@
   width: 100%;
   display: block;
   border-radius: 10px;
+  background-color: #f2f2f2;
 }
 
 .skills-battery-image-caption {
@@ -256,6 +261,7 @@
   height: auto;
   display: block;
   border-radius: 10px;
+  background-color: #f2f2f2;
 }
 
 .skills-sem-caption {
@@ -329,7 +335,7 @@
     object-fit: cover;
   }
 
-  .skills-battery-video-grid {
+  .skills-actuator-gallery-video-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
@@ -364,7 +370,7 @@
 }
 
 @media (max-width: 480px) {
-  .skills-battery-video-grid {
+  .skills-actuator-gallery-video-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
