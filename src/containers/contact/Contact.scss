@@ -19,18 +19,30 @@
 
 .contact-detail,
 .contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 400;
   color: $subTitle;
   text-decoration: none;
+  line-height: 1.2;
+  transition: all 0.3s;
+}
+
+.contact-detail {
+  margin-top: 20px;
+}
+
+.contact-email-list {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
 }
 
 .contact-detail:hover,
 .contact-detail-email:hover {
   color: $textColor;
   text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
 }
 
 .contact-subtitle {
@@ -55,13 +67,8 @@
 /* Media Query */
 @media (max-width: 1380px), (max-width: 768px) {
   .contact-title {
-    font-size: 56px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .contact-title {
     font-size: 40px;
+    font-weight: 400;
     text-align: center;
   }
 
@@ -81,6 +88,12 @@
     font-size: 20px;
   }
 
+  .contact-email-list {
+    margin-top: 24px;
+    gap: 12px;
+    align-items: center;
+  }
+
   .contact-image-div {
     display: none;
   }
@@ -88,7 +101,7 @@
 
 /* Pull Contact Me closer to the section above */
 #contact.main {
-  margin-top: 5rem; // try 2rem; use 1rem or 0rem if you want it even tighter
+  margin-top: 5rem;
 }
 
 .contact-page-wrapper {

@@ -327,7 +327,8 @@ const contactInfo = {
   title: emoji("Contact Me"),
   subtitle: "",
   number: "",
-  email_address: "justinjz@umich.edu"
+  email_address: "justinjz@umich.edu",
+  email_addresses: ["justinjz@umich.edu", "justinz2@andrew.cmu.edu"]
 };
 
 // Twitter Section

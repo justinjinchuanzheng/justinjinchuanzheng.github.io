@@ -40,12 +40,19 @@ export default function Contact() {
                   <br />
                 </>
               )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
-                {contactInfo.email_address}
-              </a>
+              <div className="contact-email-list">
+                {(
+                  contactInfo.email_addresses || [contactInfo.email_address]
+                ).map(emailAddress => (
+                  <a
+                    key={emailAddress}
+                    className="contact-detail-email"
+                    href={"mailto:" + emailAddress}
+                  >
+                    {emailAddress}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <div className="contact-image-div">
