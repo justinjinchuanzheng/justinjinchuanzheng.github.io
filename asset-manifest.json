@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.06093bc7.css",
-    "main.js": "/static/js/main.67fc3891.js",
+    "main.js": "/static/js/main.5d8ea070.js",
     "static/css/794.eda1235e.chunk.css": "/static/css/794.eda1235e.chunk.css",
     "static/js/794.19b19997.chunk.js": "/static/js/794.19b19997.chunk.js",
-    "static/css/470.b86bcc58.chunk.css": "/static/css/470.b86bcc58.chunk.css",
-    "static/js/470.e059a3ab.chunk.js": "/static/js/470.e059a3ab.chunk.js",
+    "static/css/470.ffdaa42f.chunk.css": "/static/css/470.ffdaa42f.chunk.css",
+    "static/js/470.071129e0.chunk.js": "/static/js/470.071129e0.chunk.js",
     "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
     "static/js/64.a71ef462.chunk.js": "/static/js/64.a71ef462.chunk.js",
     "static/media/cmuLogo.png": "/static/media/cmuLogo.f2e5135de35dc5e0ad8c.png",
@@ -24,16 +24,16 @@
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.06093bc7.css.map": "/static/css/main.06093bc7.css.map",
-    "main.67fc3891.js.map": "/static/js/main.67fc3891.js.map",
+    "main.5d8ea070.js.map": "/static/js/main.5d8ea070.js.map",
     "794.eda1235e.chunk.css.map": "/static/css/794.eda1235e.chunk.css.map",
     "794.19b19997.chunk.js.map": "/static/js/794.19b19997.chunk.js.map",
-    "470.b86bcc58.chunk.css.map": "/static/css/470.b86bcc58.chunk.css.map",
-    "470.e059a3ab.chunk.js.map": "/static/js/470.e059a3ab.chunk.js.map",
+    "470.ffdaa42f.chunk.css.map": "/static/css/470.ffdaa42f.chunk.css.map",
+    "470.071129e0.chunk.js.map": "/static/js/470.071129e0.chunk.js.map",
     "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
     "64.a71ef462.chunk.js.map": "/static/js/64.a71ef462.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06093bc7.css",
-    "static/js/main.67fc3891.js"
+    "static/js/main.5d8ea070.js"
   ]
 }
