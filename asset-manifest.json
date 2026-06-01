@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.06093bc7.css",
-    "main.js": "/static/js/main.ee3683da.js",
+    "main.js": "/static/js/main.fa825938.js",
     "static/css/794.eda1235e.chunk.css": "/static/css/794.eda1235e.chunk.css",
     "static/js/794.19b19997.chunk.js": "/static/js/794.19b19997.chunk.js",
     "static/css/470.ffdaa42f.chunk.css": "/static/css/470.ffdaa42f.chunk.css",
@@ -11,8 +11,8 @@
     "static/media/cmuLogo.png": "/static/media/cmuLogo.f2e5135de35dc5e0ad8c.png",
     "static/media/finger.png": "/static/media/finger.b122bfb3f4a0b2e0e718.png",
     "static/media/Award.png": "/static/media/Award.f7851a9c452b4fa76c8a.png",
-    "static/media/umichLogo.png": "/static/media/umichLogo.c056ff15f0b9288b1f2a.png",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/umichLogo.png": "/static/media/umichLogo.fd775e14d8c5c7700f5a.png",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/quoraLogo.png": "/static/media/quoraLogo.85eb29f4d52320c8ed99.png",
@@ -24,7 +24,7 @@
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.06093bc7.css.map": "/static/css/main.06093bc7.css.map",
-    "main.ee3683da.js.map": "/static/js/main.ee3683da.js.map",
+    "main.fa825938.js.map": "/static/js/main.fa825938.js.map",
     "794.eda1235e.chunk.css.map": "/static/css/794.eda1235e.chunk.css.map",
     "794.19b19997.chunk.js.map": "/static/js/794.19b19997.chunk.js.map",
     "470.ffdaa42f.chunk.css.map": "/static/css/470.ffdaa42f.chunk.css.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.06093bc7.css",
-    "static/js/main.ee3683da.js"
+    "static/js/main.fa825938.js"
   ]
 }
