@@ -235,7 +235,7 @@ export default function Skills() {
                 muted
                 playsInline
               >
-                <source src={`${publicUrl}/Greyvid.mp4`} type="video/mp4" />
+                <source src={`${publicUrl}/Bluevid2.mp4`} type="video/mp4" />
               </video>
             </div>
 
@@ -283,7 +283,7 @@ export default function Skills() {
                 muted
                 playsInline
               >
-                <source src={`${publicUrl}/Bluevid2.mp4`} type="video/mp4" />
+                <source src={`${publicUrl}/Greyvid.mp4`} type="video/mp4" />
               </video>
             </div>
           </div>
