@@ -107,7 +107,7 @@ const researchAppointmentsInfo = {
       desc: "Lab: Soft Machines Lab",
       descBullets: [
         "Faculty Host: Prof. Carmel Majidi",
-        "Research Focus: Soft Robotics, Microfluidic Electronics, and Liquid-Metal Actuators"
+        "Research Focus: Soft Robotics, Wearable Electronics, and Liquid-Metal Actuators"
       ]
     }
   ]
