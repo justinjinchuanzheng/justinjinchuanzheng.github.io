@@ -10,7 +10,8 @@ import {
   talkSection,
   achievementSection,
   resumeSection,
-  educationInfo
+  educationInfo,
+  publicationsInfo
 } from "../../portfolio";
 
 function Header() {
@@ -23,6 +24,7 @@ function Header() {
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
   const viewResume = resumeSection.display;
+  const viewPublications = publicationsInfo.display;
 
   const scrollToSection = (sectionId, delay = 0) => {
     setTimeout(() => {
@@ -172,6 +174,12 @@ function Header() {
             </li>
           )}
 
+          {viewPublications && (
+            <li>
+              <a href="#/publications">Publications</a>
+            </li>
+          )}
+
           {viewAchievement && (
             <li>
               <a href="#/courses">Courses</a>
@@ -195,10 +203,6 @@ function Header() {
               <a href="#/resume">Resume</a>
             </li>
           )}
-
-          <li>
-            <a href="#/contact">Contact Me</a>
-          </li>
 
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

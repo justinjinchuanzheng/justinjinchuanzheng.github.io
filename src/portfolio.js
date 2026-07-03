@@ -113,7 +113,19 @@ const researchAppointmentsInfo = {
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
+const publicationsInfo = {
+  display: true,
+  publications: [
+    {
+      title:
+        "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
+      authors:
+        "Jonathan Li, Arnold Yuxuan Xie, Justin Jinchuan Zheng, and Bing Q. Li.",
+      journal: "European Journal of Physics",
+      year: "2026"
+    }
+  ]
+};
 
 const techStack = {
   viewSkillBars: false,
@@ -348,6 +360,7 @@ export {
   skillsSection,
   educationInfo,
   researchAppointmentsInfo,
+  publicationsInfo,
   techStack,
   workExperiences,
   openSource,

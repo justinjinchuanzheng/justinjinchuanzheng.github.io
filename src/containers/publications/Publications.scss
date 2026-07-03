@@ -1,0 +1,107 @@
+@import "../../_globalColor";
+
+.publications-page {
+  min-height: 100vh;
+}
+
+.publications-main {
+  padding-top: 3.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0 !important;
+}
+
+.publications-page-title {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.publications-section {
+  width: 100%;
+}
+
+.publications-section-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid $subTitle;
+}
+
+.publications-list {
+  padding-left: 1.5rem;
+  margin-top: 1.7rem;
+  margin-bottom: 0;
+}
+
+.publication-item {
+  margin-bottom: 1.4rem;
+  padding-left: 0.2rem;
+}
+
+.publication-citation {
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.publication-authors {
+  color: $textColor;
+}
+
+.publication-authors strong {
+  font-weight: 700;
+  color: #ffcb05;
+}
+
+.publication-title {
+  color: $textColor;
+}
+
+.publication-status {
+  color: $subTitle;
+}
+
+.publication-journal {
+  color: $subTitle;
+  font-style: italic;
+}
+
+.dark-mode .publication-authors,
+.dark-mode .publication-title {
+  color: $textColorDark;
+}
+
+.dark-mode .publication-status,
+.dark-mode .publication-journal {
+  color: $subTitle;
+}
+
+.dark-mode .publication-authors strong {
+  color: #ffcb05;
+}
+
+@media (max-width: 768px) {
+  .publications-main {
+    padding-top: 1.2rem;
+    max-width: calc(100% - 40px);
+    margin-top: 0 !important;
+  }
+
+  .publications-page-title {
+    font-size: 34px;
+    margin-bottom: 3rem;
+  }
+
+  .publications-section-title {
+    font-size: 20px;
+  }
+
+  .publication-citation {
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+}
