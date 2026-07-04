@@ -86,14 +86,36 @@
 
 @media (max-width: 768px) {
   .publications-main {
-    padding-top: 1.2rem;
+    padding-top: 5rem;
     max-width: calc(100% - 40px);
     margin-top: 0 !important;
   }
 
   .publications-page-title {
-    font-size: 34px;
-    margin-bottom: 3rem;
+    font-size: 32px;
+    margin-bottom: 3.2rem;
+    text-align: left;
+  }
+
+  .publications-section-title {
+    font-size: 21px;
+  }
+
+  .publication-citation {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .publications-main {
+    padding-top: 5.5rem;
+    max-width: calc(100% - 36px);
+  }
+
+  .publications-page-title {
+    font-size: 30px;
+    margin-bottom: 3.1rem;
   }
 
   .publications-section-title {
@@ -101,7 +123,7 @@
   }
 
   .publication-citation {
-    font-size: 15.5px;
-    line-height: 1.65;
+    font-size: 14.5px;
+    line-height: 1.6;
   }
 }
