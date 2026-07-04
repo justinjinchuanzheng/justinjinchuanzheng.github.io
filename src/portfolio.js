@@ -24,7 +24,7 @@ const greeting = {
   username: "Justin J. Zheng",
   title: "Justin Jinchuan Zheng",
   subTitle: emoji(
-    "I am an undergraduate student at the University of Michigan with a research focus on soft robotics. I am interested in how the composition and structure of soft materials, such as liquid metal based conductors, battery materials, and architected soft composites, shape the behavior of robotic actuators and bodies. My goal is to design functional materials that can bend, stretch, and distribute forces in a controlled way so that robots can navigate safely through complex environments. I envision a future where soft robots are built from materials that are intrinsically safe for close human interaction and energetically sustainable throughout their life cycle."
+    "I am a senior undergraduate student in Robotics at the University of Michigan. My research interests include soft robotics, wearable electronics, and functional materials for robotics. I am currently an undergraduate researcher in the Soft Machines Lab at Carnegie Mellon University. I am interested in how the composition and structure of soft and functional materials, including liquid metals, stretchable conductors, battery materials, and soft composites, can be designed to create robotic systems that sense, actuate, and interact safely with the physical world. My goal is to develop robotic systems that are soft, adaptive, and safe for close human interaction."
   ),
   resumeLink:
     "https://scholar.google.com/citations?hl=en&user=XVc7h10AAAAJ&view_op=list_works&gmla=AKzYXQ3YJXS2bDhbIpt6reHK-TmlO_rzsUAFdN1H1yPuXGp_ya6MzLa4ksd5MhPkLgByQGzoUKkwuMLl4YoEXdMU",
