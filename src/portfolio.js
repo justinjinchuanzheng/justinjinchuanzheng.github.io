@@ -115,6 +115,7 @@ const researchAppointmentsInfo = {
 
 const publicationsInfo = {
   display: true,
+
   publications: [
     {
       title:
@@ -124,7 +125,22 @@ const publicationsInfo = {
       journal: "European Journal of Physics",
       year: "2026"
     }
-  ]
+  ],
+
+  acknowledgedContributions: [
+  {
+    title:
+      "Revealing the Neglected Role of Passivation Layers of Current Collectors for Solid-State Anode-Free Batteries",
+    journal: "Advanced Materials",
+    volume: "37",
+    issue: "47",
+    articleNumber: "e13090",
+    year: "2025",
+    contribution:
+      "Battery assembly; acknowledged by name in the published article.",
+    url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513090"
+  }
+]
 };
 
 const techStack = {

@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.acknowledged-section {
+  margin-top: 4rem;
+}
+
 .publications-section-title {
   font-size: 22px;
   font-weight: 500;
@@ -61,6 +65,15 @@
   color: $textColor;
 }
 
+.publication-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.publication-link:hover {
+  text-decoration: underline;
+}
+
 .publication-status {
   color: $subTitle;
 }
@@ -69,6 +82,38 @@
   color: $subTitle;
   font-style: italic;
 }
+
+.publication-volume {
+  font-weight: 700;
+}
+
+/* Acknowledged publication citation */
+
+.acknowledged-publication-entry .publication-journal,
+.acknowledged-publication-entry .publication-status,
+.acknowledged-publication-entry .publication-volume {
+  color: #8a6500;
+}
+
+.acknowledged-publication-entry .publication-journal {
+  font-weight: 500;
+}
+
+/* Contribution note */
+
+.publication-contribution-note {
+  margin: 0.45rem 0 0;
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: $subTitle;
+}
+
+.contribution-label {
+  font-weight: 600;
+  color: #8a6500;
+}
+
+/* Dark mode */
 
 .dark-mode .publication-authors,
 .dark-mode .publication-title {
@@ -83,6 +128,22 @@
 .dark-mode .publication-authors strong {
   color: #ffcb05;
 }
+
+.dark-mode .acknowledged-publication-entry .publication-journal,
+.dark-mode .acknowledged-publication-entry .publication-status,
+.dark-mode .acknowledged-publication-entry .publication-volume {
+  color: #ffcb05;
+}
+
+.dark-mode .publication-contribution-note {
+  color: #9aa3b2;
+}
+
+.dark-mode .contribution-label {
+  color: #ffcb05;
+}
+
+/* Tablet and mobile */
 
 @media (max-width: 768px) {
   .publications-main {
@@ -105,6 +166,15 @@
     font-size: 15px;
     line-height: 1.65;
   }
+
+  .publication-contribution-note {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .acknowledged-section {
+    margin-top: 3.2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -123,6 +193,11 @@
   }
 
   .publication-citation {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  .publication-contribution-note {
     font-size: 14.5px;
     line-height: 1.6;
   }
