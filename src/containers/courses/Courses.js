@@ -54,18 +54,27 @@ export default function Courses() {
               </h2>
 
               <p className="teaching-meta">
-                Fall 2026
-                <span className="teaching-meta-separator"> | </span>
-                Course Instructor: Prof. Christoforos Mavrogiannis
+                <span className="teaching-date">Fall 2026</span>
+
+                <span className="teaching-meta-separator">
+                  {" "}
+                  |{" "}
+                </span>
+
+                <span className="teaching-instructor">
+                  Course Instructor: Prof. Christoforos Mavrogiannis
+                </span>
               </p>
 
               <ul className="teaching-responsibilities">
                 <li>
                   Hold office hours and provide instructional support to students
                 </li>
+
                 <li>
                   Assist with hands-on robotics laboratory sessions
                 </li>
+
                 <li>
                   Grade coursework and contribute to quiz and exam development
                 </li>

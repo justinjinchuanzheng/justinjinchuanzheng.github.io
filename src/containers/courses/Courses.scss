@@ -169,70 +169,122 @@
 
 /* =========================================================
    MOBILE
+   Match the Education section layout
    ========================================================= */
 
 @media (max-width: 768px) {
   .courses-teaching-section {
     width: 92%;
-    padding-top: 4.5rem;
+    padding-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  /* Same style as Education heading on mobile */
   .courses-teaching-heading {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 2rem;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: left;
+    margin: 0 0 10px 0;
   }
 
+  /*
+   * Stack the logo and information vertically,
+   * just like the Education card.
+   */
   .teaching-entry {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .teaching-logo-container {
-    width: 130px;
-    min-width: 130px;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 1rem 0;
   }
 
+  /* Same 5rem size as the Education logo */
   .teaching-logo {
-    width: 125px;
-    height: 125px;
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
   }
 
   .teaching-content {
-    margin-left: 0;
     width: 100%;
+    max-width: 100%;
+    margin-left: 0;
     text-align: left;
   }
 
+  /* Same scale as the university title in Education */
   .teaching-role {
     font-size: 22px;
+    font-weight: 400;
+    line-height: 1.25;
     white-space: normal;
-    line-height: 1.35;
+    text-align: left;
+    margin: 0 0 0.7rem 0;
   }
 
+  /*
+   * Put Fall 2026 and Course Instructor on separate lines.
+   * This prevents the current "Fall 2026Course Instructor"
+   * problem on iPhone.
+   */
   .teaching-meta {
-    font-size: 17px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    font-size: 17px;
+    line-height: 1.35;
+    text-align: left;
+    margin: 0 0 0.6rem 0;
+  }
+
+  .teaching-date {
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  .teaching-instructor {
+    display: block;
   }
 
   .teaching-meta-separator {
     display: none;
   }
 
+  /* Same general size as Education bullets */
   .teaching-responsibilities {
-    font-size: 17px;
-    padding-left: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0.6rem 0 0 0;
+    padding-left: 1.25rem;
+    font-size: 16px;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .teaching-responsibilities li {
+    font-size: 16px;
+    margin-bottom: 0.35rem;
+    padding-left: 0;
   }
 
   .teaching-divider {
-    margin-top: 2rem;
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 28px;
+    border-top: 1px solid $subTitle;
   }
 
   .courses-page #achievements.main {
-    margin-top: 2.5rem !important;
+    margin-top: 0 !important;
     padding-top: 0 !important;
   }
 }
