@@ -7,9 +7,11 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
+
   if (!achievementSection.display) {
     return null;
   }
+
   return (
     <Fade duration={300}>
       <div className="main" id="achievements">
@@ -22,9 +24,9 @@ export default function Achievement() {
                   : "heading achievement-heading"
               }
             >
-              {achievementSection.title}
+              Graduate-Level Courses
             </h1>
-            {/* subtitle: pure white in dark mode, pure black in light mode */}
+
             <p
               className={
                 isDark
@@ -50,9 +52,11 @@ export default function Achievement() {
                         <span className="course-card-title-line">
                           {card.courseTitle}
                         </span>
+
                         <span className="course-card-credits">
                           {card.credits}
                         </span>
+
                         {card.grade && (
                           <span className="course-card-grade">
                             {card.grade}
@@ -73,6 +77,7 @@ export default function Achievement() {
           <div className="course-detail-list">
             <div className="course-detail">
               <hr className="course-detail-divider" />
+
               <h2
                 className={
                   isDark
@@ -82,9 +87,12 @@ export default function Achievement() {
               >
                 Robotics 560 · Bio-Inspired Robotic Design
               </h2>
+
               <p
                 className={
-                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
+                  isDark
+                    ? "dark-mode course-detail-text"
+                    : "course-detail-text"
                 }
               >
                 Examines original scientific research to extract general
@@ -94,11 +102,13 @@ export default function Achievement() {
                 the bioinspired design process through case studies that
                 highlight health, the environment, and safety.
               </p>
+
               <hr className="course-detail-divider" />
             </div>
 
             <div className="course-detail">
               <hr className="course-detail-divider" />
+
               <h2
                 className={
                   isDark
@@ -108,9 +118,12 @@ export default function Achievement() {
               >
                 Robotics 535 · Self Driving Cars: Perception and Control
               </h2>
+
               <p
                 className={
-                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
+                  isDark
+                    ? "dark-mode course-detail-text"
+                    : "course-detail-text"
                 }
               >
                 Self-driving cars are a transformative technology for society.
@@ -121,11 +134,13 @@ export default function Achievement() {
                 underpinnings of self-driving car algorithms and practical
                 application of the material in hands-on labs.
               </p>
+
               <hr className="course-detail-divider" />
             </div>
 
             <div className="course-detail">
               <hr className="course-detail-divider" />
+
               <h2
                 className={
                   isDark
@@ -135,9 +150,12 @@ export default function Achievement() {
               >
                 Robotics 530 · Mobile Robotics: Methods and Algorithms
               </h2>
+
               <p
                 className={
-                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
+                  isDark
+                    ? "dark-mode course-detail-text"
+                    : "course-detail-text"
                 }
               >
                 Theory and application of probabilistic techniques for
@@ -150,11 +168,13 @@ export default function Achievement() {
                 and control in the presence of uncertainty; application to
                 autonomous marine, ground, and air vehicles.
               </p>
+
               <hr className="course-detail-divider" />
             </div>
 
             <div className="course-detail">
               <hr className="course-detail-divider" />
+
               <h2
                 className={
                   isDark
@@ -164,9 +184,12 @@ export default function Achievement() {
               >
                 BIOMEDE 561 · Biological Micro- and Nanotechnology
               </h2>
+
               <p
                 className={
-                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
+                  isDark
+                    ? "dark-mode course-detail-text"
+                    : "course-detail-text"
                 }
               >
                 Many life processes occur at small size-scales. This course
@@ -177,11 +200,13 @@ export default function Achievement() {
                 emphasis on microfluidics, surface science, and non-traditional
                 fabrication techniques.
               </p>
+
               <hr className="course-detail-divider" />
             </div>
 
             <div className="course-detail">
               <hr className="course-detail-divider" />
+
               <h2
                 className={
                   isDark
@@ -192,9 +217,12 @@ export default function Achievement() {
                 MECHENG 570 · Fundamentals of Defects in Materials and
                 Applications of Atomistic Modeling
               </h2>
+
               <p
                 className={
-                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
+                  isDark
+                    ? "dark-mode course-detail-text"
+                    : "course-detail-text"
                 }
               >
                 Introduction on the correlation between various types of
@@ -204,6 +232,7 @@ export default function Achievement() {
                 demo applications are also introduced to help students build
                 better intuition about defects' structures and behaviors.
               </p>
+
               <hr className="course-detail-divider" />
             </div>
           </div>

@@ -4,25 +4,130 @@
   min-height: 100vh;
 }
 
-/* Give the Courses page enough space below the fixed header */
-.courses-page #achievements.main {
-  margin-top: 0;
+/* =========================================================
+   TEACHING EXPERIENCE
+   ========================================================= */
+
+.courses-teaching-section {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 5rem;
 }
 
-/* Make the course cards look like the original dark homepage version */
+.courses-teaching-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 3rem 0;
+}
+
+.teaching-entry {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.teaching-logo-container {
+  width: 160px;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.teaching-logo {
+  width: 155px;
+  height: 155px;
+  object-fit: contain;
+}
+
+.teaching-content {
+  flex: 1;
+  margin-left: 2rem;
+  min-width: 0;
+}
+
+.teaching-role {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 0.7rem 0;
+  white-space: nowrap;
+}
+
+/* Course link */
+.teaching-course-link {
+  color: inherit;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.teaching-course-link:hover {
+  color: #ffcb05;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.teaching-course-link:focus-visible {
+  color: #ffcb05;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  outline: none;
+}
+
+.teaching-meta {
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0 0 0.6rem 0;
+}
+
+.teaching-meta-separator {
+  margin-left: 0.35rem;
+  margin-right: 0.35rem;
+}
+
+.teaching-responsibilities {
+  font-size: 19px;
+  line-height: 1.55;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  padding-left: 2rem;
+}
+
+.teaching-responsibilities li {
+  margin-bottom: 0.35rem;
+}
+
+.teaching-divider {
+  width: 100%;
+  border-top: 1px solid $subTitle;
+  margin-top: 2.4rem;
+}
+
+/* =========================================================
+   GRADUATE-LEVEL COURSES
+   ========================================================= */
+
+.courses-page #achievements.main {
+  margin-top: 3rem !important;
+  padding-top: 0 !important;
+}
+
+/* Dark mode course cards */
 .courses-page.dark-mode #achievements .certificate-card {
   background-color: $darkBackground;
   border: 1px solid $subTitle;
   box-shadow: none;
 }
 
-/* Keep the hover effect subtle */
 .courses-page.dark-mode #achievements .certificate-card:hover {
   box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
 }
 
-/* Fix black text / dark text boxes inside course cards */
+/* Course card text */
 .courses-page.dark-mode #achievements .card-title,
 .courses-page.dark-mode #achievements .card-subtitle,
 .courses-page.dark-mode #achievements .course-card-title-line,
@@ -32,14 +137,102 @@
   background: transparent !important;
 }
 
-/* Keep the course details readable */
+/* Detailed course descriptions */
 .courses-page.dark-mode #achievements .course-detail-title,
 .courses-page.dark-mode #achievements .course-detail-text {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1380px) {
+  .courses-teaching-heading {
+    font-size: 40px;
+  }
+
+  .teaching-role {
+    font-size: 24px;
+    white-space: normal;
+  }
+
+  .teaching-meta,
+  .teaching-responsibilities {
+    font-size: 18px;
+  }
+
   .courses-page #achievements.main {
+    margin-top: 2.75rem !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .courses-teaching-section {
+    width: 92%;
     padding-top: 4.5rem;
+  }
+
+  .courses-teaching-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .teaching-entry {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teaching-logo-container {
+    width: 130px;
+    min-width: 130px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .teaching-logo {
+    width: 125px;
+    height: 125px;
+  }
+
+  .teaching-content {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .teaching-role {
+    font-size: 22px;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .teaching-meta {
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teaching-meta-separator {
+    display: none;
+  }
+
+  .teaching-responsibilities {
+    font-size: 17px;
+    padding-left: 1.5rem;
+  }
+
+  .teaching-divider {
+    margin-top: 2rem;
+  }
+
+  .courses-page #achievements.main {
+    margin-top: 2.5rem !important;
+    padding-top: 0 !important;
   }
 }
