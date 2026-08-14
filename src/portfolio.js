@@ -89,10 +89,14 @@ const educationInfo = {
       subHeader: "Bachelor of Science in Engineering, Robotics",
       duration: "Expected December 2026",
       desc: "",
-      descBullets: ["Research Focus: Soft Robotics", "GPA: 4.0 / 4.0"]
-    }
-  ]
-};
+      descBullets: [
+      "Irma M. Wyman Scholar",
+      "Research Focus: Soft Robotics",
+      "GPA: 4.0 / 4.0"
+    ]
+        }
+      ]
+    };
 
 const researchAppointmentsInfo = {
   display: true,
