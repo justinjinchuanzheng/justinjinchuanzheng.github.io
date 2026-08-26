@@ -126,7 +126,7 @@ const publicationsInfo = {
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors:
         "Jonathan Li, Arnold Yuxuan Xie, Justin Jinchuan Zheng, and Bing Q. Li.",
-      journal: "American Journal of Physics",
+      journal: "AIP Advances",
       year: "2026"
     }
   ],
