@@ -1,23 +1,23 @@
 /* Change this file to get your personal Portfolio */
 // cd developerFolio
 // npm run deploy
-// To change portfolio colors globally go to the  _globalColor.scss file
+// To change portfolio colors globally go to the _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: true,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000
 };
 
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true
 };
 
 const greeting = {
@@ -37,12 +37,6 @@ const socialMediaLinks = {
   github: "https://github.com/justinjinchuanzheng",
   linkedin: "https://www.linkedin.com/in/justin-j-zheng-918876373/",
   gmail: "justinjz@umich.edu",
-  //gitlab: "#",
-  //facebook: "#",
-  //medium: "#",
-  //stackoverflow: "#",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
   display: false
 };
 
@@ -70,18 +64,6 @@ const skillsSection = {
 const educationInfo = {
   display: true,
   schools: [
-    /*{
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Doctor of Philosophy in Engineering Science",
-      duration: "September 2027 - April 2032",
-      desc: "Lab: Harvard Microrobotics Laboratory",
-      descBullets: [
-        "Advisor: Prof. Robert J. Wood",
-        "Thesis: Soft Microrobotics",
-        "GPA: 4.0 / 4.0",
-      ]
-    },*/
     {
       schoolName: "University of Michigan, Ann Arbor",
       college: "College of Engineering, Robotics Institute",
@@ -90,13 +72,16 @@ const educationInfo = {
       duration: "Expected December 2026",
       desc: "",
       descBullets: [
-      "Irma M. Wyman Scholar",
-      "Research Focus: Soft Robotics",
-      "GPA: 4.0 / 4.0"
-    ]
-        }
+        "Irma M. Wyman Scholar",
+        "Research Focus: Soft Robotics",
+        "GPA: 4.0 / 4.0",
+        "Class Rank: 1st"
       ]
-    };
+    }
+  ]
+};
+
+// Research Appointments Section
 
 const researchAppointmentsInfo = {
   display: true,
@@ -104,7 +89,6 @@ const researchAppointmentsInfo = {
   schools: [
     {
       schoolName: "Carnegie Mellon University",
-      //college: "School of Computer Science, Robotics Institute",
       logo: require("./assets/images/cmuLogo.png"),
       subHeader: "Undergraduate Researcher",
       duration: "",
@@ -116,6 +100,8 @@ const researchAppointmentsInfo = {
     }
   ]
 };
+
+// Publications Section
 
 const publicationsInfo = {
   display: true,
@@ -132,19 +118,19 @@ const publicationsInfo = {
   ],
 
   acknowledgedContributions: [
-  {
-    title:
-      "Revealing the Neglected Role of Passivation Layers of Current Collectors for Solid-State Anode-Free Batteries",
-    journal: "Advanced Materials",
-    volume: "37",
-    issue: "47",
-    articleNumber: "e13090",
-    year: "2025",
-    contribution:
-      "Battery assembly; acknowledged by name in the published article.",
-    url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513090"
-  }
-]
+    {
+      title:
+        "Revealing the Neglected Role of Passivation Layers of Current Collectors for Solid-State Anode-Free Batteries",
+      journal: "Advanced Materials",
+      volume: "37",
+      issue: "47",
+      articleNumber: "e13090",
+      year: "2025",
+      contribution:
+        "Battery assembly; acknowledged by name in the published article.",
+      url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513090"
+    }
+  ]
 };
 
 const techStack = {
@@ -166,7 +152,7 @@ const techStack = {
   displayCodersrank: false
 };
 
-// Work experience section
+// Work Experience Section
 
 const workExperiences = {
   display: false,
@@ -199,15 +185,14 @@ const workExperiences = {
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
+// Open Source Section
 
 const openSource = {
   showGithubProfile: "false",
   display: false
 };
 
-// Some big projects you have worked on
+// Big Projects Section
 
 const bigProjects = {
   title: "Big Projects",
@@ -239,8 +224,7 @@ const bigProjects = {
   display: false
 };
 
-// Achievement Section
-// Graduate-level courses
+// Graduate-Level Courses Section
 
 const achievementSection = {
   title: "Graduate Level Courses",
@@ -316,7 +300,7 @@ const blogSection = {
   display: false
 };
 
-// Talks Sections
+// Talks Section
 
 const talkSection = {
   title: "TALKS",
@@ -340,7 +324,6 @@ const talkSection = {
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
@@ -354,6 +337,8 @@ const resumeSection = {
   subtitle: "Feel free to download my resume",
   display: false
 };
+
+// Contact Section
 
 const contactInfo = {
   title: emoji("Contact Me"),
