@@ -1,12 +1,37 @@
 import React, {useContext, useEffect} from "react";
-import "./Skills.scss";
-import {skillsSection} from "../../portfolio";
+import {Link} from "react-router-dom";
 import {Fade} from "react-reveal";
+import {skillsSection} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import "./Skills.scss";
+import "./ResearchHighlights.scss";
 
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
   const publicUrl = process.env.PUBLIC_URL || "";
+
+  const researchHighlights = [
+    {
+      title: "Wearable Electronics",
+      video: "Wearables2.mp4",
+      route: "/research/wearable-electronics",
+      ariaLabel: "Soft wearable LED-ring prototype operating during handling"
+    },
+    {
+      title: "Dragonfly-Inspired Millirobot",
+      video: "Dragonfly.mp4",
+      route: "/research/soft-robotics",
+      ariaLabel:
+        "Dragonfly-inspired millirobot driven by a liquid-metal actuator"
+    },
+    {
+      title: "Liquid-Metal Hydrogel Muscle",
+      video: "Actuator.mp4",
+      route: "/research/soft-robotics",
+      ariaLabel:
+        "Axisymmetric liquid-metal hydrogel muscle operating in real time"
+    }
+  ];
 
   useEffect(() => {
     const videos = Array.from(document.querySelectorAll("#skills video"));
@@ -49,254 +74,57 @@ export default function Skills() {
   }
 
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
-      {/* Header */}
-      <div className="skills-header" id="liquid-metal-actuators">
-        <h1 className={isDark ? "dark-mode skills-heading" : "skills-heading"}>
-          Research
-        </h1>
-
-        <h2 className="skills-project-title">Liquid-Metal Actuators</h2>
-
-        <p className="skills-project-status-top">
-          Manuscript in Preparation (2025-2026)
-        </p>
+    <section
+      className={
+        isDark
+          ? "dark-mode main research-highlights"
+          : "main research-highlights"
+      }
+      id="skills"
+    >
+      <div className="research-highlights-header">
+        <h1 className="research-highlights-heading">Research Highlights</h1>
       </div>
 
       <Fade duration={300}>
-        {/* Dragonfly: two videos side by side */}
-        <div className="skills-video-row">
-          <div className="skills-video-block">
-            <video className="skills-video" autoPlay loop muted playsInline>
-              <source src={`${publicUrl}/Dragonfly.mp4`} type="video/mp4" />
-            </video>
+        <div>
+          <div className="research-highlights-grid">
+            {researchHighlights.map(highlight => (
+              <Link
+                className="research-highlight-card"
+                to={highlight.route}
+                aria-label={`View ${highlight.title} research project`}
+                key={highlight.title}
+              >
+                <div className="research-highlight-media">
+                  <video
+                    className="research-highlight-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-label={highlight.ariaLabel}
+                  >
+                    <source
+                      src={`${publicUrl}/${highlight.video}`}
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
 
-            <p className="skills-video-caption">
-              Dragonfly-inspired liquid-metal actuator shown at 0.25x speed.
-            </p>
+                <h2 className="research-highlight-title">{highlight.title}</h2>
+              </Link>
+            ))}
           </div>
 
-          <div className="skills-video-block">
-            <video className="skills-video" autoPlay loop muted playsInline>
-              <source src={`${publicUrl}/Dragonfly2.mp4`} type="video/mp4" />
-            </video>
-
-            <p className="skills-video-caption">
-              Dragonfly-inspired liquid-metal actuator operating in real time.
-            </p>
+          <div className="research-highlights-footer">
+            <Link className="research-highlights-link" to="/research">
+              View All Research
+            </Link>
           </div>
-        </div>
-
-        {/* Dragonfly text */}
-        <div className="skills-text-below">
-          <h3
-            className={
-              isDark
-                ? "dark-mode skills-project-subheading"
-                : "skills-project-subheading"
-            }
-          >
-            Dragonfly-Inspired Millirobot Driven by a Liquid-Metal Muscle
-          </h3>
-
-          <p
-            className={
-              isDark ? "subTitle skills-text" : "subTitle skills-text-dark"
-            }
-          >
-            This video shows a millimeter-scale flapping-wing robot driven by a
-            liquid-metal hydrogel actuator. The demonstration shows how
-            low-voltage, high-bandwidth soft actuators can be integrated into
-            insect-scale robotic platforms. My contributions included hydrogel
-            material synthesis and quantitative video analysis of wing
-            trajectory and flapping frequency.
-          </p>
-
-          <div className="skills-divider" />
-        </div>
-
-        {/* Axisymmetric muscle */}
-        <div className="skills-second-project">
-          <h3
-            className={
-              isDark
-                ? "dark-mode skills-project-subheading"
-                : "skills-project-subheading"
-            }
-          >
-            Axisymmetric Liquid-Metal Hydrogel Muscle Characterization
-          </h3>
-
-          <div className="skills-single-video">
-            <div className="skills-video-block">
-              <video
-                className="skills-video-wide"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Actuator.mp4`} type="video/mp4" />
-              </video>
-
-              <p className="skills-video-caption">
-                Axisymmetric liquid-metal hydrogel muscle operating in real
-                time.
-              </p>
-            </div>
-          </div>
-
-          <div className="skills-text-below">
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text"
-                  : "subTitle skills-text"
-              }
-            >
-              This video shows an axisymmetric liquid-metal hydrogel muscle
-              operating in real time. My contributions included synthesizing
-              the hydrogel membrane and performing image-based motion tracking
-              to quantify actuator kinematics using recorded videos.
-            </p>
-          </div>
-
-          <div className="skills-divider" />
-        </div>
-
-        {/* Linear tracking */}
-        <div className="skills-third-project">
-          <div className="skills-text-above">
-            <h3
-              className={
-                isDark
-                  ? "dark-mode skills-project-subheading"
-                  : "skills-project-subheading"
-              }
-            >
-              Linear Kinematic Tracking of an Axisymmetric Liquid-Metal Hydrogel
-              Muscle
-            </h3>
-          </div>
-
-          <div className="skills-single-video">
-            <div className="skills-video-block">
-              <video
-                className="skills-video-wide"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Tracking.mp4`} type="video/mp4" />
-              </video>
-
-              <p className="skills-video-caption">
-                Image-based tracking overlay used to extract axial strain and
-                time-resolved response curves.
-              </p>
-            </div>
-          </div>
-
-          <div className="skills-text-below">
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text"
-                  : "subTitle skills-text"
-              }
-            >
-              For this project, I designed and implemented an image-based
-              tracking workflow to quantify the linear deformation of an
-              axisymmetric liquid-metal hydrogel muscle. The pipeline tracked
-              actuator boundaries frame by frame, converted pixel motion into
-              physical displacement, and extracted axial strain, actuation
-              frequency, and time-resolved response curves.
-            </p>
-
-            <div className="skills-divider" />
-          </div>
-        </div>
-
-        {/* Liquid-metal actuator demo video gallery */}
-        <div className="skills-battery-video-grid-wrapper">
-          <div className="skills-battery-video-grid">
-            <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Bubblevid.mp4`} type="video/mp4" />
-              </video>
-            </div>
-
-            <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Bluevid2.mp4`} type="video/mp4" />
-              </video>
-            </div>
-
-            <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Bubblevid2.mp4`} type="video/mp4" />
-              </video>
-            </div>
-
-            <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Bluevid.mp4`} type="video/mp4" />
-              </video>
-            </div>
-
-            <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Bluevid1.mp4`} type="video/mp4" />
-              </video>
-            </div>
-
-            <div className="skills-battery-video-block">
-              <video
-                className="skills-battery-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`${publicUrl}/Greyvid.mp4`} type="video/mp4" />
-              </video>
-            </div>
-          </div>
-
-          <div className="skills-battery-video-divider" />
         </div>
       </Fade>
-    </div>
+    </section>
   );
 }

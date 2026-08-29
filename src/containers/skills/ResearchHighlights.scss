@@ -1,0 +1,219 @@
+@import "../../_globalColor";
+
+#skills.research-highlights {
+  margin-top: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+  scroll-margin-top: 130px;
+}
+
+.research-highlights-header {
+  width: 100%;
+  margin-bottom: 3.25rem;
+  text-align: center;
+}
+
+.research-highlights .research-highlights-heading {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.research-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.research-highlight-card {
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.research-highlight-card:hover {
+  transform: translateY(-4px);
+}
+
+.research-highlight-card:focus-visible {
+  outline: 3px solid #8a6500;
+  outline-offset: 6px;
+}
+
+.dark-mode .research-highlight-card:focus-visible {
+  outline-color: #ffcb05;
+}
+
+.research-highlight-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+.research-highlight-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.research-highlight-card:hover .research-highlight-video {
+  transform: scale(1.02);
+}
+
+.research-highlight-title {
+  margin: 1rem 0.5rem 0;
+  color: #1f1f1f;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.research-highlight-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin: 0.7rem auto 0;
+  background-color: #8a6500;
+}
+
+.dark-mode .research-highlight-title {
+  color: #ffffff;
+}
+
+.dark-mode .research-highlight-title::after {
+  background-color: #ffcb05;
+}
+
+.research-highlight-card:hover .research-highlight-title {
+  color: #8a6500;
+}
+
+.dark-mode .research-highlight-card:hover .research-highlight-title {
+  color: #ffcb05;
+}
+
+.research-highlights-footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.research-highlights-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #00274c;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #00274c;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dark-mode .research-highlights-link {
+  border-color: #ffcb05;
+  background-color: transparent;
+  color: #ffcb05;
+}
+
+.research-highlights-link:hover {
+  transform: translateY(-2px);
+  background-color: #00274c;
+  color: #ffffff;
+}
+
+.dark-mode .research-highlights-link:hover {
+  background-color: #ffcb05;
+  color: #00274c;
+}
+
+.research-highlights-link:focus-visible {
+  outline: 3px solid #8a6500;
+  outline-offset: 4px;
+}
+
+.dark-mode .research-highlights-link:focus-visible {
+  outline-color: #ffffff;
+}
+
+@media (max-width: 1380px) {
+  .research-highlights .research-highlights-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .research-highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-highlight-card:last-child {
+    width: calc(50% - 1rem);
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills.research-highlights {
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+    scroll-margin-top: 110px;
+  }
+
+  .research-highlights-header {
+    margin-bottom: 2.75rem;
+  }
+
+  .research-highlights .research-highlights-heading {
+    font-size: 30px;
+  }
+
+  .research-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+
+  .research-highlight-card:last-child {
+    width: 100%;
+    grid-column: auto;
+  }
+
+  .research-highlight-title {
+    font-size: 20px;
+  }
+
+  .research-highlights-footer {
+    margin-top: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-highlight-card,
+  .research-highlight-video,
+  .research-highlights-link {
+    transition: none;
+  }
+}
