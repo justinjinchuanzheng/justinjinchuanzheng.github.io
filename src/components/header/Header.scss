@@ -17,7 +17,7 @@ body {
 
 /* React Headroom */
 .headroom-wrapper {
-  max-height: 100px;
+  width: 100%;
   position: relative;
   z-index: 9999;
 }
@@ -345,11 +345,18 @@ $dropdown-hover: #2a3140;
 /* Phone layout */
 @media (max-width: 767px) {
   .header {
-    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    align-items: center;
+    column-gap: 8px;
+    min-height: 76px;
+    padding: 8px 12px;
   }
 
   .logo-title {
-    font-size: 1.2rem;
+    min-width: 0;
+    font-size: clamp(0.82rem, 4vw, 1rem);
+    line-height: 1.22;
     white-space: normal;
   }
 
@@ -358,7 +365,31 @@ $dropdown-hover: #2a3140;
   }
 
   .header .logo {
-    float: left;
+    float: none;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .header .logo img {
+    width: 54px;
+    height: 54px !important;
+    margin-right: 10px !important;
+    object-fit: contain;
+    flex: 0 0 54px;
+  }
+
+  .header .menu-icon {
+    float: none;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    padding: 22px 15px;
+  }
+
+  .header .menu {
+    grid-column: 1 / -1;
+    width: 100%;
+    clear: none;
   }
 
   .header .menu-dropdown {

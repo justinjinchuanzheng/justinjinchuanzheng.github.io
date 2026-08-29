@@ -30,15 +30,15 @@ export default function ResearchPage() {
             <article className="research-project" id="liquid-metal-actuators">
               <div className="research-project-media">
                 <video
-                  key="dragonfly-video"
+                  key="dragonfly2-video"
                   className="research-project-video"
-                  src={`${publicUrl}/Dragonfly.mp4`}
+                  src={`${publicUrl}/Dragonfly2.mp4`}
                   autoPlay
                   loop
                   muted
                   playsInline
                   preload="metadata"
-                  aria-label="Dragonfly-inspired liquid-metal actuator operating in slow motion"
+                  aria-label="Dragonfly-inspired liquid-metal actuator operating in real time"
                 />
               </div>
 
