@@ -13,6 +13,12 @@ const PublicationsPage = lazy(() =>
   import("./containers/publications/PublicationsPage")
 );
 
+const ResearchPage = lazy(() => import("./containers/research/ResearchPage"));
+
+const ResearchDetailPage = lazy(() =>
+  import("./containers/research/ResearchDetailPage")
+);
+
 function App() {
   return (
     <HashRouter>
@@ -24,7 +30,40 @@ function App() {
 
           <Route exact path="/education" component={Main} />
 
-          <Route exact path="/research" component={Main} />
+          <Route
+            exact
+            path="/research/soft-robotics"
+            render={() => (
+              <ResearchDetailPage
+                title="Soft Robotics"
+                pageId="soft-robotics"
+              />
+            )}
+          />
+
+          <Route
+            exact
+            path="/research/wearable-electronics"
+            render={() => (
+              <ResearchDetailPage
+                title="Wearable Electronics"
+                pageId="wearable-electronics"
+              />
+            )}
+          />
+
+          <Route
+            exact
+            path="/research/next-generation-batteries"
+            render={() => (
+              <ResearchDetailPage
+                title="Next-Generation Batteries"
+                pageId="next-generation-batteries"
+              />
+            )}
+          />
+
+          <Route exact path="/research" component={ResearchPage} />
 
           <Route exact path="/publications" component={PublicationsPage} />
 

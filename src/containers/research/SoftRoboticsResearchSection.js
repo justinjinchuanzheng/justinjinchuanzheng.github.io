@@ -1,11 +1,8 @@
-import React, {useContext, useEffect} from "react";
-import "./Skills.scss";
-import {skillsSection} from "../../portfolio";
+import React, {useEffect} from "react";
 import {Fade} from "react-reveal";
-import StyleContext from "../../contexts/StyleContext";
+import "../skills/Skills.scss";
 
-export default function Skills() {
-  const {isDark} = useContext(StyleContext);
+export default function SoftRoboticsResearchSection({isDark}) {
   const publicUrl = process.env.PUBLIC_URL || "";
 
   useEffect(() => {
@@ -44,19 +41,18 @@ export default function Skills() {
     };
   }, []);
 
-  if (!skillsSection.display) {
-    return null;
-  }
-
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
-      {/* Header */}
-      <div className="skills-header" id="liquid-metal-actuators">
-        <h1 className={isDark ? "dark-mode skills-heading" : "skills-heading"}>
-          Research
-        </h1>
-
-        <h2 className="skills-project-title">Liquid-Metal Actuators</h2>
+    <>
+      <div className="skills-header" id="soft-robotics">
+        <h2
+          className={
+            isDark
+              ? "dark-mode skills-project-title soft-robotics-title"
+              : "skills-project-title soft-robotics-title"
+          }
+        >
+          Soft Robotics
+        </h2>
 
         <p className="skills-project-status-top">
           Manuscript in Preparation (2025-2026)
@@ -64,7 +60,6 @@ export default function Skills() {
       </div>
 
       <Fade duration={300}>
-        {/* Dragonfly: two videos side by side */}
         <div className="skills-video-row">
           <div className="skills-video-block">
             <video className="skills-video" autoPlay loop muted playsInline>
@@ -87,7 +82,6 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Dragonfly text */}
         <div className="skills-text-below">
           <h3
             className={
@@ -115,7 +109,6 @@ export default function Skills() {
           <div className="skills-divider" />
         </div>
 
-        {/* Axisymmetric muscle */}
         <div className="skills-second-project">
           <h3
             className={
@@ -164,7 +157,6 @@ export default function Skills() {
           <div className="skills-divider" />
         </div>
 
-        {/* Linear tracking */}
         <div className="skills-third-project">
           <div className="skills-text-above">
             <h3
@@ -218,7 +210,6 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Liquid-metal actuator demo video gallery */}
         <div className="skills-battery-video-grid-wrapper">
           <div className="skills-battery-video-grid">
             <div className="skills-battery-video-block">
@@ -297,6 +288,6 @@ export default function Skills() {
           <div className="skills-battery-video-divider" />
         </div>
       </Fade>
-    </div>
+    </>
   );
 }

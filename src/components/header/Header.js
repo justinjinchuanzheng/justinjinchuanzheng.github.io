@@ -71,7 +71,6 @@ function Header() {
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        {/* Logo and title: clickable, returns to top */}
         <div
           className="logo"
           onClick={goToTop}
@@ -89,6 +88,7 @@ function Header() {
             alt="University of Michigan logo"
             style={{height: "80px", marginRight: "12px"}}
           />
+
           <span className="logo-title">
             Justin J. Zheng | Research Portfolio
           </span>
@@ -101,7 +101,7 @@ function Header() {
           htmlFor="menu-btn"
           style={{color: "white"}}
         >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
+          <span className={isDark ? "navicon navicon-dark" : "navicon"} />
         </label>
 
         <ul className={isDark ? "dark-menu menu" : "menu"}>
@@ -130,47 +130,8 @@ function Header() {
           )}
 
           {viewResearch && (
-            <li className="menu-dropdown">
-              <a
-                href="#/research"
-                onClick={event =>
-                  goToRouteAndScroll(event, "#/research", "skills")
-                }
-              >
-                Research <span className="menu-caret">▾</span>
-              </a>
-
-              <ul className={isDark ? "dark-menu submenu" : "submenu"}>
-                <li>
-                  <a
-                    href="#/research"
-                    onClick={event =>
-                      goToRouteAndScroll(
-                        event,
-                        "#/research",
-                        "liquid-metal-actuators"
-                      )
-                    }
-                  >
-                    Liquid-Metal Actuators
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#/research"
-                    onClick={event =>
-                      goToRouteAndScroll(
-                        event,
-                        "#/research",
-                        "liquid-state-batteries"
-                      )
-                    }
-                  >
-                    Liquid State Batteries
-                  </a>
-                </li>
-              </ul>
+            <li>
+              <a href="#/research">Research</a>
             </li>
           )}
 
