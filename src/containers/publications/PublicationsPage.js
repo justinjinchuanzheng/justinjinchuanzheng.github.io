@@ -10,18 +10,21 @@ import "./Publications.scss";
 
 function renderAuthors(authors) {
   const myName = "Justin Jinchuan Zheng";
-
-  if (!authors.includes(myName)) {
-    return authors;
-  }
-
-  const parts = authors.split(myName);
+  const parts = authors.split(/(Justin Jinchuan Zheng|\*)/g);
 
   return (
     <>
-      {parts[0]}
-      <strong>{myName}</strong>
-      {parts[1]}
+      {parts.map((part, index) => {
+        if (part === myName) {
+          return <strong key={index}>{part}</strong>;
+        }
+
+        if (part === "*") {
+          return <sup key={index}>*</sup>;
+        }
+
+        return <React.Fragment key={index}>{part}</React.Fragment>;
+      })}
     </>
   );
 }
@@ -36,9 +39,7 @@ export default function PublicationsPage() {
   return (
     <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
       <div
-        className={
-          isDark ? "dark-mode publications-page" : "publications-page"
-        }
+        className={isDark ? "dark-mode publications-page" : "publications-page"}
       >
         <Header />
 
@@ -48,26 +49,31 @@ export default function PublicationsPage() {
           <section className="publications-section">
             <h2 className="publications-section-title">Manuscripts</h2>
 
-            <ol className="publications-list">
+            <ol
+              className="publications-list"
+              reversed
+              start={publicationsInfo.publications.length}
+            >
               {publicationsInfo.publications.map((publication, index) => (
                 <li className="publication-item" key={index}>
                   <p className="publication-citation">
                     <span className="publication-authors">
                       {renderAuthors(publication.authors)}
                     </span>{" "}
-
                     <span className="publication-title">
                       “{publication.title}.”
                     </span>{" "}
-
                     <span className="publication-status">
-                      Manuscript submitted to
-                    </span>{" "}
-
-                    <span className="publication-journal">
-                      {publication.journal}
+                      {publication.status}
                     </span>
-
+                    {publication.journal && (
+                      <>
+                        {" "}
+                        <span className="publication-journal">
+                          {publication.journal}
+                        </span>
+                      </>
+                    )}
                     <span className="publication-status">
                       , {publication.year}.
                     </span>
@@ -96,20 +102,15 @@ export default function PublicationsPage() {
                         >
                           “{contribution.title}.”
                         </a>{" "}
-
                         <span className="publication-journal">
                           {contribution.journal}
                         </span>
-
                         <span className="publication-status">, </span>
-
                         <strong className="publication-volume">
                           {contribution.volume}
                         </strong>
-
                         <span className="publication-status">
-                          ({contribution.issue}),{" "}
-                          {contribution.articleNumber} (
+                          ({contribution.issue}), {contribution.articleNumber} (
                           {contribution.year}).
                         </span>
                       </p>

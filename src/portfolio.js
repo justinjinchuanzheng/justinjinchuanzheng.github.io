@@ -95,7 +95,7 @@ const researchAppointmentsInfo = {
       desc: "Lab: Soft Machines Lab",
       descBullets: [
         "Faculty Host: Prof. Carmel Majidi",
-        "Research Focus: Soft Robotics, Wearable Electronics, and Liquid-Metal Actuators"
+        "Research Focus: Soft Robotics, Wearable Electronics"
       ]
     }
   ]
@@ -109,9 +109,19 @@ const publicationsInfo = {
   publications: [
     {
       title:
+        "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
+      authors:
+        "Seung Won Lee*, Marta Calisto Freitas*, Justin Jinchuan Zheng, Mahmoud Tavakoli, Carmel Majidi.",
+      status: "Manuscript in preparation",
+      authorNote: "Equal contribution.",
+      year: "2026"
+    },
+    {
+      title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors:
-        "Jonathan Li, Arnold Yuxuan Xie, Justin Jinchuan Zheng, and Bing Q. Li.",
+        "Jonathan Li, Arnold Yuxuan Xie, Justin Jinchuan Zheng, Bing Q. Li.",
+      status: "Manuscript submitted to",
       journal: "AIP Advances",
       year: "2026"
     }
