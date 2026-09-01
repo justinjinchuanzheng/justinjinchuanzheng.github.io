@@ -28,19 +28,25 @@ export default function ResearchPage() {
         <main className="main research-main" id="research">
           <div className="research-project-list">
             <article className="research-project" id="liquid-metal-actuators">
-              <div className="research-project-media">
-                <video
-                  key="dragonfly2-video"
-                  className="research-project-video"
-                  src={`${publicUrl}/Dragonfly2.mp4`}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-label="Dragonfly-inspired liquid-metal actuator operating in real time"
-                />
-              </div>
+              <Link
+                className="research-project-media-link"
+                to="/research/soft-robotics"
+                aria-label="View Soft Robotics research details"
+              >
+                <div className="research-project-media">
+                  <video
+                    key="dragonfly2-video"
+                    className="research-project-video"
+                    src={`${publicUrl}/Dragonfly2.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-label="Dragonfly-inspired liquid-metal actuator operating in real time"
+                  />
+                </div>
+              </Link>
 
               <div className="research-project-content">
                 <h2 className="research-project-title">
@@ -60,23 +66,43 @@ export default function ResearchPage() {
                   experiments, and used computer vision to quantify actuator
                   deformation and movement.
                 </p>
+
+                <Link
+                  className="research-project-details-link"
+                  to="/research/soft-robotics"
+                  aria-label="View Soft Robotics research details"
+                >
+                  View Research Details
+                  <span
+                    className="research-project-details-arrow"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </Link>
               </div>
             </article>
 
             <article className="research-project" id="wearable-electronics">
-              <div className="research-project-media">
-                <video
-                  key="wearables-video"
-                  className="research-project-video"
-                  src={`${publicUrl}/Wearables.mp4`}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-label="Flexible wearable-electronics device demonstration"
-                />
-              </div>
+              <Link
+                className="research-project-media-link"
+                to="/research/wearable-electronics"
+                aria-label="View Wearable Electronics research details"
+              >
+                <div className="research-project-media">
+                  <video
+                    key="wearables-video"
+                    className="research-project-video"
+                    src={`${publicUrl}/Wearables.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-label="Flexible wearable-electronics device demonstration"
+                  />
+                </div>
+              </Link>
 
               <div className="research-project-content">
                 <h2 className="research-project-title">
@@ -96,17 +122,37 @@ export default function ResearchPage() {
                   LED-ring prototypes, and performed UV-epoxy bonding, battery
                   integration, and mechanical testing.
                 </p>
+
+                <Link
+                  className="research-project-details-link"
+                  to="/research/wearable-electronics"
+                  aria-label="View Wearable Electronics research details"
+                >
+                  View Research Details
+                  <span
+                    className="research-project-details-arrow"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </Link>
               </div>
             </article>
 
             <article className="research-project" id="liquid-state-batteries">
-              <div className="research-project-media">
-                <img
-                  className="research-project-image"
-                  src={`${publicUrl}/SEM13.png`}
-                  alt="SEM micrograph of a dry-processed sodium-ion composite cathode"
-                />
-              </div>
+              <Link
+                className="research-project-media-link"
+                to="/research/next-generation-batteries"
+                aria-label="View Next-Generation Batteries research details"
+              >
+                <div className="research-project-media">
+                  <img
+                    className="research-project-image"
+                    src={`${publicUrl}/SEM13.png`}
+                    alt="SEM micrograph of a dry-processed sodium-ion composite cathode"
+                  />
+                </div>
+              </Link>
 
               <div className="research-project-content">
                 <h2 className="research-project-title">
@@ -127,6 +173,20 @@ export default function ResearchPage() {
                   contributed to solid-state research involving LPSC argyrodite
                   sulfide electrolytes.
                 </p>
+
+                <Link
+                  className="research-project-details-link"
+                  to="/research/next-generation-batteries"
+                  aria-label="View Next-Generation Batteries research details"
+                >
+                  View Research Details
+                  <span
+                    className="research-project-details-arrow"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </Link>
               </div>
             </article>
           </div>
