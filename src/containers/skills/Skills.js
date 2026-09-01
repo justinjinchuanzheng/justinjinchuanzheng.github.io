@@ -25,7 +25,7 @@ export default function Skills() {
         "Dragonfly-inspired millirobot driven by a liquid-metal actuator"
     },
     {
-      title: "Liquid-Metal Hydrogel Muscle",
+      title: "Liquid-Metal Artificial Muscle",
       video: "Actuator.mp4",
       route: "/research/soft-robotics",
       ariaLabel:
