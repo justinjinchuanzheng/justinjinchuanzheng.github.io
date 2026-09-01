@@ -55,7 +55,7 @@ export default function SoftRoboticsResearchSection({isDark}) {
         </h2>
 
         <p className="skills-project-status-top">
-          Manuscript in Preparation (2025-2026)
+          Research Project (2025-2026)
         </p>
       </div>
 
@@ -148,9 +148,9 @@ export default function SoftRoboticsResearchSection({isDark}) {
               }
             >
               This video shows an axisymmetric liquid-metal hydrogel muscle
-              operating in real time. My contributions included synthesizing
-              the hydrogel membrane and performing image-based motion tracking
-              to quantify actuator kinematics using recorded videos.
+              operating in real time. My contributions included synthesizing the
+              hydrogel membrane and performing image-based motion tracking to
+              quantify actuator kinematics using recorded videos.
             </p>
           </div>
 
@@ -286,6 +286,84 @@ export default function SoftRoboticsResearchSection({isDark}) {
           </div>
 
           <div className="skills-battery-video-divider" />
+        </div>
+
+        <div className="skills-fourth-project">
+          <h3
+            className={
+              isDark
+                ? "dark-mode skills-project-subheading"
+                : "skills-project-subheading"
+            }
+          >
+            Synaptic Plasticity in a Liquid-Metal Actuator
+          </h3>
+
+          <p className="skills-project-status-top">
+            Research Project (2025-2026)
+          </p>
+
+          <div className="synaptic-video-grid">
+            <div className="skills-video-block">
+              <video className="skills-video" autoPlay loop muted playsInline>
+                <source src={`${publicUrl}/LMA1.mp4`} type="video/mp4" />
+              </video>
+
+              <p className="skills-video-caption">
+                Oxidation-driven flattening of the liquid-metal actuator.
+              </p>
+            </div>
+
+            <div className="skills-video-block">
+              <video className="skills-video" autoPlay loop muted playsInline>
+                <source src={`${publicUrl}/LMA4.mp4`} type="video/mp4" />
+              </video>
+
+              <p className="skills-video-caption">
+                Reversible shape modulation during cyclic actuation.
+              </p>
+            </div>
+
+            <div className="skills-video-block">
+              <video className="skills-video" autoPlay loop muted playsInline>
+                <source src={`${publicUrl}/LMA3.mp4`} type="video/mp4" />
+              </video>
+
+              <p className="skills-video-caption">
+                Reduction-driven recovery of the raised liquid-metal state.
+              </p>
+            </div>
+          </div>
+
+          <div className="skills-text-below">
+            <p
+              className={
+                isDark
+                  ? "dark-mode subTitle skills-text"
+                  : "subTitle skills-text"
+              }
+            >
+              This project explores synaptic-like short- and long-term
+              plasticity in a liquid-metal actuator through electrochemical
+              oxide retention. Systematic sweeps of KOH concentration, input
+              voltage, waveform, and frequency reveal how the actuator
+              transitions from temporary deformation to retained intermediate
+              shapes.
+            </p>
+
+            <p
+              className={
+                isDark
+                  ? "dark-mode subTitle skills-text"
+                  : "subTitle skills-text"
+              }
+            >
+              My contributions included setting up the complete experiment;
+              preparing carbon ink, KOH electrolyte, and SIS samples;
+              independently conducting and recording the actuation experiments;
+              and performing image-based motion tracking and data analysis.
+            </p>
+          </div>
         </div>
       </Fade>
     </>

@@ -146,6 +146,29 @@
   margin: 0 auto;
 }
 
+.skills-fourth-project {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-fourth-project .skills-text-below {
+  text-align: left;
+}
+
+.synaptic-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.synaptic-video-grid .skills-video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .skills-divider {
   max-width: 900px;
   margin: 3.5rem auto 4.5rem auto;
@@ -315,6 +338,20 @@
 
   .skills-third-project {
     margin: 0 20px;
+  }
+
+  .skills-fourth-project {
+    margin: 0 20px;
+  }
+
+  .skills-fourth-project .skills-text-below {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .synaptic-video-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .skills-single-video {
