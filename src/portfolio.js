@@ -112,6 +112,14 @@ const publicationsInfo = {
   publications: [
     {
       title:
+        "Wireless ultrasonic blood pressure monitoring for versatile diagnostics",
+      authors:
+        "Daniel Ranke, Lloyd Lobo, Natalie Ficca, Justin Jinchuan Zheng, Adam Jacobs, Yelim Kim, Doug Weber, Maysam Chamanzar, Carmel Majidi.",
+      status: "Manuscript in preparation",
+      year: "2026"
+    },
+    {
+      title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
         "Seung Won Lee*, Marta Calisto Freitas*, Justin Jinchuan Zheng, Mahmoud Tavakoli, Carmel Majidi.",
