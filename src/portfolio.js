@@ -120,6 +120,15 @@ const publicationsInfo = {
     },
     {
       title:
+        "Wall-Scale Computer Vision for Full-Cycle Lettuce Leaf Counting and Yield Prediction in a Vertical Agrivoltaic Agrotunnel",
+      authors:
+        "Justin Jinchuan Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Haotian Li, and Joshua M. Pearce.",
+      status: "Manuscript in preparation",
+      authorNote: "Equal contribution.",
+      year: "2026"
+    },
+    {
+      title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
         "Seung Won Lee*, Marta Calisto Freitas*, Justin Jinchuan Zheng, Mahmoud Tavakoli, Carmel Majidi.",
