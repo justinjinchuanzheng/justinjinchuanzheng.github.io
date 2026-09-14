@@ -120,6 +120,15 @@ const publicationsInfo = {
     },
     {
       title:
+        "Wall-Scale Computer Vision for Full-Cycle Lettuce Leaf Counting and Yield Prediction in a Vertical Agrivoltaic Agrotunnel",
+      authors:
+        "Justin Jinchuan Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Haotian Li, Joshua M. Pearce.",
+      status: "Manuscript in preparation",
+      authorNote: "Equal contribution.",
+      year: "2026"
+    },
+    {
+      title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
         "Seung Won Lee*, Marta Calisto Freitas*, Justin Jinchuan Zheng, Mahmoud Tavakoli, Carmel Majidi.",
@@ -184,33 +193,7 @@ const techStack = {
 
 const workExperiences = {
   display: false,
-  experience: [
-    {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
-    },
-    {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-  ]
+  experience: []
 };
 
 // Open Source Section
