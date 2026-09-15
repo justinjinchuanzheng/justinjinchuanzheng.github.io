@@ -114,7 +114,7 @@ const publicationsInfo = {
       title:
         "Wireless ultrasonic blood pressure monitoring for versatile diagnostics",
       authors:
-        "Daniel Ranke, Lloyd Lobo, Natalie Ficca, Justin Jinchuan Zheng, Adam Jacobs, Yelim Kim, Doug Weber, Maysam Chamanzar, Carmel Majidi.",
+        "Daniel Ranke, Lloyd Lobo, Natalie Ficca, Justin J. Zheng, Adam Jacobs, Yelim Kim, Doug Weber, Maysam Chamanzar, Carmel Majidi.",
       status: "Manuscript in preparation",
       year: "2026"
     },
@@ -122,7 +122,7 @@ const publicationsInfo = {
       title:
         "Wall-Scale Computer Vision for Full-Cycle Lettuce Leaf Counting and Yield Prediction in a Vertical Agrivoltaic Agrotunnel",
       authors:
-        "Justin Jinchuan Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Haotian Li, Joshua M. Pearce.",
+        "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Haotian Li, Joshua M. Pearce.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
@@ -131,7 +131,7 @@ const publicationsInfo = {
       title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
-        "Seung Won Lee*, Marta Calisto Freitas*, Justin Jinchuan Zheng, Mahmoud Tavakoli, Carmel Majidi.",
+        "Seung Won Lee*, Marta Calisto Freitas*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
@@ -140,7 +140,7 @@ const publicationsInfo = {
       title:
         "High-speed, low-voltage soft actuation through field-effect elastocapillarity",
       authors:
-        "Jiahe Liao, Xiangqiang Bao, Yihao Geng, Marta Calisto Freitas, Seung Won Lee, Zihuan Bai, Jianhua Zhang, Jimmy Liao, Justin Jinchuan Zheng, Abrar Shariff, Muhammad Yunusa, Mahmoud Tavakoli, Massimo Mastrangeli, Carmel Majidi, Metin Sitti.",
+        "Jiahe Liao, Xiangqiang Bao, Yihao Geng, Marta Calisto Freitas, Seung Won Lee, Zihuan Bai, Jianhua Zhang, Jimmy Liao, Justin J. Zheng, Abrar Shariff, Muhammad Yunusa, Mahmoud Tavakoli, Massimo Mastrangeli, Carmel Majidi, Metin Sitti.",
       status: "Manuscript in preparation",
       year: "2026"
     },
@@ -148,7 +148,7 @@ const publicationsInfo = {
       title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors:
-        "Jonathan Li, Arnold Yuxuan Xie, Justin Jinchuan Zheng, Bing Q. Li.",
+        "Jonathan Li, Arnold Yuxuan Xie, Justin J. Zheng, Bing Q. Li.",
       status: "Manuscript submitted to",
       journal: "AIP Advances",
       year: "2026"

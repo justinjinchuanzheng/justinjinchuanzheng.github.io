@@ -9,8 +9,8 @@ import "../Main.scss";
 import "./Publications.scss";
 
 function renderAuthors(authors) {
-  const myName = "Justin Jinchuan Zheng";
-  const parts = authors.split(/(Justin Jinchuan Zheng|\*)/g);
+  const myName = "Justin J. Zheng";
+  const parts = authors.split(/(Justin J\. Zheng|\*)/g);
 
   return (
     <>
