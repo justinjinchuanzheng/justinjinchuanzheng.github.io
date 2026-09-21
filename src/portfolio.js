@@ -120,7 +120,16 @@ const publicationsInfo = {
     },
     {
       title:
-        "Wall-Scale Computer Vision for Full-Cycle Lettuce Leaf Counting and Yield Prediction in a Vertical Agrivoltaic Agrotunnel",
+        "Longitudinal Plant Phenotyping with Computer Vision: Seed-to-Maturity Leaf and Fruit Counting in Nasturtium under Vertical Agrivoltaics",
+      authors:
+        "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Joshua M. Pearce.",
+      status: "Manuscript in preparation",
+      authorNote: "Equal contribution.",
+      year: "2026"
+    },
+    {
+      title:
+        "Wall-Scale Computer Vision for Plant Phenotyping: Full-Cycle Lettuce Leaf Counting and Yield Prediction in Vertical Agrivoltaics",
       authors:
         "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Haotian Li, Joshua M. Pearce.",
       status: "Manuscript in preparation",
@@ -147,8 +156,7 @@ const publicationsInfo = {
     {
       title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
-      authors:
-        "Haotian Li, Arnold Xie, Justin J. Zheng, Bing Q. Li.",
+      authors: "Haotian Li, Arnold Xie, Justin J. Zheng, Bing Q. Li.",
       status: "Manuscript submitted to",
       journal: "AIP Advances",
       year: "2026"
