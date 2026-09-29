@@ -140,7 +140,7 @@ const publicationsInfo = {
       title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
-        "Seung Won Lee*, Marta Freitas*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
+        "Marta Freitas*, Seung Won Lee*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
@@ -157,7 +157,7 @@ const publicationsInfo = {
       title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors: "Haotian Li, Arnold Xie, Justin J. Zheng, Bing Q. Li.",
-      status: "Manuscript submitted to",
+      status: "Manuscript under review at",
       journal: "AIP Advances",
       year: "2026"
     }
