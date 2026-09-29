@@ -5,6 +5,14 @@ import "../skills/Skills.scss";
 export default function WearableElectronicsResearchSection({isDark}) {
   const publicUrl = process.env.PUBLIC_URL || "";
 
+  const useMobilePrintVideo =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+  const printedVideoSrc = useMobilePrintVideo
+    ? `${publicUrl}/PrintedE-mobile.mp4`
+    : `${publicUrl}/PrintedE.mp4`;
+
   useEffect(() => {
     const videos = Array.from(document.querySelectorAll("#skills video"));
 
@@ -138,7 +146,7 @@ export default function WearableElectronicsResearchSection({isDark}) {
                 preload="metadata"
                 aria-label="Voltera printer printing an LED-ring circuit prototype"
               >
-                <source src={`${publicUrl}/PrintedE.mp4`} type="video/mp4" />
+                <source src={printedVideoSrc} type="video/mp4" />
               </video>
 
               <p className="skills-video-caption">

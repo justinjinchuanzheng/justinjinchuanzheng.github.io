@@ -23,8 +23,13 @@ export default function Courses() {
       <StyleProvider value={{isDark, changeTheme}}>
         <Header />
 
-        <section className="courses-teaching-section" id="teaching-experience">
-          <h1 className="courses-teaching-heading">Teaching Experience</h1>
+        <section
+          className="courses-teaching-section"
+          id="teaching-experience"
+        >
+          <h1 className="courses-teaching-heading">
+            Teaching Experience
+          </h1>
 
           <div className="teaching-entry">
             <div className="teaching-logo-container">
@@ -54,20 +59,15 @@ export default function Courses() {
 
               <p className="teaching-meta">
                 <span className="teaching-date">Fall 2026</span>
-
-                <span className="teaching-meta-separator"> | </span>
-
-                <span className="teaching-instructor">
-                  Course Instructor: Prof. Christoforos Mavrogiannis
-                </span>
               </p>
 
               <ul className="teaching-responsibilities">
                 <li>
-                  Hold office hours and provide instructional support to
-                  students
+                  Hold office hours and provide instructional support to students
                 </li>
-                <li>Assist with hands-on robotics laboratory sessions</li>
+                <li>
+                  Assist with hands-on robotics laboratory sessions
+                </li>
                 <li>
                   Grade coursework and contribute to quiz and exam development
                 </li>
