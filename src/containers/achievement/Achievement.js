@@ -90,9 +90,7 @@ export default function Achievement() {
 
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Examines original scientific research to extract general
@@ -121,9 +119,7 @@ export default function Achievement() {
 
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Self-driving cars are a transformative technology for society.
@@ -153,9 +149,7 @@ export default function Achievement() {
 
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Theory and application of probabilistic techniques for
@@ -187,9 +181,7 @@ export default function Achievement() {
 
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Many life processes occur at small size-scales. This course
@@ -220,9 +212,7 @@ export default function Achievement() {
 
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
                 Introduction on the correlation between various types of
@@ -251,18 +241,15 @@ export default function Achievement() {
 
               <p
                 className={
-                  isDark
-                    ? "dark-mode course-detail-text"
-                    : "course-detail-text"
+                  isDark ? "dark-mode course-detail-text" : "course-detail-text"
                 }
               >
-                Explores symmetry in geometry through group theory,
-                differential geometry, representation theory, and Lie groups,
-                then applies these mathematical tools to computationally
-                efficient and generalizable methods for learning, perception,
-                estimation, and control. Topics include geometric learning,
-                symmetry-preserving algorithms, computer vision, AI, and
-                robotics.
+                Explores symmetry in geometry through group theory, differential
+                geometry, representation theory, and Lie groups, then applies
+                these mathematical tools to computationally efficient and
+                generalizable methods for learning, perception, estimation, and
+                control. Topics include geometric learning, symmetry-preserving
+                algorithms, computer vision, AI, and robotics.
               </p>
 
               <hr className="course-detail-divider" />

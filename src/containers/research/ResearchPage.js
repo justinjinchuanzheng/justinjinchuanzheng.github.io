@@ -60,11 +60,10 @@ export default function ResearchPage() {
 
                 <p className="research-project-description">
                   My soft-robotics research focuses on liquid-metal actuators
-                  for fast, compliant, and adaptive motion. Across projects led
-                  by Dr. Jiahe Liao and Marta Calisto Freitas, I prepared
-                  hydrogel and SIS materials, conducted KOH and EGaIn
-                  experiments, and used computer vision to quantify actuator
-                  deformation and movement.
+                  for fast, compliant, and adaptive motion. I prepared hydrogel
+                  and SIS materials, conducted KOH and EGaIn experiments, and
+                  used computer vision to quantify actuator deformation and
+                  movement.
                 </p>
 
                 <Link
@@ -115,10 +114,9 @@ export default function ResearchPage() {
                 </h2>
 
                 <p className="research-project-description">
-                  My wearable-electronics research focuses on soft, conformable
-                  devices for physiological sensing and healthcare monitoring.
-                  In collaboration with Daniel Ranke, I fabricated SIS- and
-                  EGaIn-based devices, printed circuits on TPU, assembled
+                  My wearable-electronics research explores soft, conformable
+                  platforms for sensing and visual feedback. I fabricated SIS-
+                  and EGaIn-based devices, printed circuits on TPU, assembled
                   LED-ring prototypes, and performed UV-epoxy bonding, battery
                   integration, and mechanical testing.
                 </p>

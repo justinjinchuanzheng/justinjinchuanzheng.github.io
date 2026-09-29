@@ -105,24 +105,47 @@ export default function WearableElectronicsResearchSection({isDark}) {
                 ? "dark-mode skills-project-subheading"
                 : "skills-project-subheading"
             }
+            style={{textAlign: "left", marginBottom: "3.5rem"}}
           >
-            Self-Contained Soft LED-Ring Wearable Platform
+            A Self-Contained Soft LED-Ring Wearable with Printed Circuits
           </h3>
 
           <p
             className={
               isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
             }
+            style={{lineHeight: 1.6}}
           >
-            This project explores a soft, self-contained electronic platform for
-            wearable sensing and visual feedback. The prototype combines printed
-            conductive pathways, surface-mounted LEDs, a compact battery, and
-            push-button control within a conformable polymer structure. In
-            collaboration with Daniel Ranke, I fabricated SIS- and EGaIn-based
-            devices, printed circuits on TPU, assembled the LED-ring prototypes,
-            performed UV-epoxy bonding and battery integration, and supported
-            mechanical testing.
+            This project explores a soft, self-contained platform for wearable
+            sensing and visual feedback. The LED-ring prototype integrates
+            printed conductive pathways, surface-mounted LEDs, a compact
+            battery, and push-button control in a conformable polymer structure.
+            The completed ring shows button-controlled illumination during
+            repeated handling without external wiring. I fabricated SIS- and
+            EGaIn-based devices, printed circuits on TPU, assembled the
+            prototypes, performed UV-epoxy bonding and battery integration, and
+            supported mechanical testing.
           </p>
+
+          <div className="skills-video-row" style={{marginTop: "3rem"}}>
+            <div className="skills-video-block">
+              <video
+                className="skills-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                aria-label="Voltera printer printing an LED-ring circuit prototype"
+              >
+                <source src={`${publicUrl}/PrintedE.mp4`} type="video/mp4" />
+              </video>
+
+              <p className="skills-video-caption">
+                Voltera printing an LED-ring circuit prototype.
+              </p>
+            </div>
+          </div>
 
           <div className="skills-divider" />
         </div>
