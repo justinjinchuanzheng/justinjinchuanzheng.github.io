@@ -120,9 +120,9 @@ const publicationsInfo = {
     },
     {
       title:
-        "Longitudinal Plant Phenotyping with Computer Vision: Seed-to-Maturity Leaf and Fruit Counting in Nasturtium under Vertical Agrivoltaics",
+        "Longitudinal Computer Vision for Full-Cycle Plant Phenotyping and Yield Prediction of Nasturtium in Vertical Agrivoltaics",
       authors:
-        "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Joshua M. Pearce.",
+        "Justin J. Zheng*, Hansheng Liu*, Farzad Hasan, Nima Asgari, Riya Roy, and Joshua M. Pearce.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
