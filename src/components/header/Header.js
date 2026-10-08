@@ -10,21 +10,55 @@ import {
   talkSection,
   achievementSection,
   resumeSection,
-  educationInfo,
   publicationsInfo
 } from "../../portfolio";
 
-function Header() {
+export default function Header() {
   const {isDark} = useContext(StyleContext);
 
-  const viewSkills = skillsSection.display;
-  const viewResearch = skillsSection.display;
-  const viewEducation = educationInfo.display;
-  const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
-  const viewResume = resumeSection.display;
-  const viewPublications = publicationsInfo.display;
+  const menuLinks = [
+    {
+      label: "About",
+      href: "#/about",
+      section: "about",
+      visible: skillsSection.display
+    },
+    {
+      label: "Research",
+      href: "#/research",
+      visible: skillsSection.display
+    },
+    {
+      label: "Publications",
+      href: "#/publications",
+      visible: publicationsInfo.display
+    },
+    {
+      label: "Courses",
+      href: "#/courses",
+      visible: achievementSection.display
+    },
+    {
+      label: "Blogs",
+      href: "#/blogs",
+      visible: blogSection.display
+    },
+    {
+      label: "Talks",
+      href: "#/talks",
+      visible: talkSection.display
+    },
+    {
+      label: "Resume",
+      href: "#/resume",
+      visible: resumeSection.display
+    },
+    {
+      label: "Contact",
+      href: "#/contact",
+      visible: true
+    }
+  ];
 
   const scrollToSection = (sectionId, delay = 0) => {
     setTimeout(() => {
@@ -55,16 +89,10 @@ function Header() {
       window.location.hash = "#/about";
 
       setTimeout(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
+        window.scrollTo({top: 0, behavior: "smooth"});
       }, 400);
     } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      window.scrollTo({top: 0, behavior: "smooth"});
     }
   };
 
@@ -76,6 +104,7 @@ function Header() {
           onClick={goToTop}
           onKeyDown={event => {
             if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               goToTop();
             }
           }}
@@ -94,76 +123,39 @@ function Header() {
           </span>
         </div>
 
-        <input className="menu-btn" type="checkbox" id="menu-btn" />
+        <input
+          className="menu-btn"
+          type="checkbox"
+          id="menu-btn"
+          aria-label="Toggle navigation menu"
+        />
 
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{color: "white"}}
+          aria-label="Navigation menu"
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"} />
         </label>
 
         <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a
-                href="#/about"
-                onClick={event => goToRouteAndScroll(event, "#/about", "about")}
-              >
-                About
-              </a>
-            </li>
-          )}
-
-          {viewEducation && (
-            <li>
-              <a
-                href="#/education"
-                onClick={event =>
-                  goToRouteAndScroll(event, "#/education", "education")
-                }
-              >
-                Education
-              </a>
-            </li>
-          )}
-
-          {viewResearch && (
-            <li>
-              <a href="#/research">Research</a>
-            </li>
-          )}
-
-          {viewPublications && (
-            <li>
-              <a href="#/publications">Publications</a>
-            </li>
-          )}
-
-          {viewAchievement && (
-            <li>
-              <a href="#/courses">Courses</a>
-            </li>
-          )}
-
-          {viewBlog && (
-            <li>
-              <a href="#/blogs">Blogs</a>
-            </li>
-          )}
-
-          {viewTalks && (
-            <li>
-              <a href="#/talks">Talks</a>
-            </li>
-          )}
-
-          {viewResume && (
-            <li>
-              <a href="#/resume">Resume</a>
-            </li>
-          )}
+          {menuLinks
+            .filter(link => link.visible)
+            .map(link => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  onClick={
+                    link.section
+                      ? event =>
+                          goToRouteAndScroll(event, link.href, link.section)
+                      : undefined
+                  }
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
 
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -176,5 +168,3 @@ function Header() {
     </Headroom>
   );
 }
-
-export default Header;

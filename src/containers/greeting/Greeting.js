@@ -5,6 +5,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import profileImage from "../../assets/images/Award.png";
+import appropediaLogo from "../../assets/images/AppropediaLogo.png";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -57,24 +58,55 @@ export default function Greeting() {
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
 
-              <div className="button-greeting-div">
-                <a
-                  href="#/contact"
-                  className={`greeting-cta ${isDark ? "dark" : "light"}`}
-                >
-                  Contact me
-                </a>
-
-                {greeting.resumeLink && (
+              <div className="button-greeting-div greeting-actions">
+                <div className="greeting-profile-links">
                   <a
-                    href={greeting.resumeLink}
+                    href="https://www.appropedia.org/User:Justin_Jinchuan_Zheng"
                     target="_blank"
-                    rel="noreferrer"
-                    className={`greeting-cta ${isDark ? "dark" : "light"}`}
+                    rel="noopener noreferrer"
+                    aria-label="Appropedia profile (opens in a new tab)"
+                    className={`greeting-cta greeting-profile-button ${
+                      isDark ? "dark" : "light"
+                    }`}
                   >
-                    Google Scholar
+                    <img
+                      src={appropediaLogo}
+                      alt=""
+                      className="greeting-appropedia-logo"
+                      width="24"
+                      height="24"
+                    />
+
+                    <span className="greeting-cta-label">
+                      Appropedia profile
+                    </span>
+
+                    <span className="greeting-external-arrow" aria-hidden="true">
+                      ↗
+                    </span>
                   </a>
-                )}
+
+                  {greeting.resumeLink && (
+                    <a
+                      href={greeting.resumeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Google Scholar (opens in a new tab)"
+                      className={`greeting-cta greeting-profile-button ${
+                        isDark ? "dark" : "light"
+                      }`}
+                    >
+                      <span className="greeting-cta-label">Google Scholar</span>
+
+                      <span
+                        className="greeting-external-arrow"
+                        aria-hidden="true"
+                      >
+                        ↗
+                      </span>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
