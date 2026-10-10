@@ -3,6 +3,7 @@
 // npm run deploy
 // To change portfolio colors globally go to the _globalColor.scss file
 
+import React from "react";
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation";
 
@@ -23,8 +24,23 @@ const illustration = {
 const greeting = {
   username: "Justin J. Zheng",
   title: "Justin Jinchuan Zheng",
-  subTitle: emoji(
-    "I am a senior undergraduate student in Robotics at the University of Michigan. My research interests include soft robotics, wearable electronics, and functional materials for robotics. I am currently an undergraduate researcher in the Soft Machines Lab at Carnegie Mellon University. I am interested in how the composition and structure of soft and functional materials, including liquid metals, stretchable conductors, battery materials, and soft composites, can be designed to create robotic systems that sense, actuate, and interact safely with the physical world. My goal is to develop robotic systems that are soft, adaptive, and safe for close human interaction."
+  subTitle: (
+    <>
+      I am a senior undergraduate student pursuing a B.S.E. in Robotics at the
+      University of Michigan. I am currently an undergraduate researcher in the
+      Soft Machines Lab at Carnegie Mellon University and Gong’s Lab at the
+      University of Michigan. I am also an alumnus of the Free Appropriate
+      Sustainability Technology (FAST) Research Group in Canada, where I
+      continue to collaborate on research.
+      <br />
+      <br />
+      My research interests focus on wearable robotics and electronics, as well
+      as soft functional materials. I am particularly interested in how material
+      design and electronic integration can improve sensing and actuation in
+      wearable devices. By combining these areas with AI, I aim to create
+      robotic systems that sense, actuate, and interact safely with the physical
+      world.
+    </>
   ),
   resumeLink:
     "https://scholar.google.com/citations?hl=en&user=XVc7h10AAAAJ&view_op=list_works&gmla=AKzYXQ3YJXS2bDhbIpt6reHK-TmlO_rzsUAFdN1H1yPuXGp_ya6MzLa4ksd5MhPkLgByQGzoUKkwuMLl4YoEXdMU",
@@ -372,7 +388,7 @@ const contactInfo = {
   subtitle: "",
   number: "",
   email_address: "justinjz@umich.edu",
-  email_addresses: ["justinjz@umich.edu", "justinz2@andrew.cmu.edu"]
+  email_addresses: ["justinjz@umich.edu"]
 };
 
 // Twitter Section
