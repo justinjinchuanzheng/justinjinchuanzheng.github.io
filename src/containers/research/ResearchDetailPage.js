@@ -6,6 +6,7 @@ import {useLocalStorage} from "../../hooks/useLocalStorage";
 import BatteryResearchSection from "./BatteryResearchSection";
 import SoftRoboticsResearchSection from "./SoftRoboticsResearchSection";
 import WearableElectronicsResearchSection from "./WearableElectronicsResearchSection";
+import AgrotunnelResearchSection from "./AgrotunnelResearchSection";
 import "../Main.scss";
 import "./ResearchDetailPage.scss";
 
@@ -15,6 +16,7 @@ export default function ResearchDetailPage({title, pageId}) {
   const isBatteryPage = pageId === "next-generation-batteries";
   const isSoftRoboticsPage = pageId === "soft-robotics";
   const isWearableElectronicsPage = pageId === "wearable-electronics";
+  const isAgrotunnelPage = pageId === "agrivoltaic-agrotunnel";
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,6 +46,10 @@ export default function ResearchDetailPage({title, pageId}) {
         ) : isWearableElectronicsPage ? (
           <main className={isDark ? "dark-mode main" : "main"} id="skills">
             <WearableElectronicsResearchSection isDark={isDark} />
+          </main>
+        ) : isAgrotunnelPage ? (
+          <main className={isDark ? "dark-mode main" : "main"} id="skills">
+            <AgrotunnelResearchSection />
           </main>
         ) : (
           <main className="main research-detail-main" id={pageId}>

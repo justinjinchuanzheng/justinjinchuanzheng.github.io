@@ -1,0 +1,571 @@
+@import "../../_globalColor";
+
+.agrotunnel-research {
+  width: 100%;
+}
+
+.agrotunnel-header {
+  max-width: 980px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.agrotunnel-eyebrow {
+  margin: 0 0 0.9rem;
+  color: #8a6500;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dark-mode .agrotunnel-eyebrow {
+  color: #ffcb05;
+}
+
+.agrotunnel-title {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 0.8rem;
+  color: #1f1f1f;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.agrotunnel-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin: 0.85rem auto 0;
+  background-color: #8a6500;
+}
+
+.dark-mode .agrotunnel-title {
+  color: #ffffff;
+}
+
+.dark-mode .agrotunnel-title::after {
+  background-color: #ffcb05;
+}
+
+.agrotunnel-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.agrotunnel-title-link span {
+  color: #8a6500;
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
+.agrotunnel-title-link:hover,
+.agrotunnel-title-link:focus-visible {
+  color: #8a6500;
+}
+
+.agrotunnel-title-link:focus-visible {
+  outline: 2px solid #8a6500;
+  outline-offset: 6px;
+}
+
+.dark-mode .agrotunnel-title-link span,
+.dark-mode .agrotunnel-title-link:hover,
+.dark-mode .agrotunnel-title-link:focus-visible {
+  color: #ffcb05;
+}
+
+.dark-mode .agrotunnel-title-link:focus-visible {
+  outline-color: #ffcb05;
+}
+
+.agrotunnel-meta {
+  margin: 1rem 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+
+.agrotunnel-affiliation {
+  margin: 0;
+  font-size: 18px;
+}
+
+.agrotunnel-affiliation-link {
+  display: inline-block;
+  max-width: 100%;
+  color: #333333;
+  text-decoration: none;
+}
+
+.agrotunnel-affiliation-link::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin: 6px auto 0;
+  background-color: #8a6500;
+}
+
+.agrotunnel-affiliation-link:hover,
+.agrotunnel-affiliation-link:focus-visible {
+  color: #8a6500;
+}
+
+.agrotunnel-affiliation-link:focus-visible {
+  outline: 2px solid #8a6500;
+  outline-offset: 5px;
+}
+
+.dark-mode .agrotunnel-affiliation-link {
+  color: #edf0f4;
+}
+
+.dark-mode .agrotunnel-affiliation-link::after {
+  background-color: #ffcb05;
+}
+
+.dark-mode .agrotunnel-affiliation-link:hover,
+.dark-mode .agrotunnel-affiliation-link:focus-visible {
+  color: #ffcb05;
+}
+
+.dark-mode .agrotunnel-affiliation-link:focus-visible {
+  outline-color: #ffcb05;
+}
+
+.agrotunnel-status {
+  margin: 6px 0 0;
+  color: #555555;
+  font-size: 16px;
+}
+
+.dark-mode .agrotunnel-status {
+  color: #d6d9df;
+}
+
+.agrotunnel-photo-date {
+  margin: 6px 0 0;
+  color: #666666;
+  font-size: 14px;
+}
+
+.dark-mode .agrotunnel-photo-date {
+  color: #b8bec8;
+}
+
+.agrotunnel-profile {
+  margin: 12px 0 0;
+  font-size: 16px;
+}
+
+.agrotunnel-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: 100%;
+  vertical-align: middle;
+  color: #333333;
+  text-decoration: none;
+}
+
+.agrotunnel-profile-logo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: brightness(0);
+}
+
+.dark-mode .agrotunnel-profile-logo {
+  filter: brightness(0) invert(1);
+}
+
+.agrotunnel-profile-link:hover,
+.agrotunnel-profile-link:focus-visible {
+  color: #8a6500;
+  text-decoration: none;
+}
+
+.agrotunnel-profile-link:focus-visible {
+  outline: 2px solid #8a6500;
+  outline-offset: 4px;
+}
+
+.dark-mode .agrotunnel-profile-link {
+  color: #edf0f4;
+}
+
+.dark-mode .agrotunnel-profile-link:hover,
+.dark-mode .agrotunnel-profile-link:focus-visible {
+  color: #ffcb05;
+}
+
+.dark-mode .agrotunnel-profile-link:focus-visible {
+  outline-color: #ffcb05;
+}
+
+.agrotunnel-external-arrow {
+  color: #8a6500;
+  font-size: 0.72em;
+  vertical-align: 0.06em;
+}
+
+.dark-mode .agrotunnel-external-arrow {
+  color: #ffcb05;
+}
+
+.agrotunnel-introduction {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.agrotunnel-introduction .agrotunnel-copy + .agrotunnel-copy {
+  margin-top: 1.25rem;
+}
+
+.agrotunnel-copy {
+  margin: 0;
+  color: #222222;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.dark-mode .agrotunnel-copy {
+  color: #f0f1f3;
+}
+
+.agrotunnel-inline-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(138, 101, 0, 0.55);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+}
+
+.agrotunnel-inline-link:hover,
+.agrotunnel-inline-link:focus-visible {
+  color: #8a6500;
+  text-decoration-color: #8a6500;
+}
+
+.agrotunnel-inline-link:focus-visible {
+  outline: 2px solid #8a6500;
+  outline-offset: 3px;
+}
+
+.dark-mode .agrotunnel-inline-link {
+  text-decoration-color: rgba(255, 203, 5, 0.45);
+}
+
+.dark-mode .agrotunnel-inline-link:hover,
+.dark-mode .agrotunnel-inline-link:focus-visible {
+  color: #ffcb05;
+  text-decoration-color: #ffcb05;
+}
+
+.dark-mode .agrotunnel-inline-link:focus-visible {
+  outline-color: #ffcb05;
+}
+
+.agrotunnel-divider {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 4.5rem;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.28);
+}
+
+.dark-mode .agrotunnel-divider {
+  border-bottom-color: rgba(255, 255, 255, 0.28);
+}
+
+.agrotunnel-block {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 5rem;
+}
+
+.agrotunnel-section-heading {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 900px);
+  gap: 1.5rem;
+  margin: 0 auto 2.6rem;
+  justify-content: center;
+}
+
+.agrotunnel-section-number {
+  margin: 0.45rem 0 0;
+  color: #8a6500;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.dark-mode .agrotunnel-section-number {
+  color: #ffcb05;
+}
+
+.agrotunnel-subtitle {
+  margin: 0 0 1.35rem;
+  color: #1f1f1f;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.dark-mode .agrotunnel-subtitle {
+  color: #ffffff;
+}
+
+.agrotunnel-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.agrotunnel-photo-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(31, 31, 31, 0.14);
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .agrotunnel-photo-card {
+  border-color: rgba(255, 255, 255, 0.13);
+  background-color: #202632;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+.agrotunnel-photo-card-featured {
+  grid-column: span 2;
+}
+
+.agrotunnel-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+}
+
+.agrotunnel-photo-card-featured .agrotunnel-photo {
+  aspect-ratio: 8 / 3;
+}
+
+.agrotunnel-photo[src$="/JustinandSolar2.jpg"] {
+  object-position: 50% 25%;
+}
+
+.agrotunnel-photo-caption {
+  padding: 0.95rem 1rem 1.05rem;
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dark-mode .agrotunnel-photo-caption {
+  color: #e6e8ec;
+}
+
+.agrotunnel-vision-block {
+  margin-bottom: 1rem;
+}
+
+.agrotunnel-publication-status {
+  margin: 1rem 0 0;
+  color: #5a5a5a;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.dark-mode .agrotunnel-publication-status {
+  color: #c8ccd3;
+}
+
+.agrotunnel-publications {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.agrotunnel-publication-card {
+  padding: 1.8rem;
+  border: 1px solid rgba(31, 31, 31, 0.16);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.dark-mode .agrotunnel-publication-card {
+  border-color: rgba(255, 255, 255, 0.14);
+  background-color: #202632;
+}
+
+.agrotunnel-publication-label {
+  margin: 0 0 0.8rem;
+  color: #8a6500;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.dark-mode .agrotunnel-publication-label {
+  color: #ffcb05;
+}
+
+.agrotunnel-publication-card h3 {
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 1.14rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.dark-mode .agrotunnel-publication-card h3 {
+  color: #ffffff;
+}
+
+.agrotunnel-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.agrotunnel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding-bottom: 0.2rem;
+  color: #8a6500;
+  border-bottom: 1px solid currentColor;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.agrotunnel-link:hover,
+.agrotunnel-link:focus-visible {
+  color: #5e4700;
+}
+
+.agrotunnel-link:focus-visible {
+  outline: 2px solid #8a6500;
+  outline-offset: 5px;
+}
+
+.dark-mode .agrotunnel-link {
+  color: #ffcb05;
+}
+
+.dark-mode .agrotunnel-link:hover,
+.dark-mode .agrotunnel-link:focus-visible {
+  color: #ffe16f;
+}
+
+.dark-mode .agrotunnel-link:focus-visible {
+  outline-color: #ffcb05;
+}
+
+@media (max-width: 900px) {
+  .agrotunnel-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agrotunnel-publications {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .agrotunnel-header {
+    margin-bottom: 3rem;
+  }
+
+  .agrotunnel-title {
+    font-size: 32px;
+  }
+
+  .agrotunnel-affiliation {
+    font-size: 16px;
+  }
+
+  .agrotunnel-status {
+    font-size: 15px;
+  }
+
+  .agrotunnel-introduction {
+    margin: 0 20px 3.25rem;
+  }
+
+  .agrotunnel-copy {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .agrotunnel-divider {
+    margin-bottom: 3.5rem;
+  }
+
+  .agrotunnel-block {
+    margin-bottom: 4rem;
+  }
+
+  .agrotunnel-section-heading {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .agrotunnel-subtitle {
+    font-size: 24px;
+  }
+
+  .agrotunnel-gallery {
+    gap: 1rem;
+  }
+
+  .agrotunnel-photo-caption {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .agrotunnel-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .agrotunnel-photo-card-featured {
+    grid-column: span 1;
+  }
+
+  .agrotunnel-photo-card-featured .agrotunnel-photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .agrotunnel-section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .agrotunnel-section-number {
+    margin-top: 0;
+  }
+
+  .agrotunnel-publication-card {
+    padding: 1.35rem;
+  }
+
+  .agrotunnel-links {
+    align-items: center;
+    flex-direction: column;
+  }
+}
