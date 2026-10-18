@@ -171,6 +171,15 @@ const publicationsInfo = {
     },
     {
       title:
+        "Decoupling Compliance from Toughness Enables Scalp-Adhesive Solid Ionic Conductors for Stable Transcranial Direct Current Stimulation",
+      authors:
+        "Zhengtao Hu, Zhuokai Qu, Melinda Xu, Jackson Frey, Zachary Pizzo, Amelia Scanio, Mohammad Asadi Tokmedash, Ajay Chavda, Sijun Seong, Carlos A. Figueroa Morales, Jouha Min, Justin J. Zheng, Benjamin Hampstead, and Xiwen Gong.",
+      status: "Manuscript submitted to",
+      journal: "ACS Nano",
+      year: "2026"
+    },
+    {
+      title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors: "Haotian Li, Arnold Xie, Justin J. Zheng, Bing Q. Li.",
       status: "Manuscript under review at",
