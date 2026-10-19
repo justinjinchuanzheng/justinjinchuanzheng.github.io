@@ -6,6 +6,32 @@
 import React from "react";
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation";
+import "./components/educationCard/EducationCard.scss";
+
+const ResearcherLink = ({href, children}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="education-bullet-link"
+    aria-label={`${children} (opens in a new tab)`}
+    style={{
+      display: "inline-block",
+      whiteSpace: "nowrap",
+      fontFamily: "inherit",
+      fontSize: "inherit",
+      fontWeight: "inherit",
+      textDecoration: "underline",
+      textUnderlineOffset: "4px",
+      textDecorationThickness: "1px"
+    }}
+  >
+    {children}
+    <span className="education-link-arrow" aria-hidden="true">
+      ↗
+    </span>
+  </a>
+);
 
 // Splash Screen
 
@@ -26,12 +52,22 @@ const greeting = {
   title: "Justin Jinchuan Zheng",
   subTitle: (
     <>
-      I am a senior undergraduate student pursuing a B.S.E. in Robotics at the
-      University of Michigan. I am currently an undergraduate researcher in the
-      Soft Machines Lab at Carnegie Mellon University and Gong’s Lab at the
-      University of Michigan. I am also an alumnus of the Free Appropriate
-      Sustainability Technology (FAST) Research Group in Canada, where I
-      continue to collaborate on research.
+      I am a senior undergraduate student majoring in Robotics at the
+      University of Michigan. My current research advisors include{" "}
+      <ResearcherLink href="https://www.meche.engineering.cmu.edu/directory/bios/majidi-carmel.html">
+        Prof. Carmel Majidi
+      </ResearcherLink>{" "}
+      at Carnegie Mellon University and{" "}
+      <ResearcherLink href="https://che.engin.umich.edu/people/gong-xiwen/">
+        Prof. Xiwen Gong
+      </ResearcherLink>{" "}
+      at the University of Michigan. I am also an alumnus of the Free
+      Appropriate Sustainable Technology (FAST) Research Group in Canada, where
+      I continue to collaborate with{" "}
+      <ResearcherLink href="https://en.wikipedia.org/wiki/Joshua_Pearce">
+        Prof. Joshua Pearce
+      </ResearcherLink>
+      <span style={{marginLeft: "-0.2rem"}}>.</span>
       <br />
       <br />
       My research interests focus on wearable robotics and electronics, as well
