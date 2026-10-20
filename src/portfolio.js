@@ -218,7 +218,7 @@ const publicationsInfo = {
       title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors: "Haotian Li, Arnold Xie, Justin J. Zheng, Bing Q. Li.",
-      status: "Manuscript under review at",
+      status: "Manuscript under revision at",
       journal: "AIP Advances",
       year: "2026"
     }
