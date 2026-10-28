@@ -190,19 +190,27 @@ const publicationsInfo = {
     },
     {
       title:
+        "High-speed, low-voltage soft actuation through field-effect elastocapillarity",
+      authors:
+        "Jiahe Liao, Xiangqiang Bao, Yihao Geng, Marta Freitas, Seung Won Lee, Zihuan Bai, Jianhua Zhang, Jimmy Liao, Justin J. Zheng, Abrar Shariff, Muhammad Yunusa, Mahmoud Tavakoli, Massimo Mastrangeli, Carmel Majidi, Metin Sitti.",
+      status: "Manuscript in preparation",
+      year: "2026"
+    },
+    {
+      title:
+        "FloodFarmGPT: A Retrieval-Augmented Multi-Agent LLM Assistant for Farm-Scale Flood Risk Communication in Ontario, Canada",
+      authors:
+        "Haotian Li, Jiajin Feng, Justin J. Zheng, and M. Reza Najafi.",
+      status: "Manuscript in preparation",
+      year: "2026"
+    },
+    {
+      title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
         "Marta Freitas*, Seung Won Lee*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
-      year: "2026"
-    },
-    {
-      title:
-        "High-speed, low-voltage soft actuation through field-effect elastocapillarity",
-      authors:
-        "Jiahe Liao, Xiangqiang Bao, Yihao Geng, Marta Freitas, Seung Won Lee, Zihuan Bai, Jianhua Zhang, Jimmy Liao, Justin J. Zheng, Abrar Shariff, Muhammad Yunusa, Mahmoud Tavakoli, Massimo Mastrangeli, Carmel Majidi, Metin Sitti.",
-      status: "Manuscript in preparation",
       year: "2026"
     },
     {
@@ -218,7 +226,7 @@ const publicationsInfo = {
       title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors: "Haotian Li, Arnold Xie, Justin J. Zheng, Bing Q. Li.",
-      status: "Manuscript under revision at",
+      status: "Revised manuscript under review at",
       journal: "AIP Advances",
       year: "2026"
     }
