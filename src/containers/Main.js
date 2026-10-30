@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
@@ -15,36 +15,15 @@ import Education from "./education/Education";
 import ResearchAppointments from "./researchAppointments/ResearchAppointments";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
-import SplashScreen from "./splashScreen/SplashScreen";
-import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  // Always start in dark mode for first-time users
   const location = useLocation();
   const [isDark, setIsDark] = useLocalStorage("isDark", true);
-  const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
-    useState(true);
 
   useEffect(() => {
-    if (splashScreen.enabled) {
-      const splashTimer = setTimeout(
-        () => setIsShowingSplashAnimation(false),
-        splashScreen.duration
-      );
-      return () => {
-        clearTimeout(splashTimer);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isShowingSplashAnimation && splashScreen.enabled) {
-      return;
-    }
-
     const sectionMap = {
       "/about": "about",
       "/education": "education",
@@ -57,14 +36,20 @@ const Main = () => {
     const sectionId = sectionMap[location.pathname];
 
     if (sectionId) {
-      setTimeout(() => {
+      const scrollTimer = setTimeout(() => {
         const section = document.getElementById(sectionId);
+
         if (section) {
-          section.scrollIntoView({behavior: "smooth", block: "start"});
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
         }
       }, 100);
+
+      return () => clearTimeout(scrollTimer);
     }
-  }, [location.pathname, isShowingSplashAnimation]);
+  }, [location.pathname]);
 
   const changeTheme = () => {
     setIsDark(!isDark);
@@ -73,27 +58,21 @@ const Main = () => {
   return (
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
-        {isShowingSplashAnimation && splashScreen.enabled ? (
-          <SplashScreen />
-        ) : (
-          <>
-            <Header />
-            <Greeting />
-            <Education />
-            <ResearchAppointments />
-            <Skills />
-            <StackProgress />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Footer />
-            <ScrollToTopButton />
-          </>
-        )}
+        <Header />
+        <Greeting />
+        <Education />
+        <ResearchAppointments />
+        <Skills />
+        <StackProgress />
+        <WorkExperience />
+        <Projects />
+        <StartupProject />
+        <Blogs />
+        <Talks />
+        <Twitter />
+        <Podcast />
+        <Footer />
+        <ScrollToTopButton />
       </StyleProvider>
     </div>
   );

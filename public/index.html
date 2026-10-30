@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Edit meta tags for SEO -->
     <title>Justin Jinchuan Zheng | Research Portfolio</title>
     <meta name="title" content="Justin Zheng | Research Portfolio" />
     <meta
@@ -12,64 +11,114 @@
       content="Research portfolio of Justin Zheng, an undergraduate robotics researcher at the University of Michigan focusing on soft robotics and liquid-metal actuators."
     />
 
-    <!-- Prevent initial white flash before React/CSS loads, but allow light mode after app loads -->
+    <!-- Keep the background stable while routes load. -->
     <style>
+      html {
+        --page-background: #171c28;
+        --page-text: #ffffff;
+        background-color: var(--page-background);
+      }
+
+      html[data-theme="light"] {
+        --page-background: #f7f9fc;
+        --page-text: #171c28;
+      }
+
       html,
-      body {
+      body,
+      #root {
         margin: 0;
         min-height: 100%;
-        background-color: #171c28;
+        background-color: var(--page-background);
       }
 
-      body {
-        min-height: 100vh;
-        background-color: #171c28;
-      }
-
-      #root {
+      body,
+      #root,
+      #root > * {
         min-height: 100vh;
       }
 
-      body.app-loaded {
-        background-color: #f7f9fc;
+      #root > * {
+        animation: page-enter 0.2s ease-out;
       }
 
-      body.app-loaded.app-dark {
-        background-color: #171c28;
+      .route-loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        color: var(--page-text);
+      }
+
+      .route-loading-spinner {
+        width: 24px;
+        height: 24px;
+        border: 3px solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: route-spin 0.8s linear infinite;
+      }
+
+      @keyframes page-enter {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes route-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #root > *,
+        .route-loading-spinner {
+          animation: none;
+        }
       }
     </style>
 
     <script>
       (function () {
-        function updateBodyBackground() {
-          var root = document.getElementById("root");
-
-          if (!root || !document.body) {
-            return;
-          }
-
-          var isDarkMode = !!root.querySelector(".dark-mode");
-
-          document.body.classList.add("app-loaded");
-
-          if (isDarkMode) {
-            document.body.classList.add("app-dark");
-          } else {
-            document.body.classList.remove("app-dark");
-          }
+        function applyTheme(isDark) {
+          document.documentElement.setAttribute(
+            "data-theme",
+            isDark ? "dark" : "light"
+          );
         }
+
+        // Read the saved choice before React starts.
+        var initialIsDark = true;
+
+        try {
+          var savedTheme = JSON.parse(localStorage.getItem("isDark"));
+
+          if (typeof savedTheme === "boolean") {
+            initialIsDark = savedTheme;
+          }
+        } catch (error) {
+          // Use dark mode if storage is unavailable.
+        }
+
+        applyTheme(initialIsDark);
 
         document.addEventListener("DOMContentLoaded", function () {
           var root = document.getElementById("root");
 
-          if (!root) {
-            updateBodyBackground();
-            return;
+          if (!root) return;
+
+          function syncPageTheme() {
+            // Keep the current theme while a route is loading.
+            if (!root.querySelector(".header, .splash-container")) return;
+
+            applyTheme(!!root.querySelector(".dark-mode"));
           }
 
-          var observer = new MutationObserver(function () {
-            updateBodyBackground();
-          });
+          var observer = new MutationObserver(syncPageTheme);
 
           observer.observe(root, {
             childList: true,
@@ -78,10 +127,7 @@
             attributeFilter: ["class"]
           });
 
-          updateBodyBackground();
-
-          setTimeout(updateBodyBackground, 500);
-          setTimeout(updateBodyBackground, 1500);
+          syncPageTheme();
         });
       })();
     </script>
@@ -94,7 +140,6 @@
       property="og:description"
       content="Research portfolio of Justin Zheng, an undergraduate robotics researcher at the University of Michigan focusing on soft robotics and liquid-metal actuators."
     />
-    <!-- <meta property="og:image" content=""> -->
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -110,12 +155,11 @@
       property="twitter:description"
       content="Research portfolio of Justin Zheng, an undergraduate robotics researcher at the University of Michigan focusing on soft robotics and liquid-metal actuators."
     />
-    <!-- <meta property="twitter:image" content=""> -->
 
     <meta name="msapplication-TileColor" content="#171c28" />
     <meta name="theme-color" content="#171c28" />
 
-    <!-- Favicon: UMich logo in public/umichLogo.png -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/umichLogo.png" />
 
     <!-- PWA manifest -->
@@ -137,16 +181,18 @@
       crossorigin
     />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-6N2Z0SK3S1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
+
       gtag("js", new Date());
       gtag("config", "G-6N2Z0SK3S1");
     </script>
@@ -161,9 +207,5 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      The build step will place the bundled scripts into the <body> tag.
-    -->
   </body>
 </html>
