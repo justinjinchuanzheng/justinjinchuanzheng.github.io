@@ -52,8 +52,8 @@ const greeting = {
   title: "Justin Jinchuan Zheng",
   subTitle: (
     <>
-      I am a senior undergraduate student majoring in Robotics at the
-      University of Michigan. My current research advisors include{" "}
+      I am a senior undergraduate student majoring in Robotics at the University
+      of Michigan. My current research advisors include{" "}
       <ResearcherLink href="https://www.meche.engineering.cmu.edu/directory/bios/majidi-carmel.html">
         Prof. Carmel Majidi
       </ResearcherLink>{" "}
@@ -199,8 +199,7 @@ const publicationsInfo = {
     {
       title:
         "FloodFarmGPT: A Retrieval-Augmented Multi-Agent LLM Assistant for Farm-Scale Flood Risk Communication in Ontario, Canada",
-      authors:
-        "Haotian Li, Jiajin Feng, Justin J. Zheng, and M. Reza Najafi.",
+      authors: "Haotian Li, Jiajin Feng, Justin J. Zheng, and M. Reza Najafi.",
       status: "Manuscript in preparation",
       year: "2026"
     },
@@ -208,7 +207,17 @@ const publicationsInfo = {
       title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
-        "Marta Freitas*, Seung Won Lee*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
+        "Marta Calisto Freitas*, Seung Won Lee*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
+      status: "Manuscript submitted to",
+      journal: "Advanced Materials",
+      authorNote: "Equal contribution.",
+      year: "2026"
+    },
+    {
+      title:
+        "Snap Bean Yield Estimation from RGB Images Using Canopy Features and Visual Embeddings",
+      authors:
+        "Justin J. Zheng*, Hansheng Liu*, Marcus Wu, Haotian Li, Anna Stuhlmacher, Ana Dyreson, and Joshua M. Pearce.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"

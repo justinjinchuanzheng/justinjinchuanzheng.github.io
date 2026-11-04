@@ -47,7 +47,30 @@ export default function PublicationsPage() {
           <h1 className="publications-page-title">Publications</h1>
 
           <section className="publications-section">
-            <h2 className="publications-section-title">Manuscripts</h2>
+            <h2
+              className="publications-section-title"
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "0.35rem 1rem"
+              }}
+            >
+              <span>Manuscripts</span>
+
+              <span
+                className="publication-status"
+                style={{
+                  fontSize: "0.65em",
+                  fontWeight: 400,
+                  lineHeight: 1.4,
+                  whiteSpace: "nowrap"
+                }}
+              >
+                * Equal contribution
+              </span>
+            </h2>
 
             <ol
               className="publications-list"
