@@ -174,7 +174,7 @@ const publicationsInfo = {
       title:
         "Longitudinal Computer Vision for Full-Cycle Plant Phenotyping and Yield Prediction of Nasturtium in Vertical Agrivoltaics",
       authors:
-        "Justin J. Zheng*, Hansheng Liu*, Farzad Hasan, Nima Asgari, Riya Roy, and Joshua M. Pearce.",
+        "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, and Joshua M. Pearce.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
@@ -183,7 +183,7 @@ const publicationsInfo = {
       title:
         "Wall-Scale Computer Vision for Plant Phenotyping: Full-Cycle Lettuce Leaf Counting and Yield Prediction in Vertical Agrivoltaics",
       authors:
-        "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, Riya Roy, Haotian Li, Joshua M. Pearce.",
+        "Justin J. Zheng*, Hansheng Liu*, Nima Asgari, Haotian Li, Joshua M. Pearce.",
       status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
