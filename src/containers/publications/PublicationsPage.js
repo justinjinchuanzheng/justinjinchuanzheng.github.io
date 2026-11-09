@@ -29,8 +29,30 @@ function renderAuthors(authors) {
   );
 }
 
+function isAcceptedOrPublished(publication) {
+  return /^(accepted|published)\b|^in press$/i.test(publication.status || "");
+}
+
 export default function PublicationsPage() {
   const [isDark, setIsDark] = useLocalStorage("isDark", true);
+
+  const publications = publicationsInfo.publications || [];
+  const hasEqualContributions = publications.some(publication =>
+    publication.authors.includes("*")
+  );
+
+  const publicationGroups = [
+    {
+      title: "Publications",
+      entries: publications.filter(isAcceptedOrPublished)
+    },
+    {
+      title: "Manuscripts",
+      entries: publications.filter(
+        publication => !isAcceptedOrPublished(publication)
+      )
+    }
+  ].filter(group => group.entries.length > 0);
 
   const changeTheme = () => {
     setIsDark(!isDark);
@@ -44,67 +66,82 @@ export default function PublicationsPage() {
         <Header />
 
         <main className="main publications-main" id="publications">
-          <h1 className="publications-page-title">Publications</h1>
+          {publicationGroups.map((group, groupIndex) => {
+            const Heading = groupIndex === 0 ? "h1" : "h2";
 
-          <section className="publications-section">
-            <h2
-              className="publications-section-title"
-              style={{
-                display: "flex",
-                alignItems: "baseline",
-                justifyContent: "space-between",
-                flexWrap: "wrap",
-                gap: "0.35rem 1rem"
-              }}
-            >
-              <span>Manuscripts</span>
-
-              <span
-                className="publication-status"
-                style={{
-                  fontSize: "0.65em",
-                  fontWeight: 400,
-                  lineHeight: 1.4,
-                  whiteSpace: "nowrap"
-                }}
+            return (
+              <section
+                className="publications-section"
+                key={group.title}
+                style={
+                  groupIndex > 0
+                    ? {marginTop: "clamp(3.2rem, 5vw, 4rem)"}
+                    : undefined
+                }
               >
-                * Equal contribution
-              </span>
-            </h2>
+                <Heading
+                  className="publications-section-title"
+                  style={{
+                    marginTop: 0,
+                    display: "flex",
+                    alignItems: "baseline",
+                    justifyContent: "space-between",
+                    flexWrap: "wrap",
+                    gap: "0.35rem 1rem"
+                  }}
+                >
+                  <span>{group.title}</span>
 
-            <ol
-              className="publications-list"
-              reversed
-              start={publicationsInfo.publications.length}
-            >
-              {publicationsInfo.publications.map((publication, index) => (
-                <li className="publication-item" key={index}>
-                  <p className="publication-citation">
-                    <span className="publication-authors">
-                      {renderAuthors(publication.authors)}
-                    </span>{" "}
-                    <span className="publication-title">
-                      “{publication.title}.”
-                    </span>{" "}
-                    <span className="publication-status">
-                      {publication.status}
+                  {groupIndex === 0 && hasEqualContributions && (
+                    <span
+                      className="publication-status"
+                      style={{
+                        fontSize: "0.65em",
+                        fontWeight: 400,
+                        lineHeight: 1.4,
+                        whiteSpace: "nowrap"
+                      }}
+                    >
+                      * Equal contribution
                     </span>
-                    {publication.journal && (
-                      <>
-                        {" "}
-                        <span className="publication-journal">
-                          {publication.journal}
+                  )}
+                </Heading>
+
+                <ol
+                  className="publications-list"
+                  reversed
+                  start={group.entries.length}
+                >
+                  {group.entries.map(publication => (
+                    <li className="publication-item" key={publication.title}>
+                      <p className="publication-citation">
+                        <span className="publication-authors">
+                          {renderAuthors(publication.authors)}
+                        </span>{" "}
+                        <span className="publication-title">
+                          “{publication.title}.”
+                        </span>{" "}
+                        <span className="publication-status">
+                          {publication.status}
                         </span>
-                      </>
-                    )}
-                    <span className="publication-status">
-                      , {publication.year}.
-                    </span>
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </section>
+                        {publication.journal && (
+                          <>
+                            {" "}
+                            <span className="publication-journal">
+                              {publication.journal}
+                            </span>
+                          </>
+                        )}
+                        <span className="publication-status">
+                          , {publication.year}.
+                        </span>
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            );
+          })}
 
           <section className="publications-section acknowledged-section">
             <h2 className="publications-section-title">

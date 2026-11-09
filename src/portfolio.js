@@ -226,7 +226,8 @@ const publicationsInfo = {
         "Snap Bean Yield Estimation from RGB Images Using Canopy Features and Visual Embeddings",
       authors:
         "Justin J. Zheng*, Hansheng Liu*, Marcus Wu, Haotian Li, Anna Stuhlmacher, Ana Dyreson, and Joshua M. Pearce.",
-      status: "Manuscript in preparation",
+      status: "Manuscript submitted to",
+      journal: "Computers and Electronics in Agriculture",
       authorNote: "Equal contribution.",
       year: "2026"
     },
