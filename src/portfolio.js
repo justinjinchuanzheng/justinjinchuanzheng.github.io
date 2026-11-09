@@ -54,17 +54,17 @@ const greeting = {
     <>
       I am a senior undergraduate student majoring in Robotics at the University
       of Michigan. My current research advisors include{" "}
-      <ResearcherLink href="https://www.meche.engineering.cmu.edu/directory/bios/majidi-carmel.html">
+      <ResearcherLink href="https://scholar.google.com/citations?user=1LyndUsAAAAJ&hl=en">
         Prof. Carmel Majidi
       </ResearcherLink>{" "}
       at Carnegie Mellon University and{" "}
-      <ResearcherLink href="https://che.engin.umich.edu/people/gong-xiwen/">
+      <ResearcherLink href="https://scholar.google.com/citations?user=SlDkd9AAAAAJ&hl=en">
         Prof. Xiwen Gong
       </ResearcherLink>{" "}
       at the University of Michigan. I am also an alumnus of the Free
       Appropriate Sustainable Technology (FAST) Research Group in Canada, where
       I continue to collaborate with{" "}
-      <ResearcherLink href="https://en.wikipedia.org/wiki/Joshua_Pearce">
+      <ResearcherLink href="https://scholar.google.com/citations?user=QZ8lPxwAAAAJ&hl=en">
         Prof. Joshua Pearce
       </ResearcherLink>
       <span style={{marginLeft: "-0.2rem"}}>.</span>
