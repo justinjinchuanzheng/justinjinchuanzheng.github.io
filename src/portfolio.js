@@ -205,6 +205,14 @@ const publicationsInfo = {
     },
     {
       title:
+        "An Open-Source Mobile Robot for Autonomous Selective Lettuce Harvesting in Vertical Farming",
+      authors:
+        "Justin J. Zheng*, Jackie Xi*, Nima Asgari, and Joshua M. Pearce.",
+      status: "Manuscript in preparation",
+      year: "2026"
+    },
+    {
+      title:
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
         "Marta Calisto Freitas*, Seung Won Lee*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
