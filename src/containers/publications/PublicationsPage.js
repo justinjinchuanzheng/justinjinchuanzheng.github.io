@@ -9,13 +9,12 @@ import "../Main.scss";
 import "./Publications.scss";
 
 function renderAuthors(authors) {
-  const myName = "Justin J. Zheng";
-  const parts = authors.split(/(Justin J\. Zheng|\*)/g);
+  const parts = authors.split(/(Justin (?:J\.|Jinchuan) Zheng|\*)/g);
 
   return (
     <>
       {parts.map((part, index) => {
-        if (part === myName) {
+        if (part === "Justin J. Zheng" || part === "Justin Jinchuan Zheng") {
           return <strong key={index}>{part}</strong>;
         }
 
@@ -31,6 +30,114 @@ function renderAuthors(authors) {
 
 function isAcceptedOrPublished(publication) {
   return /^(accepted|published)\b|^in press$/i.test(publication.status || "");
+}
+
+function JournalDetails({volume, issue, articleNumber, year}) {
+  return (
+    <span className="publication-status">
+      {", "}
+      {volume && <strong className="publication-volume">{volume}</strong>}
+      {issue && `(${issue})`}
+      {articleNumber && `, ${articleNumber}`}
+      {volume ? ` (${year}).` : `${year}.`}
+    </span>
+  );
+}
+
+const citationLinkStyles = `
+  .publications-page .journal-citation-link,
+  .publications-page .journal-citation-link:visited {
+    color: #4f2683;
+    text-decoration: none;
+  }
+
+  .publications-page.dark-mode .journal-citation-link {
+    color: #9ac8ff;
+  }
+
+  .publications-page .journal-citation-link:hover,
+  .publications-page .journal-citation-link:focus {
+    text-decoration: none;
+  }
+
+  .publications-page .journal-citation-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+`;
+
+function PublicationCitation({publication, acknowledged = false}) {
+  const {
+    authors,
+    title,
+    status,
+    journal,
+    year,
+    volume,
+    issue,
+    articleNumber,
+    url
+  } = publication;
+
+  const published = acknowledged || /^published\b/i.test(status || "");
+  const publishedJournal = published && journal;
+  const titleText = published ? `${title}.` : `“${title}.”`;
+  const volumeIssue = issue && volume ? `${volume}(${issue})` : volume;
+  const details = [year, volumeIssue, articleNumber].filter(Boolean).join(", ");
+
+  const journalCitation = (
+    <>
+      <strong>
+        <em>{journal}</em>
+      </strong>
+      {details && `, ${details}`}.
+    </>
+  );
+
+  return (
+    <p className="publication-citation">
+      {authors && (
+        <span className="publication-authors">{renderAuthors(authors)} </span>
+      )}
+      {url && !publishedJournal ? (
+        <a
+          className="publication-title publication-link"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {titleText}
+        </a>
+      ) : (
+        <span className="publication-title">{titleText}</span>
+      )}{" "}
+      {publishedJournal ? (
+        url ? (
+          <a
+            className="journal-citation-link"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {journalCitation}
+          </a>
+        ) : (
+          <span className="publication-status">{journalCitation}</span>
+        )
+      ) : (
+        <>
+          {!published && (
+            <span className="publication-status">
+              {status}
+              {status && journal && " "}
+            </span>
+          )}
+          {journal && <span className="publication-journal">{journal}</span>}
+          <JournalDetails {...publication} />
+        </>
+      )}
+    </p>
+  );
 }
 
 export default function PublicationsPage() {
@@ -63,6 +170,7 @@ export default function PublicationsPage() {
       <div
         className={isDark ? "dark-mode publications-page" : "publications-page"}
       >
+        <style>{citationLinkStyles}</style>
         <Header />
 
         <main className="main publications-main" id="publications">
@@ -114,28 +222,7 @@ export default function PublicationsPage() {
                 >
                   {group.entries.map(publication => (
                     <li className="publication-item" key={publication.title}>
-                      <p className="publication-citation">
-                        <span className="publication-authors">
-                          {renderAuthors(publication.authors)}
-                        </span>{" "}
-                        <span className="publication-title">
-                          “{publication.title}.”
-                        </span>{" "}
-                        <span className="publication-status">
-                          {publication.status}
-                        </span>
-                        {publication.journal && (
-                          <>
-                            {" "}
-                            <span className="publication-journal">
-                              {publication.journal}
-                            </span>
-                          </>
-                        )}
-                        <span className="publication-status">
-                          , {publication.year}.
-                        </span>
-                      </p>
+                      <PublicationCitation publication={publication} />
                     </li>
                   ))}
                 </ol>
@@ -149,51 +236,20 @@ export default function PublicationsPage() {
             </h2>
 
             <ol className="publications-list">
-              {publicationsInfo.acknowledgedContributions.map(
-                (contribution, index) => (
-                  <li className="publication-item" key={index}>
-                    <div className="acknowledged-publication-entry">
-                      <p className="publication-citation">
-                        <a
-                          className="publication-title publication-link"
-                          href={contribution.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          “{contribution.title}.”
-                        </a>{" "}
-                        <span className="publication-journal">
-                          {contribution.journal}
-                        </span>
-                        <span className="publication-status">, </span>
-                        <strong className="publication-volume">
-                          {contribution.volume}
-                        </strong>
-                        <span className="publication-status">
-                          ({contribution.issue}), {contribution.articleNumber} (
-                          {contribution.year}).
-                        </span>
-                      </p>
+              {publicationsInfo.acknowledgedContributions.map(entry => (
+                <li className="publication-item" key={entry.title}>
+                  <PublicationCitation publication={entry} acknowledged />
 
-                      <p className="publication-contribution-note">
-                        <strong className="contribution-label">
-                          Contribution:
-                        </strong>{" "}
-                        {contribution.contribution}
-                      </p>
-
-                      <a
-                        className="publication-view-link"
-                        href={contribution.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Published article ↗
-                      </a>
-                    </div>
-                  </li>
-                )
-              )}
+                  {entry.contribution && (
+                    <p className="publication-contribution-note">
+                      <strong className="contribution-label">
+                        Contribution:
+                      </strong>{" "}
+                      {entry.contribution}
+                    </p>
+                  )}
+                </li>
+              ))}
             </ol>
           </section>
         </main>
