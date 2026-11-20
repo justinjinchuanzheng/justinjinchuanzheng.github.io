@@ -216,14 +216,13 @@ const publicationsInfo = {
         "Synaptic Plasticity in a Liquid Metal Actuator: Tunable Shape Memory via Electrochemical Oxide Retention",
       authors:
         "Marta Calisto Freitas*, Seung Won Lee*, Justin J. Zheng, Mahmoud Tavakoli, Carmel Majidi.",
-      status: "Manuscript submitted to",
-      journal: "Advanced Materials",
+      status: "Manuscript in preparation",
       authorNote: "Equal contribution.",
       year: "2026"
     },
     {
       title:
-        "Snap Bean Yield Estimation from RGB Images Using Canopy Features and Visual Embeddings",
+        "Individual-plant snap bean yield estimation from smartphone RGB images under agrivoltaic shading using canopy traits and frozen DINOv2 embeddings",
       authors:
         "Justin J. Zheng*, Hansheng Liu*, Marcus Wu, Haotian Li, Anna Stuhlmacher, Ana Dyreson, and Joshua M. Pearce.",
       status: "Manuscript submitted to",
